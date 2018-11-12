@@ -15,9 +15,11 @@
             </div>
 
             {% for p in site.pages %}
+            {% if p.name contains 'html' or p.name contains 'md' %}
             <a class="Links" id="link" href="{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
                 {{ p.title }}
             </a>
+            {% endif %}
             {% endfor %}
 
         </div>
@@ -27,7 +29,7 @@
         </div>
 
         <div class="footer">
-            
+
         </div>
 
     </div>
