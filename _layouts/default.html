@@ -14,14 +14,14 @@
                 <img src="assets/images/GetAcademy2_4_2_blue.png" style="width: 15rem; margin: 0.5rem;" />
             </div>
 
-            {% for p in site.html_files %}
-            <!-- {% if p.name contains 'html' or p.name contains 'md'%} -->
-            {% unless p.name == "README.html" or p.name == "README.md" %}
+            {% for p in site.pages %}
+            {% if p.name contains 'html' or p.name contains 'md'%}
+            <!-- {% unless p.name == "README.html" or p.name == "README.md" %} -->
             <a class="Links" id="link" href="{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
                 {{ p.title }}
             </a>
-            {% endunless %}
-            <!-- {% endif %} -->
+            <!-- {% endunless %} -->
+            {% endif %}
             {% endfor %}
 
         </div>
