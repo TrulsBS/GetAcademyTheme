@@ -7,15 +7,16 @@ body
 {
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 25px;
     font-family: sans-serif;
     line-height: 1.3;
+    color:#0a1224;
 }
 
 a#link
 {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     margin: 0.5rem;
 }
 
@@ -32,21 +33,21 @@ div.page
 {
     height: 100vh;
     display: grid;
-    grid-template-rows: 500px 12fr 100px;
+    grid-template-rows: 90vh 12fr 100px;
     grid-template-columns: 6fr;
     grid-template-areas: 'header'
                          'mainContent'
                          'footer';
 }
-
 div.header
 {
     grid-area: header;
     overflow: hidden;
     display: flex;
-    align-content: flex-start;
+    align-content: stretch;
     align-items: flex-start;
-    justify-content: space-between;    
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 div.bgi
 {  
@@ -66,32 +67,34 @@ div.tint
 div.logo
 {    
     z-index: 2;
-    flex-grow: 0;
+    flex-grow: 1;
 }
 div.Links
 {
     color: white;
     z-index: 2;
-    flex-grow: 2;
+    flex-grow: 1;
     max-height: 5rem;
 }
 
 div.mainContent
 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     grid-area: mainContent;
 }
 
 div.footer
 {
     grid-area: footer;
-    background-color: #1a2d52;
+    background-color: #0a1224;
 }
 
 div.sKButton 
 {
     transition: all 0.5s;
     cursor: pointer;
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
     color: white;
 }
@@ -123,4 +126,86 @@ div.sKButton:hover span:after
 {
     opacity: 1;
     right: 0;
+}
+
+.homePageGrid
+{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr 3fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'textLeft imageRight'
+                         'skole konsulent'
+                         'textImage textImage'
+                         'textImage textImage'
+                         'textImage textImage';
+}
+// .textImageContainer
+// {
+//     grid-area: textImage;
+//     background-color: aquamarine;
+//     display: flex;
+//     align-content: stretch;
+//     align-items: flex-start;
+//     justify-content: space-evenly;
+// }
+
+.textLeft
+{
+    grid-area: textLeft;
+    padding: 1rem;
+    padding-left: 25%;
+    display: flex;
+}
+.textLeft p
+{
+    margin: auto;
+}
+.imageRight
+{
+    grid-area: imageRight;
+    padding: 1rem;
+}
+
+.skole
+{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    grid-area: skole;
+    background-color: #ff8400;
+}
+.konsulent
+{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    grid-area: konsulent;
+    background-color: #b85f00;
+}
+
+
+
+.nyheterGrid
+{
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.newsBox
+{    
+    margin: 1rem;
+    width: 25rem;
+    background: #0a1224;
+    height: 33rem;    
+    padding: 0.5rem;    
+    display: flex;
+    align-content: center;
+    align-items: stretch;
 }
