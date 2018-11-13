@@ -15,7 +15,7 @@
             </div>
 
             {% for p in site.html_pages %}
-            <a class="Links" id="link" href="getacademy.no{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
+            <a class="Links" id="link" href="{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
                 {{ p.title }}
             </a>
             {% endfor %}
