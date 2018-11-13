@@ -15,13 +15,9 @@
             </div>
 
             {% for p in site.html_pages %}
-            <!-- {% if p.name contains 'html' or p.name contains 'md'%} -->
-            <!-- {% unless p.name == "README.html" or p.name == "README.md" %} -->
-            <a class="Links" id="link" href="/getacademy.no{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
+            <a class="Links" id="link" href="getacademy.no/{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
                 {{ p.title }}
             </a>
-            <!-- {% endunless %} -->
-            <!-- {% endif %} -->
             {% endfor %}
 
         </div>
