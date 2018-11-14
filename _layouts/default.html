@@ -18,9 +18,15 @@
             <div class="headerBox2">
                 <div>
                     {% for p in site.html_pages %}
-                    <a class="link" id="link" href="{{ p.url }}" {% if page.url=="{{ p.url }}" %} class="active" {% endif %}>
+                    {% if page.url=="{{ p.url }}" %}
+                    <a id="link" href="{{site.baseurl}}{{ p.url }}"  class="active" >
                         {{p.title}}
                     </a>
+                    {% else %}
+                    <a id="link" href="{{site.baseurl}}{{ p.url }}"  class="link" >
+                        {{p.title}}
+                    </a>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
