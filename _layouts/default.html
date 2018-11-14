@@ -13,11 +13,17 @@
             <div class="logo">
                 <img src="{{site.baseurl}}/assets/images/GetAcademy2_4_2_blue.png" style="width: 15rem; margin: 0.5rem;" />
             </div>
-
+ 
             {% for p in site.html_pages %}
-            <a class="Links" id="link" href="{{site.baseurl}}{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
+            {% if page.url=="{{ p.url }}" %}
+            <a id="link" href="{{site.baseurl}}{{ p.url }}" class="active">
                 {{ p.title }}
-            </a>
+            </a>            
+            {% else %}
+            <a id="link" href="{{site.baseurl}}{{ p.url }}" class="Links">
+                {{ p.title }}
+            </a>            
+            {% endif %}
             {% endfor %}
 
         </div>
