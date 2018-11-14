@@ -8,10 +8,12 @@ layout: default
         <!-- <div>
             <img src="assets/images/programmer.jpg"/>            
         </div> -->
-        <div style="margin: auto;">
-            <h1 style="text-align: center; color: white;">news</h1>
-            <a id="link" href=".{{post.url}}"> {{post.title}} </a>
-        </div>
+        <a class="link" id="link" href=".{{post.url}}">
+            <div style="margin: auto;">
+                <h1 style="text-align: center; color: white;">news</h1>
+                {{post.title}} 
+            </div>
+        </a>
     </div>
     {% endfor %}
 </div>
