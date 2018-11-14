@@ -15,12 +15,12 @@
             </div>
  
             {% for p in site.html_pages %}
-            {% if page.url=="{{ p.url }}" %}
+            {% if page.url == p.url %}
             <a id="link" href="{{site.baseurl}}{{ p.url }}" class="active">
                 {{ p.title }}
             </a>            
             {% else %}
-            <a id="link" href="{{site.baseurl}}{{ p.url }}" class="Links">
+            <a id="link" href="{{site.baseurl}}{{ p.url }}" class="link">
                 {{ p.title }}
             </a>            
             {% endif %}
