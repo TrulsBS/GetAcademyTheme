@@ -15,9 +15,15 @@
             </div>
 
             {% for p in site.html_pages %}
-            <a class="Links" id="link" href="{{site.baseurl}}/{{ p.url }}" {% if page.url=="{{ p.url }} " %} class="active" {% endif %}>
+            {% if page.url == p.url %}
+            <a class="active" id="link" href="{{site.baseurl}}{{ p.url }}">
                 {{ p.title }}
             </a>
+            {% else %}
+            <a class="link" id="link" href="{{site.baseurl}}{{ p.url }}">
+                {{ p.title }}
+            </a>
+            {% endif %}
             {% endfor %}
 
         </div>
