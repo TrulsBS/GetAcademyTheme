@@ -19,14 +19,14 @@ a#link
     font-size: 30px;
     margin: 0.5rem;
 }
+.link
+{
+    text-decoration: none;
+}
 
 .active
 {
-    background-color: #1a2d52;
-    // background-color: #ff8400;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 10px;
+    text-decoration: underline;
 }
 
 div.page
