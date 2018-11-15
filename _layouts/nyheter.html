@@ -5,15 +5,19 @@ layout: default
 <div class="nyheterGrid">
     {% for post in site.posts %}
     <div class="newsBox">
-        <!-- <div>
-            <img src="assets/images/programmer.jpg"/>            
-        </div> -->
-        <a class="link" id="link" href=".{{post.url}}">
-            <div style="margin: auto;">
-                <h1 style="text-align: center; color: white;">news</h1>
-                {{post.title}} 
-            </div>
-        </a>
+        <div style="margin: auto;">      
+            <a style="text-decoration: none;" id="link" href="{{site.baseurl}}{{post.url}}">
+                <h1 style="text-align: center; color: white;">
+                    {{post.title}}
+                </h1>
+            </a>
+            <p style="text-align: center; color: white;">
+                {{post.description}}
+            </p>
+            <p style="text-align: center; color: #101a31; font-style: italic; font-size: 1.2rem;">
+                {{post.date | date:"%d-%m-%Y"}}
+            </p>
+        </div>
     </div>
     {% endfor %}
 </div>

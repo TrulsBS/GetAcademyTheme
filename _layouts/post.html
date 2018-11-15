@@ -1,5 +1,10 @@
 ---
 layout: default
 ---
-
-{{ content }}
+<div class="postPage">
+    <div class="postContent">
+        <p style="font-size: 1.2rem; color: #ff8400; font-style: italic;"> {{page.date | date:"%d-%m-%Y"}} </p>
+        <h1>{{page.title}}</h1>
+        <p>{{ content }}</p>
+    </div>
+</div>

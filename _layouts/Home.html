@@ -1,30 +1,57 @@
 ---
 layout: default
 ---
+
 <div class="homePageGrid">
 
-        <div class="textLeft">
-            <p>
-                Vi tilbyr en helt unikt 1-årig utdanning, pakket med relevante teknologier, praktisk erfaring
-                og personlig utvikling. <br>
-                <br>
-                IT-Utvikling <br>
-                Design <br>
-                Nøkkelkompetanser            
-            </p>
-        </div>
-        <div class="imageRight">
-            <img style="width: 30rem;" src="assets/images/programmer.jpg"/>
-        </div>
+    <div class="textLeft">
+        <p>
+            Vi tilbyr en helt unikt 1-årig utdanning, pakket med relevante teknologier, praktisk erfaring
+            og personlig utvikling. <br>
+            <br>
+            IT-Utvikling <br>
+            Design <br>
+            Nøkkelkompetanser
+        </p>
+    </div>
+    <div class="imageRight">
+        <img style="width: 100%; margin: auto;" src="assets/images/stock.jpg" />
+    </div>
 
-        <div class="sKButton skole">  
-            <span style="margin: auto;">
-                Skole
-            </span>          
+    <div class="sKButton skole">
+        <span>
+            Skole
+        </span>
+    </div>
+    <div class="sKButton konsulent">
+        <span>
+            Konsulentbyrå
+        </span>
+    </div>
+
+    <div class="longBox">
+        <span style="margin: auto;">
+            Reelle prosjekter for reelle kunder skaper reel læring
+        </span>
+    </div>
+
+    <div class="news">
+        <h1 id="title">
+            Nytt fra GET Academy
+        </h1>
+        <div class="newsBoxes">
+            {% for post in site.posts limit:3 %}
+            <div class="newsBox">
+                <div style="margin: auto;">
+                    <a style="text-align: center;" id="link" href="{{site.baseurl}}{{post.url}}">
+                        <h1>{{post.title}}</h1>
+                    </a>
+                    <p style="text-align: center; color: white;">{{post.description}}</p>
+                    <p style="text-align: center; color: #101a31; font-style: italic; font-size: 1.2rem;">{{post.date | date:"%d-%m-%Y"}}</p>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-        <div class="sKButton konsulent">
-            <span style="margin: auto;">
-                Konsulentbyrå
-            </span>
-        </div>
+    </div>
+
 </div>
