@@ -13,11 +13,11 @@
         <div style="margin: auto;">
             {% for p in site.html_pages %}
             {% if page.url == p.url %}
-            <a class="active" id="link" href="{{ p.url }}">
+            <a class="active" id="link" href="{{site.baseurl}}/{{ p.url }}">
                 {{p.page-name}}
             </a>
             {% else %}
-            <a class="link" id="link" href="{{ p.url }}">
+            <a class="link" id="link" href="{{site.baseurl}}/{{ p.url }}">
                 {{p.page-name}}
             </a>
             {% endif %}
