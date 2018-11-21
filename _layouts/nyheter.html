@@ -32,11 +32,11 @@
 
     {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
     {% for post in sorted-posts limit:currentSize %}
-    <a href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem;">
+    <a href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem;">
             <div class="newsBox">
                 <div class="innerNewsBox">
                     <div style="padding: 0; margin: 0;">
-                        <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
+                        <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
                         </div>
                         <h2>
                             {{post.title}}
