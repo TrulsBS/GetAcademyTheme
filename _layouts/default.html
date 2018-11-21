@@ -13,7 +13,7 @@
                 <img src="{{site.baseurl}}/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin: 0.5rem;" />
             </div>
             {% for p in site.html_pages %}
-            {% if page.url == p.url %}
+            {% if p.url == page.url %}
             <a class="active" id="link" href="{{site.baseurl}}/{{ p.url }}">
                 {{p.page-name}}
             </a>
@@ -28,7 +28,6 @@
                 <p>
                     {{page.headerInfo}}
                 </p>
-                </a>
             </div>
         </div>
 
