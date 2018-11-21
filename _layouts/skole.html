@@ -15,11 +15,11 @@ layout: default
             {{site.posts[0].description}} 
             <br>
             <br>
-            <a href="{{site.posts[0].url}}">Les Mer</a>
+            <a href="{{site.baseurl}}/{{site.posts[0].url}}">Les Mer</a>
         </p>
     </div>
     <div class="imageRight">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{site.posts[0].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[0].image}}" />
     </div>
 
 
@@ -29,11 +29,11 @@ layout: default
             <h2>{{site.posts[1].title}}</h2>
             {{site.posts[1].description}} <br>
             <br>
-            <a href="{{site.posts[1].url}}">Les Mer</a>
+            <a href="{{site.baseurl}}/{{site.posts[1].url}}">Les Mer</a>
         </p>
     </div>
     <div class="imageLeft">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{site.posts[1].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[1].image}}" />
     </div>
 
     <div class="longBox">
@@ -48,7 +48,7 @@ layout: default
         </h1>
         <div class="partnere">
             {% for partner in site.data.partnere %}
-            <a href="{{partner.url}}">{{partner.name}}</a>
+            <a href="{{site.baseurl}}/{{partner.url}}">{{partner.name}}</a>
             {% endfor %}
         </div>
     </div>
@@ -58,11 +58,11 @@ layout: default
             <h2>{{site.posts[2].title}}</h2>
             {{site.posts[2].description}} <br>
             <br>
-            <a href="{{site.posts[2].url}}">Les Mer</a>
+            <a href="{{site.baseurl}}/{{site.posts[2].url}}">Les Mer</a>
         </p>
     </div>
     <div class="imageRight1">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{site.posts[2].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[2].image}}" />
     </div>
 
     <div class="textRight1">
@@ -71,11 +71,11 @@ layout: default
             <h2>{{site.posts[3].title}}</h2>
             {{site.posts[3].description}} <br>
             <br>
-            <a href="{{site.posts[3].url}}">Les Mer</a>
+            <a href="{{site.baseurl}}/{{site.posts[3].url}}">Les Mer</a>
         </p>
     </div>
     <div class="imageLeft1">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{site.posts[3].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[3].image}}" />
     </div>
 
     <div class="longBox1">
