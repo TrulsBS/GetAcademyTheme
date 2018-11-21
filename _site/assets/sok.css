@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+  background-color: #e4e4e4; }
+
+.søkePage {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form {
+  margin-top: 5rem; }
+
+a#link {
+  font-family: sans-serif;
+  color: #101a31;
+  font-size: 2rem;
+  margin: 0.5rem; }
+
+.link {
+  text-decoration: none; }
+
+.active {
+  text-decoration: underline; }
+
+a:hover {
+  text-decoration: underline; }

@@ -1,10 +1,17 @@
 ---
 layout: default
 ---
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/nyhet.css">
+</head>
+
 <div class="postPage">
     <div class="postContent">
-        <p style="font-size: 1.2rem; color: #ff8400; font-style: italic;"> {{page.date | date:"%d-%m-%Y"}} </p>
-        <h1>{{page.title}}</h1>
+        <a onclick="window.history.back()">Tilbake</a>
+        <p style="font-size: 1.2rem; color: #ff8400; font-style: italic;">
+            {{page.date | date:"%d-%m-%Y"}}
+        </p>
         <p>{{ content }}</p>
     </div>
 </div>

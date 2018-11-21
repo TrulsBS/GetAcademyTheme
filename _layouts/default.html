@@ -8,19 +8,18 @@
 
 <body>
     <div class="page">
-
-        <div class="header bgi tint">
+        <div id="header" class="header bgi tint">
             <div class="logo">
                 <img src="{{site.baseurl}}/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin: 0.5rem;" />
             </div>
             {% for p in site.html_pages %}
             {% if page.url == p.url %}
-            <a class="active" id="link" href="{{site.baseurl}}{{ p.url }}">
-                {{p.title}}
+            <a class="active" id="link" href="{{ p.url }}">
+                {{p.page-name}}
             </a>
             {% else %}
-            <a class="link" id="link" href="{{site.baseurl}}{{ p.url }}">
-                {{p.title}}
+            <a class="link" id="link" href="{{ p.url }}">
+                {{p.page-name}}
             </a>
             {% endif %}
             {% endfor %}
@@ -29,6 +28,7 @@
                 <p>
                     {{page.headerInfo}}
                 </p>
+                </a>
             </div>
         </div>
 
@@ -37,7 +37,28 @@
         </div>
 
         <div class="footer">
-            FOOTER
+            <div id="leftFooter">
+                <p>
+                    Adresse: </br>
+                    Torget 8 </br>
+                    3256 </br>
+                    Larvik </br>
+                </p>
+            </div>
+            <div id="middleFooter">
+                <div class="toTopButton">
+                    <a style="color: white; text-decoration: none;" href="#header">
+                        <span>
+                            Tilbake til top
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div id="rightFooter">
+                <a>
+                    Kontakt
+                </a>
+            </div>
         </div>
 
     </div>

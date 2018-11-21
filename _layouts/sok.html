@@ -1,0 +1,31 @@
+---
+
+---
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/sok.css">
+</head>
+
+<div style="display: flex; background: #ffffff00; padding: 0.5rem;">
+        <div class="logo">
+            <img src="{{site.baseurl}}/assets/images/GetAcademy2_4_2.png" style="width: 15rem; margin: 0.5rem;" />
+        </div>
+        <div style="margin: auto;">
+            {% for p in site.html_pages %}
+            {% if page.url == p.url %}
+            <a class="active" id="link" href="{{ p.url }}">
+                {{p.page-name}}
+            </a>
+            {% else %}
+            <a class="link" id="link" href="{{ p.url }}">
+                {{p.page-name}}
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+<div class="søkePage">
+        <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSdMb2atBPZB2_i5-wAT36ApAuR4-chF0kgarFP8mvWfMRKzPg/viewform?embedded=true"
+         width="640" height="1538" frameborder="0" marginheight="0" marginwidth="0">Laster inn ...</iframe>
+</div>

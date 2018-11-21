@@ -3,12 +3,8 @@
 
 @charset "UTF-8";
 
-
-//-----------------//
-//---MAIN LAYOUT---//
-//-----------------//
 body
-{
+{    
     margin: 0;
     padding: 0;
     font-size: 25px;
@@ -37,7 +33,7 @@ div.page
 {
     height: 100vh;
     display: grid;
-    grid-template-rows: 90vh 1fr 20vh;
+    grid-template-rows: 90vh 1fr 30vh;
     grid-template-columns: 6fr;
     grid-template-areas: 'header'
                          'mainContent'
@@ -45,6 +41,7 @@ div.page
 }
 div.header
 {
+    user-select: none;
     grid-area: header;
     overflow: hidden;
     display: flex;
@@ -77,8 +74,6 @@ div.tint
 }
 .headerInfo h1
 {
-    text-decoration: underline #101a31; 
-    text-underline-position: under;
     margin-bottom: 0.5rem;
     margin: 0;
     font-size: 5rem;
@@ -89,45 +84,54 @@ div.logo
     z-index: 2;
     flex-grow: 1;
 }
-div.Links
-{
-    color: white;
-    z-index: 2;
-    flex-grow: 1;
-    max-height: 5rem;
-}
+// div.Links
+// {
+//     color: white;
+//     z-index: 2;
+//     flex-grow: 1;
+//     max-height: 5rem;
+// }
 
 div.mainContent
 {
-    // margin-top: 5rem;
-    // margin-bottom: 5rem;
     grid-area: mainContent;
 }
 
 div.footer
 {
     grid-area: footer;
-    text-align: center;
-    font-weight: bold;
-    font-size: 3rem;
+    // text-align: center;    
+    font-size: 1.2rem;
     color: white;
     background-color: #101a31;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    padding: 1rem;
 }
-
-
-//-----------------//
-//-------HOME------//
-//-----------------//
-div.sKButton 
+#leftFooter
+{
+    width: 100%;   
+    text-align: right;    
+}
+#leftFooter p
+{
+    margin: 0;
+}
+#leftFooter p::first-line
+{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.toTopButton
 {
     transition: all 0.5s;
     cursor: pointer;
-    font-size: 4rem;
-    text-align: center;
-    color: white;
+    width: 11rem;
+    margin: auto;
 }
-  
-div.sKButton span
+.toTopButton span
 {
     cursor: pointer;
     display: inline-block;
@@ -135,170 +139,35 @@ div.sKButton span
     transition: 0.5s;
     margin: auto;
 }
-  
-div.sKButton span:after 
+.toTopButton span:after
 {
-    font-family: "Font Awesome 5 free"; font-weight: 900; content: "\f061";
+    font-family: "Font Awesome 5 free"; font-weight: 900; content: "\f062";
     position: absolute;
     opacity: 0;
-    top: 0;
-    right: -70px;
+    left: 4rem;
+    top: -10px;
     transition: 0.5s;
 }
-  
-div.sKButton:hover span 
+.toTopButton:hover span
 {
-    padding-right: 65px;
+    padding-top: 25px;
 }
-  
-div.sKButton:hover span:after 
+.toTopButton:hover span:after 
 {
     opacity: 1;
-    right: 0;
+    top: 0;
 }
 
-.homePageGrid
+#middleFooter
 {
-    display: grid;
-    grid-template-rows: repeat(auto, 4);
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'textLeft imageRight'
-                         'skole konsulent'
-                         'longBox longBox'
-                         'news news';
-                      
-}
-.textLeft
-{
-    grid-area: textLeft;
-    padding: 1rem;
-    padding-left: 10%;
-    display: flex;
-    background-color: #e4d9c8;
-}
-.textLeft p
-{
-    color: #101a31;
-    margin: auto;
-    font-weight: bold;
-}
-.imageRight
-{
-    grid-area: imageRight;
-    display: flex;
-    align-content: center;
-    align-items: center;
-}
-
-.skole
-{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    grid-area: skole;
-    background-color: #ff8400;
-}
-.konsulent
-{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    grid-area: konsulent;
-    background-color: #b85f00;
-}
-.longBox
-{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    grid-area: longBox;
-    font-size: 3rem;
-    color: #c2c2c2;
-    display: flex;
-    background-color: #101a31;
-}
-.news
-{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    grid-area: news;
-    display: flex;
-    flex-direction: column;
-}
-.news h1#title
-{
-    margin: auto;
-    font-size: 4rem;
-}
-.newsBoxes
-{    
-    display: flex;
-    align-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-    //flex-wrap: wrap;
-    //justify-content: center;
-    //flex-direction: row;    
-}
-
-//-----------------//
-//-----NYHETER-----//
-//-----------------//
-.nyheterGrid
-{
-    display: flex;
-    align-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.newsBox
-{    
-    margin: 1rem;
-    width: 25rem;
-    background: #ff8400;
-    height: 33rem;      
-    display: flex;
-    align-content: center;
-    align-items: stretch;
-}
-
-//-----------------//
-//-------Post------//
-//-----------------//
-
-.postPage
-{
-    display: flex;
-    align-content: center;
-    align-items: center;  
-    justify-content: center; 
-    background-color: #b8b8b8; 
-}
-.postContent
-{
-    background-color: #101a31;
-    height: 100%;
-    width: 80%;
-    outline: 1px solid #ff8400;
-    border-bottom: 1px solid #ff8400;
-    outline-offset: -5rem;
-    box-sizing: border-box;
-    display: flex;
-    align-content: flex-start;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    padding: 5rem;
-    overflow-wrap: normal;
-}
-.postContent p
-{
-    color: #fff;
+    width: 100%;
+    font-size: 1.5rem;
     text-align: center;
-}
-.postContent h1
-{
-    color: white;
+    display: flex;
     margin: 0;
+}
+#rightFooter
+{
+    width: 100%;
+    text-align: left;
 }

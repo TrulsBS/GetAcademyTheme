@@ -1,0 +1,65 @@
+---
+---
+
+@charset "UTF-8";
+
+.postPage
+{
+    display: flex;
+    align-content: center;
+    align-items: center;  
+    justify-content: center; 
+    background-color: #707070; 
+}
+.postContent
+{
+    background-color: #fff;
+    //height: 100%;
+    width: 80%;
+    outline-offset: -5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow-wrap: normal;
+}
+.postContent p
+{
+    color: #101a31;
+    text-align: center;
+}
+.postContent h1
+{
+    color: 101a31;
+    margin: 0;
+}
+img
+{
+    width: 25rem;
+}
+
+
+img[src*="#left"]
+{
+    float: left;
+    margin: 1rem;
+}
+img[src*="#right"]
+{
+    float: right;
+    margin: 1rem;
+}
+
+a
+{
+    cursor: pointer;    
+}
+a:hover
+{
+    text-decoration: underline;
+}
