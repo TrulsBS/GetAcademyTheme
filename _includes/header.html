@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/header.css">    
+</head>
+
+<div id="header" class="header">
+    <div class="logo">
+        <a href="{{site.baseurl}}/index.html">
+            <img src="{{site.baseurl}}/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 20rem; margin-left: 5rem; margin-top: 1rem;" />
+        </a>
+    </div>
+    <div class="links">
+        {% assign sorted-links = site.html_pages | where:"categories","include" %}
+        {% for p in sorted-links %}
+        {% if page.url == p.url %}
+        <a class="active" id="linkDark" href="{{ p.url }}">
+            {{p.page-name}}
+        </a>
+        {% else %}
+        <a id="linkDark" href="{{ p.url }}">
+            {{p.page-name}}
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
