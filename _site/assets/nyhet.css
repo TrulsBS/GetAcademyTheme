@@ -1,43 +1,39 @@
+body {
+  margin: 0;
+  padding: 0; }
+
 .postPage {
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
-  background-color: #707070; }
+  background-color: #ffffff;
+  padding: 0 10rem 0 10rem; }
 
 .postContent {
   background-color: #fff;
   width: 80%;
-  outline-offset: -5rem;
-  box-sizing: border-box;
   display: flex;
   align-content: flex-start;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 10rem 5rem 10rem;
   overflow-wrap: normal; }
 
 .postContent p {
   color: #101a31;
-  text-align: center; }
+  text-align: center;
+  margin: 2rem 0 2rem 0; }
 
 .postContent h1 {
   color: 101a31;
   margin: 0; }
 
 img {
-  width: 25rem; }
-
-img[src*="#left"] {
-  float: left;
-  margin: 1rem; }
-
-img[src*="#right"] {
-  float: right;
-  margin: 1rem; }
+  width: 25rem;
+  margin: auto;
+  width: 100%; }
 
 a {
   cursor: pointer; }

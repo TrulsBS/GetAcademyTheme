@@ -1,6 +1,25 @@
 @charset "UTF-8";
 body {
-  background-color: #e4e4e4; }
+  margin: 0;
+  padding: 0;
+  background-color: #e4e4e4;
+  font-size: 25px;
+  font-family: helvetica;
+  line-height: 1.3; }
+
+div.header {
+  user-select: none;
+  grid-area: header;
+  overflow: hidden;
+  display: flex;
+  align-content: stretch;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+div.logo {
+  z-index: 2;
+  flex-grow: 1; }
 
 .søkePage {
   display: flex;
@@ -10,17 +29,39 @@ body {
 .form {
   margin-top: 5rem; }
 
-a#link {
-  font-family: sans-serif;
+a#linkDark {
   color: #101a31;
-  font-size: 2rem;
-  margin: 0.5rem; }
+  font-size: 1.3rem;
+  margin: 2rem;
+  text-transform: uppercase; }
 
-.link {
-  text-decoration: none; }
-
-.active {
+.active#linkDark {
   text-decoration: underline; }
 
-a:hover {
-  text-decoration: underline; }
+a#linkDark {
+  position: relative;
+  text-decoration: none;
+  color: #101a31; }
+  a#linkDark:before, a#linkDark:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #101a31; }
+  a#linkDark:before {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
+  a#linkDark:after {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+  a#linkDark:hover:before, a#linkDark:hover:after, a#linkDark:focus:before, a#linkDark:focus:after {
+    opacity: 1;
+    transform: translateY(0); }
+  a#linkDark:hover:before, a#linkDark:focus:before {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+  a#linkDark:hover:after, a#linkDark:focus:after {
+    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }

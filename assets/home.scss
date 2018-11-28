@@ -2,44 +2,48 @@
 ---
 
 @charset "UTF-8";
-div.sKButton 
-{
-    transition: all 0.5s;
-    cursor: pointer;
-    font-size: 4rem;
-    text-align: center;
-    color: white;
-}
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+
+// div.sKButton 
+// {
+//     transition: all 0.5s;
+//     cursor: pointer;
+//     font-size: 1rem;
+//     text-align: center;
+//     color: white;
+// }
   
-div.sKButton span
-{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    margin: auto;
-}
+// div.sKButton span
+// {
+//     cursor: pointer;
+//     display: inline-block;
+//     position: relative;
+//     transition: 0.5s;
+//     margin: auto;
+// }
   
-div.sKButton span:after 
-{
-    font-family: "Font Awesome 5 free"; font-weight: 900; content: "\f061";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -70px;
-    transition: 0.5s;
-}
+// div.sKButton span:after 
+// {
+//     font-family: "Font Awesome 5 free"; font-weight: 900; content: "\f061";
+//     position: absolute;
+//     opacity: 0;
+//     top: 0;
+//     right: -70px;
+//     transition: 0.5s;
+// }
   
-div.sKButton:hover span 
-{
-    padding-right: 75px;
-}
+// div.sKButton:hover span 
+// {
+//     padding-right: 50px;
+// }
   
-div.sKButton:hover span:after 
-{
-    opacity: 1;
-    right: 0;
-}
+// div.sKButton:hover span:after 
+// {
+//     opacity: 1;
+//     right: 0;
+// }
+
+
 
 .homePageGrid
 {
@@ -53,19 +57,62 @@ div.sKButton:hover span:after
                          'besøk besøk';
                       
 }
+@media  only screen and (max-width: 1300px)
+{
+    .homePageGrid
+    {
+        display: grid;
+        grid-template-rows: repeat(auto, 10);
+        grid-template-columns: 1fr;
+        grid-template-areas: 'textLeft' 
+                             'imageRight'
+                             'skole'
+                             'konsulent'
+                             'longBox' 
+                             'longBox'
+                             'news' 
+                             'news'
+                             'besøk' 
+                             'besøk';
+                          
+    }
+    .skole
+    {
+        margin: 5rem 10rem 5rem 10rem;
+        height: 30rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: skole;
+        background-color: #101a31;
+    }
+    .konsulent
+    {
+        margin: 5rem 10rem 5rem 10rem;
+        height: 30rem;
+        display: flex;
+        grid-area: konsulent;
+        background-color: #101a31;
+    }
+}
 .textLeft
 {
+    margin: 5rem;
+    margin-left: 10rem;
     grid-area: textLeft;
-    padding: 1rem;
-    padding-left: 10%;
     display: flex;
     flex-direction: column;
-    background-color: #e4d9c8;    
+    //background-color: #101a31;    
 }
 .textLeft p
 {
     color: #101a31;
-    margin: auto;
+    margin: 0;
+}
+.textLeft h2
+{
+    margin: 0;
+    margin-bottom: 2rem;
 }
 .imageRight
 {
@@ -73,40 +120,66 @@ div.sKButton:hover span:after
     display: flex;
     align-content: center;
     align-items: center;
+    margin: 5rem;
+    margin-right: 10rem;
 }
 
 .skole
 {
+    margin: 5rem 2rem 5rem 10rem;
     height: 30rem;
     // padding-top: 12rem;
     // padding-bottom: 12rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: skole;
-    background-color: #858585;
+    background-color: #101a31;
 }
 .konsulent
 {
+    margin: 5rem 10rem 5rem 2rem;
     height: 30rem;
     // padding-top: 12rem;
     // padding-bottom: 12rem;
     display: flex;
     grid-area: konsulent;
-    background-color: #3a3a3a;
+    background-color: #101a31;
 }
 .longBox
 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 15rem 10rem 15rem 10rem;
+    margin: 5rem 0 0 0;
     grid-area: longBox;
-    font-size: 3rem;
-    color: #c2c2c2;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #bec3cf;
     display: flex;
     background-color: #101a31;
+    font-style: italic;
+    font-family: serif;
 }
+.besøk
+{
+    grid-area: besøk;
+    background-color: #c0ae8d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 10rem 10rem 10rem;
+    margin: 2rem 0 0 0;
+}
+.besøk p
+{
+    color: #2b3958;
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+}
+
 .news
 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 5rem 5rem 5rem 5rem;
     grid-area: news;
     display: flex;
     flex-direction: column;
@@ -114,8 +187,23 @@ div.sKButton:hover span:after
 .news h1#title
 {
     margin: auto;
-    font-size: 4rem;
+    padding: 5rem;
+    font-size: 3rem;
 }
+.newsBox
+{    
+    width: 25rem;
+    //background: #d6d6d6;
+    height: 20rem;      
+    display: flex;
+    align-content: center;
+    align-items: stretch;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: #101a31;
+}
+
 .newsBoxes
 {    
     display: flex;
@@ -126,34 +214,6 @@ div.sKButton:hover span:after
     //flex-wrap: wrap;
     //justify-content: center;
     //flex-direction: row;    
-}
-.besøk
-{
-    grid-area: besøk;
-    height: 20rem;
-    background-color: #21232b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.besøk p
-{
-    color: rgb(201, 201, 201);
-    font-size: 3rem;
-    text-align: center;
-}
-.newsBox
-{    
-    width: 25rem;
-    //background: #d6d6d6;
-    height: 33rem;      
-    display: flex;
-    align-content: center;
-    align-items: stretch;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    color: #101a31;
 }
 .innerNewsBox
 {
@@ -169,22 +229,31 @@ div.sKButton:hover span:after
 .innerNewsBox h2
 {
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
 }
+// .newsImage:hover
+// {
+//     filter: sepia(0) saturate(100%) brightness(100%) hue-rotate(0);
+// }
 .newsImage
 {    
+    margin: 0 0 5rem 0;
     background-repeat: no-repeat; 
     background-size: cover; 
     overflow: hidden;
     width: 100%;
     height: 12rem;
+    background-color: #ff8400;
+    background-blend-mode: multiply;
+}
+.newsBox:hover .newsImage
+{
+    background-color: #fff;
+    background-blend-mode: normal;
 }
 .innerNewsBox div
 {
     margin: auto;
-}
-.NewsBox:hover .newsImage
-{    
-    background-color: #ff8400;
-    background-blend-mode: multiply;
+    //text-align: center;
 }

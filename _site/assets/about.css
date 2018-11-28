@@ -1,0 +1,18 @@
+.aboutPage {
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5rem 15rem 5rem 15rem; }
+
+.aboutPage a {
+  color: #ff8400;
+  text-decoration: none; }
+
+.aboutPage a:hover {
+  color: #ff8400;
+  text-decoration: underline; }
+
+.main {
+  margin: auto; }

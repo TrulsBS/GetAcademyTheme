@@ -10,7 +10,7 @@ layout: default
 
     <div class="nyheter">
         <div>
-            <h2>title</h2>
+            <h2>Jeg</h2>
             <p>
                 Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret,
                 mei ut viris blandit sadipscing.
@@ -18,7 +18,7 @@ layout: default
             </p>
         </div>
         <div>
-            <h2>title</h2>
+            <h2>vet</h2>
             <p>
                 Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret,
                 mei ut viris blandit sadipscing.
@@ -26,7 +26,7 @@ layout: default
             </p>
         </div>
         <div>
-            <h2>title</h2>
+            <h2>ikke hva som skal være her</h2>
             <p>
                 Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret,
                 mei ut viris blandit sadipscing.
@@ -36,16 +36,31 @@ layout: default
     </div>
 
     <div class="empty">
-        
+
     </div>
 
     <div class="prosjekter">
         <h1>Våre prosjekter</h1>
-        <div>
-            <p>Prosjekt1</p>
-            <p>Prosjekt2</p>
-            <p>Prosjekt3</p>
-            <p>Prosjekt4</p>
+        <div class="prosjekterContainer">
+            {% assign sorted-posts = site.posts | where:"categories","prosjekter" %}
+            {% for post in sorted-posts limit:currentSize %}
+            <a id="link" href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem;">
+                <div class="prosjektBox">
+                    <div class="innerProsjektBox">
+                        <div style="padding: 0; margin: 0;">
+                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}{{post.image}});">
+                            </div>
+                            <h2>
+                                {{post.title}}
+                            </h2>
+                            <p style="font-size: 1.5rem;">
+                                {{post.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
 

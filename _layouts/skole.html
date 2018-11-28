@@ -6,35 +6,38 @@ layout: default
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/skole.css">
 </head>
 
+{% assign sorted-news = site.posts | where:"categories","nyheter" %}
+
 <div class="skolePageGrid">
 
+    {% if sorted-news[0] %}
     <div class="textLeft">
-        <p>
-            <div style="font-size: 1rem;">{{site.posts[0].date | date:"%d.%m.%Y"}}</div>
-            <h2>{{site.posts[0].title}}</h2>
-            {{site.posts[0].description}} 
-            <br>
-            <br>
-            <a href="{{site.baseurl}}/{{site.posts[0].url}}">Les Mer</a>
-        </p>
+        <a id="linkDark" href="{{sorted-news[0].url}}">
+            <div>
+                <h2>{{sorted-news[0].title}}</h2>
+                {{sorted-news[0].description}}
+            </div>
+        </a>
     </div>
     <div class="imageRight">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[0].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[0].image}}" />
     </div>
+    {% endif %}
 
 
+    {% if sorted-news[1] %}
     <div class="textRight">
-        <p>
-            <div style="font-size: 1rem;">{{site.posts[1].date | date:"%d.%m.%Y"}}</div>
-            <h2>{{site.posts[1].title}}</h2>
-            {{site.posts[1].description}} <br>
-            <br>
-            <a href="{{site.baseurl}}/{{site.posts[1].url}}">Les Mer</a>
-        </p>
+        <a id="linkDark" href="{{sorted-news[1].url}}">
+            <div>
+                <h2>{{sorted-news[1].title}}</h2>
+                {{sorted-news[1].description}}
+            </div>
+        </a>
     </div>
     <div class="imageLeft">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[1].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[1].image}}" />
     </div>
+    {% endif %}
 
     <div class="longBox">
         <span style="margin: auto;">
@@ -48,40 +51,45 @@ layout: default
         </h1>
         <div class="partnere">
             {% for partner in site.data.partnere %}
-            <a href="{{site.baseurl}}/{{partner.url}}">{{partner.name}}</a>
+            <a title="{{partner.name}}" href="{{partner.url}}"><img src="{{partner.imgUrl}}"></a>
             {% endfor %}
         </div>
     </div>
+
+    {% if sorted-news[2] %}
     <div class="textLeft1">
-        <p>
-            <div style="font-size: 1rem;">{{site.posts[2].date | date:"%d.%m.%Y"}}</div>
-            <h2>{{site.posts[2].title}}</h2>
-            {{site.posts[2].description}} <br>
-            <br>
-            <a href="{{site.baseurl}}/{{site.posts[2].url}}">Les Mer</a>
-        </p>
+        <a id="linkDark" href="{{sorted-news[2].url}}">
+            <div>
+                <h2>{{sorted-news[2].title}}</h2>
+                {{sorted-news[2].description}}
+            </div>
+        </a>
     </div>
     <div class="imageRight1">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[2].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[2].image}}" />
     </div>
+    {% endif %}
 
+    {% if sorted-news[3] %}
     <div class="textRight1">
-        <p>
-            <div style="font-size: 1rem;">{{site.posts[3].date | date:"%d.%m.%Y"}}</div>
-            <h2>{{site.posts[3].title}}</h2>
-            {{site.posts[3].description}} <br>
-            <br>
-            <a href="{{site.baseurl}}/{{site.posts[3].url}}">Les Mer</a>
-        </p>
+        <a id="linkDark" href="{{sorted-news[3].url}}">
+            <div>
+                <h2>{{sorted-news[3].title}}</h2>
+                {{sorted-news[3].description}}
+            </div>
+        </a>
     </div>
     <div class="imageLeft1">
-        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{site.posts[3].image}}" />
+        <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[3].image}}" />
     </div>
+    {% endif %}
 
     <div class="longBox1">
-        <span style="margin: auto;">
-            Lær om vårt unike studieprogram
-        </span>
+        <a id="linkLight" href="{{site.baseurl}}/studieprogram.html" style="margin: auto; font-size: 3rem; text-align: center;">
+            <span style="margin: auto;">
+                Lær om vårt unike studieprogram
+            </span>
+        </a>
     </div>
 
 </div>

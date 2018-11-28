@@ -1,0 +1,111 @@
+@charset "UTF-8";
+div.header {
+  user-select: none;
+  grid-area: header;
+  overflow: hidden;
+  display: flex;
+  align-content: stretch;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.søk {
+  background: #101a31;
+  width: 15rem;
+  height: 5rem;
+  margin: auto;
+  display: flex; }
+
+.søk p {
+  margin: auto;
+  color: white; }
+
+div.bgi {
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+
+div.tint {
+  background-color: #ff8400;
+  background-blend-mode: multiply; }
+
+.headerInfo {
+  display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  width: 100%; }
+
+div.logo {
+  z-index: 2;
+  flex-grow: 1;
+  margin: 0 0 2rem 0; }
+
+.links {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: stretch;
+  flex-direction: row; }
+
+@media only screen and (max-width: 800px) {
+  div.header {
+    user-select: none;
+    grid-area: header;
+    overflow: hidden;
+    display: flex;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column; }
+
+  .links {
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column; }
+
+  .søk {
+    display: none; } }
+a#linkLight {
+  color: white;
+  font-size: 1.2rem;
+  margin: 2rem;
+  text-transform: uppercase; }
+
+.active#linkLight {
+  text-decoration: underline; }
+
+a#linkLight {
+  position: relative;
+  text-decoration: none; }
+  a#linkLight:before, a#linkLight:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff; }
+  a#linkLight:before {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
+  a#linkLight:after {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+  a#linkLight:hover:before, a#linkLight:hover:after, a#linkLight:focus:before, a#linkLight:focus:after {
+    opacity: 1;
+    transform: translateY(0); }
+  a#linkLight:hover:before, a#linkLight:focus:before {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+  a#linkLight:hover:after, a#linkLight:focus:after {
+    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }

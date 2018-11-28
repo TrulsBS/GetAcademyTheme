@@ -4,61 +4,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
 </head>
-<!--<a id="one" href="/sok.html" {% if page.url=="/sok.html" %} class="active" {% endif %}>Søk!</a>-->
 
 <body>
-    <div class="page">
-        <div id="header" class="header bgi tint">
-            <div class="logo">
-                <img src="{{site.baseurl}}/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin: 0.5rem;" />
-            </div>
-            {% for p in site.html_pages %}
-            {% if p.url == page.url %}
-            <a class="active" id="link" href="{{site.baseurl}}/{{ p.url }}">
-                {{p.page-name}}
-            </a>
-            {% else %}
-            <a class="link" id="link" href="{{site.baseurl}}/{{ p.url }}">
-                {{p.page-name}}
-            </a>
-            {% endif %}
-            {% endfor %}
-            <div class="headerInfo">
-                <h1>{{page.title}}</h1>
-                <p>
-                    {{page.headerInfo}}
-                </p>
-            </div>
-        </div>
+    <div class="page" {% if page.header=="background" %} style="grid-template-rows: 90vh 1fr 30vh;" {% else %} style="grid-template-rows: 30vh 1fr 30vh;"
+        {% endif %}>
+
+        {% if page.header == "background" %}
+        {% include headerBackground.html %}
+        {% else %}
+        {% include header.html %}
+        {% endif %}
 
         <div class="mainContent">
             {{ content }}
         </div>
 
-        <div class="footer">
-            <div id="leftFooter">
-                <p>
-                    Adresse: </br>
-                    Torget 8 </br>
-                    3256 </br>
-                    Larvik </br>
-                </p>
-            </div>
-            <div id="middleFooter">
-                <div class="toTopButton">
-                    <a style="color: white; text-decoration: none;" href="#header">
-                        <span>
-                            Tilbake til top
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div id="rightFooter">
-                <a>
-                    Kontakt
-                </a>
-            </div>
-        </div>
-
+        {% include footer.html %}
     </div>
 </body>

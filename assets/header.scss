@@ -1,0 +1,87 @@
+---
+---
+
+@charset "UTF-8";
+
+div.header
+{
+    user-select: none;
+    grid-area: header;
+    overflow: hidden;
+    display: flex;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.links
+{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: stretch;
+    flex-direction: row;
+}
+a#linkDark
+{
+    color: #101a31;
+    font-size: 1.2rem;
+    margin: 2rem;    
+    text-transform: uppercase;
+}
+
+.active#linkDark
+{
+    text-decoration: underline;
+}
+
+
+$duration: .2s;
+$distance: 20px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);
+
+a#linkDark{
+  position: relative;
+  text-decoration: none;
+
+   &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: #101a31;
+    }
+    &:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+        opacity: 0;
+        transform: translateY($distance/1);
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+        &:before,
+        &:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+            transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+    }
+}
+div.logo
+{
+    z-index: 2;
+    flex-grow: 1;
+    margin: 0 0 2rem 0;
+}

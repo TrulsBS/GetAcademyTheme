@@ -1,56 +1,37 @@
 ---
-
+layout: default
 ---
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/nyheter.css">
 </head>
 
-<div style="display: flex; background: #ffffff00; padding: 0.5rem;">
-    <div class="logo">
-        <img src="{{site.baseurl}}/assets/images/GetAcademy2_4_2.png" style="width: 15rem; margin: 0.5rem;" />
-    </div>
-    <div style="margin: auto;">
-        {% for p in site.html_pages %}
-        {% if page.url == p.url %}
-        <a class="active" id="link" href="{{site.baseurl}}/{{ p.url }}">
-            {{p.page-name}}
-        </a>
-        {% else %}
-        <a class="link" id="link" href="{{site.baseurl}}/{{ p.url }}">
-            {{p.page-name}}
-        </a>
-        {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
 <div class="nyheterGrid">
-    
-    {% assign currentSize = 4 %}
-    {% assign psize = sorted-pages | size %}
 
+    <!-- {% assign psize = site.posts | size%}
+    {% assign currentSize = 3 %} -->
     {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
-    {% for post in sorted-posts limit:currentSize %}
-    <a href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem;">
-            <div class="newsBox">
-                <div class="innerNewsBox">
-                    <div style="padding: 0; margin: 0;">
-                        <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
-                        </div>
-                        <h2>
-                            {{post.title}}
-                        </h2>
-                        <p style="font-size: 1.5rem;">
-                            {{post.description}}
-                        </p>
+    {% for post in sorted-posts %}
+    <a id="linkDark" href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem; text-transform: none;">
+        <div class="newsBox">
+            <div class="innerNewsBox">
+                <div style="padding: 0; margin: 0;">
+                    <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
                     </div>
+                    <h2>
+                        {{post.title}}
+                    </h2>
+                    <p style="color: #101a31; font-size: 1rem; font-style: italic;">{{post.date | date:"%d.%m.%Y"}}</p>
                 </div>
             </div>
-        </a>
+        </div>
+    </a>
     {% endfor %}
 
-    {% if psize > currentSize %}
-    <button>Vis mer</button>
-    {% endif %}
+    <!--{% if psize > currentSize %}
+    <button>
+        VIS MER {{currentSize}}        
+    </button>
+    {% endif %} -->
+
 </div>
