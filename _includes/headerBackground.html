@@ -14,11 +14,11 @@
             {% assign sorted-links = site.html_pages | where:"categories","include" %}
             {% for p in sorted-links %}
             {% if page.url == p.url %}
-            <a class="active" id="linkLight" href="{{ p.url }}">
+            <a class="active" id="linkLight" href="{{site.baseurl}}/{{ p.url }}">
                 {{p.page-name}}
             </a>
             {% else %}
-            <a id="linkLight" href="{{ p.url }}">
+            <a id="linkLight" href="{{site.baseurl}}/{{ p.url }}">
                 {{p.page-name}}
             </a>
             {% endif %}
