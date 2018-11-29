@@ -14,64 +14,56 @@ body
 }
 
 .kontaktGrid
-{
-    grid-area: get;
-    display: flex;
-    align-content: flex-start;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;    
+{    
     padding: 5rem 0 5rem 0; 
+
+    display: grid;
+    grid-template-rows: repeat(auto, 3);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'skole konsulent'
+                         'e i'
+                         'eD iD';
 }
-img
+.eskil
 {
-    border-radius: 10px;
+    grid-area: e;
+    margin: auto;
+    margin-top: 5rem;
 }
-.get
+.eskil img
 {
-    grid-area: get;
-    display: flex;
-    align-content: flex-start;
-    align-items: baseline;
-    justify-content: center;
-    flex-direction: row; 
-    margin: 0 5rem 5rem 5rem;    
-    border-bottom: #101a31 solid 2px;
+    width: 15rem;
 }
-.get div
+.eD
 {
-    margin: 2rem;
-    width: fit-content;    
+    grid-area: eD;
+    margin: auto;
 }
-.get p
+.ida
 {
-    font-size: 1.3rem;
+    grid-area: i;
+    margin: auto;
+    margin-top: 5rem;
 }
-.get h1
+.ida img
 {
+    width: 15rem;
+    overflow: hidden;
+}
+.iD
+{
+    grid-area: iD;
+    margin: auto;
+}
+.skole
+{
+    grid-area: skole;
+    margin: auto;
     text-align: center;
-    font-size: 3.5rem;
 }
 .konsulent
 {
     grid-area: konsulent;
-    display: flex;
-    align-content: flex-start;
-    align-items: baseline;
-    justify-content: center;
-    flex-direction: row; 
-    margin: 5rem 5rem 5rem 5rem;
-}
-.konsulent div
-{
-    margin: 2rem;
-    width: 16.7rem;
-}
-.konsulent p
-{    
-    font-size: 1.3rem;
-}
-.konsulent img 
-{
-    width: 100%;
+    margin: auto;
+    text-align: center;
 }

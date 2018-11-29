@@ -8,10 +8,9 @@ layout: default
 
 <div class="postPage">
     <div class="postContent">
-        <a id="linkDark" style="color: #101a31" onclick="window.history.back()">Tilbake</a>
+        <p>{{ content }}</p>
         <p style="font-size: 1.2rem; color: #ff8400; font-style: italic;">
             {{page.date | date:"%d-%m-%Y"}}
         </p>
-        <p>{{ content }}</p>
     </div>
 </div>

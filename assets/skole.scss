@@ -19,6 +19,7 @@
 .textLeft
 {
     margin: 5rem 2rem 5rem 10rem;
+    text-align: right;
     grid-area: textLeft;
     display: flex;
     flex-direction: column;
@@ -45,6 +46,7 @@
 {
     margin: 5rem 2rem 5rem 10rem;
     grid-area: textLeft1;
+    text-align: right;
     display: flex;
     flex-direction: column;
 }
@@ -88,7 +90,7 @@
     grid-area: imageLeft;
     display: flex;
     align-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 5rem 2rem 5rem 10rem;
 }
 .textRight1
@@ -113,7 +115,7 @@
     grid-area: imageLeft1;
     display: flex;
     align-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 5rem 2rem 5rem 10rem;
 }
 .longBox
@@ -131,9 +133,9 @@
     padding: 15rem 10rem 15rem 10rem;
     grid-area: longBox1;
     font-size: 3rem;
-    color: #ffca92;
+    color: #101a31;
     display: flex;
-    background-color: #b4722b;
+    background-color: #a3a3a3;
     text-align: center;
 }
 .samarbeidsPartnere
@@ -144,7 +146,7 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    margin: 5rem 0 5rem 0;
+    margin: 5rem 10rem 5rem 10rem;
 }
 .samarbeidsPartnere h1
 {

@@ -25,4 +25,34 @@
 .main
 {
     margin: auto;
+    padding: 0 10rem 0 10rem;
+    border-left: #b3b3b3 solid 1px;
+    border-right: #b3b3b3 solid 1px;
+}
+.ansatte
+{
+    border-left: #b3b3b3 solid 1px;
+    border-right: #b3b3b3 solid 1px;
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ansatte h2
+{
+    text-align: center;
+}
+.ansatte div
+{
+    width: 15rem;
+    margin: 2rem;
+}
+.ansatte div img
+{
+    width: 15rem;
+}
+h1
+{
+    text-align: center;
 }

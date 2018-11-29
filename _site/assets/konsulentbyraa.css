@@ -77,12 +77,12 @@
   width: 25rem;
   height: 15rem;
   background-size: cover;
-  background-color: #ff8400;
-  background-blend-mode: multiply; }
+  filter: contrast(80%);
+  transition: filter 1500ms linear; }
 
 .prosjektBox:hover .prosjektImage {
-  background-color: #fff;
-  background-blend-mode: normal; }
+  filter: contrast(120%);
+  transition: filter 1500ms linear; }
 
 .innerProsjektBox h2 {
   margin: 1rem 0 0 0; }

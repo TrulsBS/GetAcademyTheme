@@ -97,11 +97,11 @@
 }
 .textLeft
 {
-    margin: 5rem;
-    margin-left: 10rem;
+    margin: 5rem 2rem 5rem 10rem;
     grid-area: textLeft;
     display: flex;
     flex-direction: column;
+    text-align: right;
     //background-color: #101a31;    
 }
 .textLeft p
@@ -120,8 +120,7 @@
     display: flex;
     align-content: center;
     align-items: center;
-    margin: 5rem;
-    margin-right: 10rem;
+    margin: 5rem 10rem 5rem 2rem;
 }
 
 .skole
@@ -131,8 +130,6 @@
     // padding-top: 12rem;
     // padding-bottom: 12rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
     grid-area: skole;
     background-color: #101a31;
 }
@@ -146,6 +143,14 @@
     grid-area: konsulent;
     background-color: #101a31;
 }
+.skole:hover a span
+{
+    font-size: 55px;
+}
+.konsulent:hover a span
+{
+    font-size: 55px;
+}
 .longBox
 {
     padding: 15rem 10rem 15rem 10rem;
@@ -157,12 +162,13 @@
     display: flex;
     background-color: #101a31;
     font-style: italic;
-    font-family: serif;
+    font-family: serif;    
 }
+
 .besøk
 {
     grid-area: besøk;
-    background-color: #c0ae8d;
+    background-color: #a3a3a3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,13 +250,15 @@
     overflow: hidden;
     width: 100%;
     height: 12rem;
-    background-color: #ff8400;
-    background-blend-mode: multiply;
+    filter: contrast(80%);
+    //background-blend-mode: multiply;
+    transition: filter 1000ms linear;
 }
 .newsBox:hover .newsImage
-{
-    background-color: #fff;
-    background-blend-mode: normal;
+{    
+    transition: filter 1000ms linear;
+    filter: contrast(120%);
+    // background-color: #fff;
 }
 .innerNewsBox div
 {

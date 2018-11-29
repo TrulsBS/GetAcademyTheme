@@ -15,7 +15,7 @@ body
     align-items: center;  
     justify-content: center; 
     background-color: #ffffff; 
-    padding: 0 10rem 0 10rem;
+    padding: 5rem 15rem 5rem 15rem;    
 }
 .postContent
 {
@@ -29,8 +29,10 @@ body
     align-items: center;
     justify-content: center;
     flex-direction: column; 
-    padding: 5rem 10rem 5rem 10rem;
+    padding: 0 10rem 0 10rem;
     overflow-wrap: normal;
+    // border-left: #b3b3b3 solid 1px;
+    // border-right: #b3b3b3 solid 1px;
 }
 .postContent p
 {
