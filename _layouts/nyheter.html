@@ -12,11 +12,11 @@ layout: default
     {% assign currentSize = 3 %} -->
     {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
     {% for post in sorted-posts %}
-    <a id="linkDark" href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem; text-transform: none;">
+    <a id="linkDark" href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem; text-transform: none;">
         <div class="newsBox">
             <div class="innerNewsBox">
                 <div style="padding: 0; margin: 0;">
-                    <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
+                    <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
                     </div>
                     <h2>
                         {{post.title}}
