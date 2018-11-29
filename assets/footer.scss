@@ -11,9 +11,10 @@
 }
 #rightFooter
 {
-    width: 100%;
     margin: 5rem 10rem 0 0;
     text-align: right;
+    display: flex;
+    flex-direction: column;    
 }
 div.footer
 {
@@ -48,6 +49,7 @@ a#linkLight{
     position: relative;
     text-decoration: none;
     color: #fff;
+    margin: 1rem;
   
      &:before,
       &:after {
