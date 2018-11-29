@@ -44,11 +44,11 @@ layout: default
         <div class="prosjekterContainer">
             {% assign sorted-posts = site.posts | where:"categories","prosjekter" %}
             {% for post in sorted-posts limit:currentSize %}
-            <a id="link" href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem;">
+            <a id="link" href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem;">
                 <div class="prosjektBox">
                     <div class="innerProsjektBox">
                         <div style="padding: 0; margin: 0;">
-                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}{{post.image}});">
+                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
                             </div>
                             <h2>
                                 {{post.title}}
