@@ -10,6 +10,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     padding: 5rem 15rem 5rem 15rem;
 }
 .aboutPage a
@@ -26,18 +27,19 @@
 {
     margin: auto;
     padding: 0 10rem 0 10rem;
-    border-left: #b3b3b3 solid 1px;
-    border-right: #b3b3b3 solid 1px;
+    // border-left: #b3b3b3 solid 1px;
+    // border-right: #b3b3b3 solid 1px;
 }
 .ansatte
 {
-    border-left: #b3b3b3 solid 1px;
-    border-right: #b3b3b3 solid 1px;
+    // border-left: #b3b3b3 solid 1px;
+    // border-right: #b3b3b3 solid 1px;
     display: flex;
     align-content: center;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto;
 }
 .ansatte h2
 {
