@@ -1,8 +1,0 @@
----
-layout: post
-title:  Visjoner
-date:   2018-11-15 09:22:23 +0100
-description: "Noe om skolens visjoner kanskje?"
-image: assets/images/stock.jpg
-categories: other
----
