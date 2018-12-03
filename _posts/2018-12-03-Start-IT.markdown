@@ -1,0 +1,25 @@
+---
+layout: post
+header: noBackground
+categories: skole
+sok: notIncluded
+description: "Start IT er første trinn i vår utdanning. Du får en introduksjon til IT-utvikling og en avklaring av om det er greia for deg - på fire måneder
+Neste oppstart i februar 2019."
+
+title:  Start IT
+date:   2018-12-03 09:22:23 +0100
+image: assets/images/stock.jpg
+---
+
+# Start IT
+ Start IT er trinn 1 til utdanningen. Deltakerne får en introduksjon til  IT-utvikling og 21st century skills. Målet er å finne ut om IT-utvikling passer for deg, samtidig som de utvikler kompetanser som er etterspurt i alle yrker og i livet generelt. 
+
+Start IT passer for deltakere som er over gjennomsnittlig interessert i data, gaming, apper eller programmering eller bare det å skape.
+
+Varighet: 4 måneder / Pris 38 000,- /
+​Vi tilbyr studiefinansiering gjennom Svea finans - ta kontakt for mer info.  Se kontaktsiden for adresser. 
+  
+## Meld interesse her for Start IT [her!]({{site.baseurl}}/sok.html)
+
+
+<iframe class="scribd_iframe_embed" title="studiebeskrivelse for web - start it" src="https://www.scribd.com/embeds/386413960/content?start_page=1&view_mode=scroll&show_recommendations=true&access_key=key-8HKH6m5phQswmFGp20Ms" data-auto-height="true" data-aspect-ratio="null" scrolling="no" width="100%" height="600" frameborder="0"></iframe>

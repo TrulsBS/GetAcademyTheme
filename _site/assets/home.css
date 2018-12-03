@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
 .homePageGrid {
   display: grid;
-  grid-template-rows: repeat(auto, 4);
+  grid-template-rows: repeat(auto, 5);
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'textLeft imageRight' 'skole konsulent' 'longBox longBox' 'news news' 'besøk besøk'; }
 
@@ -64,11 +64,13 @@
   grid-area: konsulent;
   background-color: #101a31; }
 
-.skole:hover a span {
-  font-size: 55px; }
+.skole:hover {
+  background: #0c1324;
+  transition: background-color .2s linear; }
 
-.konsulent:hover a span {
-  font-size: 55px; }
+.konsulent:hover {
+  background: #0c1324;
+  transition: background-color .2s linear; }
 
 .longBox {
   padding: 15rem 10rem 15rem 10rem;
@@ -98,7 +100,7 @@
   text-align: center; }
 
 .news {
-  margin: 5rem 5rem 5rem 5rem;
+  margin: 7rem 5rem 7rem 5rem;
   grid-area: news;
   display: flex;
   flex-direction: column; }

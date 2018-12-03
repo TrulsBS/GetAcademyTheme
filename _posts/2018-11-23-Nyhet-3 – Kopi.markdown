@@ -1,0 +1,30 @@
+---
+layout: post
+title:  En ny nyhet
+date:   2018-11-27 09:22:23 +0100
+description: "Noe beskrivende om nyheten som sier noe som folk som er interressert i denne nyheten burde vite."
+image: assets/images/programmer.jpg
+topImage: assets/images/programmer.jpg
+categories: nyheter
+header: background
+sok: notIncluded
+---
+
+# *Title*  
+  
+![programmer]({{site.baseurl}}/assets/images/programmer.jpg)
+  
+Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret, mei ut viris blandit sadipscing. Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet. Eos ad eligendi complectitur, vix ex eirmod virtute sententiae. Ut qui probo appellantur voluptatibus, ius quas iusto persecuti id. Partem vidisse contentiones qui no, possim laoreet delicata mei te. Sanctus adipiscing mea ad, est te reque noster molestie.
+
+![office]({{site.baseurl}}/assets/images/office.jpg)  
+  
+Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret, mei ut viris blandit sadipscing. Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet. Eos ad eligendi complectitur, vix ex eirmod virtute sententiae. Ut qui probo appellantur voluptatibus, ius quas iusto persecuti id. Partem vidisse contentiones qui no, possim laoreet delicata mei te. Sanctus adipiscing mea ad, est te reque noster molestie.  
+Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret, mei ut viris blandit sadipscing. Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet. Eos ad eligendi complectitur, vix ex eirmod virtute sententiae. Ut qui probo appellantur voluptatibus, ius quas iusto persecuti id. Partem vidisse contentiones qui no, possim laoreet delicata mei te. Sanctus adipiscing mea ad, est te reque noster molestie.  
+  
+  ## Another Title? I guess not 
+    
+  Lorem ipsum dolor sit amet, *vix ne graeci* __postulant__ elaboraret, _mei_ ut viris blandit sadipscing. Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet. Eos ad eligendi complectitur, vix ex eirmod virtute sententiae. Ut qui probo appellantur voluptatibus, ius quas iusto persecuti id. Partem vidisse contentiones qui no, possim laoreet delicata mei te. Sanctus adipiscing mea ad, est te reque noster molestie.  
+    
+  ![office]({{site.baseurl}}/assets/images/office.jpg#right)  
+  
+

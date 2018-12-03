@@ -53,8 +53,63 @@
 .ansatte div img
 {
     width: 15rem;
+    height: 17rem;
 }
 h1
 {
     text-align: center;
+}
+
+
+a#linkOrange
+{
+    color: #ff8400;
+}
+
+.active#linkOrange
+{
+    text-decoration: underline;
+}
+
+$duration: .2s;
+$distance: 20px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);
+
+a#linkOrange{
+  position: relative;
+  text-decoration: none;
+
+   &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: #ff8400;
+    }
+    &:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+        opacity: 0;
+        transform: translateY($distance/1);
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+        &:before,
+        &:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+            transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+    }
 }

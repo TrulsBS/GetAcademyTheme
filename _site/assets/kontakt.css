@@ -16,19 +16,22 @@ body {
 .eskil {
   grid-area: e;
   margin: auto;
-  margin-top: 5rem; }
+  margin-top: 2rem;
+  margin-right: 10rem; }
 
 .eskil img {
   width: 15rem; }
 
 .eD {
   grid-area: eD;
-  margin: auto; }
+  margin: auto;
+  margin-right: 10rem; }
 
 .ida {
   grid-area: i;
   margin: auto;
-  margin-top: 5rem; }
+  margin-top: 2rem;
+  margin-left: 10rem; }
 
 .ida img {
   width: 15rem;
@@ -36,14 +39,17 @@ body {
 
 .iD {
   grid-area: iD;
-  margin: auto; }
+  margin: auto;
+  margin-left: 10rem; }
 
 .skole {
   grid-area: skole;
   margin: auto;
+  margin-right: 10rem;
   text-align: center; }
 
 .konsulent {
   grid-area: konsulent;
   margin: auto;
-  text-align: center; }
+  text-align: center;
+  margin-left: 10rem; }

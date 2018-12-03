@@ -41,15 +41,26 @@ div.footer
     margin: 0;
 }
 
+.fb
+{
+    width: 3rem; 
+    margin-top: 2rem;
+}
+.fb:hover
+{
+    filter: brightness(150%);
+}
+
 $duration: .2s;
 $distance: 20px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);
 
-a#linkLight{
+a#linkLight1{
     position: relative;
     text-decoration: none;
     color: #fff;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   
      &:before,
       &:after {

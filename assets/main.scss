@@ -16,18 +16,12 @@ body
 div.page
 {
     height: 100vh;
-    display: grid;    
+    display: grid;
     grid-template-columns: 6fr;
     grid-template-areas: 'header'
                          'mainContent'
                          'footer';
 }
-
-div.mainContent
-{
-    grid-area: mainContent;
-}
-
 $duration: .2s;
 $distance: 20px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);

@@ -4,6 +4,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   padding: 5rem 15rem 5rem 15rem; }
 
 .aboutPage a {
@@ -16,18 +17,15 @@
 
 .main {
   margin: auto;
-  padding: 0 10rem 0 10rem;
-  border-left: #b3b3b3 solid 1px;
-  border-right: #b3b3b3 solid 1px; }
+  padding: 0 10rem 0 10rem; }
 
 .ansatte {
-  border-left: #b3b3b3 solid 1px;
-  border-right: #b3b3b3 solid 1px;
   display: flex;
   align-content: center;
   align-items: flex-start;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: auto; }
 
 .ansatte h2 {
   text-align: center; }
@@ -37,7 +35,41 @@
   margin: 2rem; }
 
 .ansatte div img {
-  width: 15rem; }
+  width: 15rem;
+  height: 17rem; }
 
 h1 {
   text-align: center; }
+
+a#linkOrange {
+  color: #ff8400; }
+
+.active#linkOrange {
+  text-decoration: underline; }
+
+a#linkOrange {
+  position: relative;
+  text-decoration: none; }
+  a#linkOrange:before, a#linkOrange:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff8400; }
+  a#linkOrange:before {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
+  a#linkOrange:after {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+  a#linkOrange:hover:before, a#linkOrange:hover:after, a#linkOrange:focus:before, a#linkOrange:focus:after {
+    opacity: 1;
+    transform: translateY(0); }
+  a#linkOrange:hover:before, a#linkOrange:focus:before {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+  a#linkOrange:hover:after, a#linkOrange:focus:after {
+    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }

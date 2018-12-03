@@ -4,9 +4,10 @@
   text-align: left; }
 
 #rightFooter {
-  width: 100%;
   margin: 5rem 10rem 0 0;
-  text-align: right; }
+  text-align: right;
+  display: flex;
+  flex-direction: column; }
 
 div.footer {
   grid-area: footer;
@@ -28,11 +29,20 @@ div.footer {
 #leftFooter p {
   margin: 0; }
 
-a#linkLight {
+.fb {
+  width: 3rem;
+  margin-top: 2rem; }
+
+.fb:hover {
+  filter: brightness(150%); }
+
+a#linkLight1 {
   position: relative;
   text-decoration: none;
-  color: #fff; }
-  a#linkLight:before, a#linkLight:after {
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  a#linkLight1:before, a#linkLight1:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -40,18 +50,18 @@ a#linkLight {
     right: 0;
     height: 2px;
     background-color: #fff; }
-  a#linkLight:before {
+  a#linkLight1:before {
     opacity: 0;
     transform: translateY(-20px);
     transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
-  a#linkLight:after {
+  a#linkLight1:after {
     opacity: 0;
     transform: translateY(20px);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
-  a#linkLight:hover:before, a#linkLight:hover:after, a#linkLight:focus:before, a#linkLight:focus:after {
+  a#linkLight1:hover:before, a#linkLight1:hover:after, a#linkLight1:focus:before, a#linkLight1:focus:after {
     opacity: 1;
     transform: translateY(0); }
-  a#linkLight:hover:before, a#linkLight:focus:before {
+  a#linkLight1:hover:before, a#linkLight1:focus:before {
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
-  a#linkLight:hover:after, a#linkLight:focus:after {
+  a#linkLight1:hover:after, a#linkLight1:focus:after {
     transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }

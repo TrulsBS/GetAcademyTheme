@@ -3,6 +3,12 @@
 
 @charset "UTF-8";
 
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
 div.header
 {
     user-select: none;
@@ -47,10 +53,10 @@ div.tint
 {
     // align-self: flex-end; 
     display: flex;
-    align-content: flex-end;
     flex-direction: column;
     text-align: center; 
     color: white;
+    margin: auto;
     font-size: 2rem;
     width: 100%; 
 }
@@ -61,15 +67,7 @@ div.logo
     flex-grow: 1;
     margin: 0 0 2rem 0;
 }
-.links
-{
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    align-content: stretch;
-    flex-direction: row;
-}
+
 @media  only screen and (max-width: 800px)
 {
     div.header
@@ -98,11 +96,21 @@ div.logo
         display: none;
     }
 }
+
+.links
+{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: stretch;
+    flex-direction: row;
+}
 a#linkLight
 {
-    color: white;
+    color: #ffffff;
     font-size: 1.2rem;
-    margin: 2rem;    
+    margin: 2rem;
     text-transform: uppercase;
 }
 
@@ -110,7 +118,6 @@ a#linkLight
 {
     text-decoration: underline;
 }
-
 
 $duration: .2s;
 $distance: 20px;
@@ -127,7 +134,7 @@ a#linkLight{
         bottom: 0;
         left: 0; right: 0;
         height: 2px;
-        background-color: #fff;
+        background-color: #ffffff;
     }
     &:before {
         opacity: 0;

@@ -3,6 +3,11 @@
 
 @charset "UTF-8";
 
+body
+{
+    margin: 0;
+    padding: 0;
+}
 div.header
 {
     user-select: none;
@@ -13,6 +18,12 @@ div.header
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+div.logo
+{
+    z-index: 2;
+    flex-grow: 1;
+    margin: 0 0 2rem 0;
 }
 .links
 {
@@ -35,7 +46,6 @@ a#linkDark
 {
     text-decoration: underline;
 }
-
 
 $duration: .2s;
 $distance: 20px;
@@ -78,10 +88,4 @@ a#linkDark{
             transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
         }
     }
-}
-div.logo
-{
-    z-index: 2;
-    flex-grow: 1;
-    margin: 0 0 2rem 0;
 }

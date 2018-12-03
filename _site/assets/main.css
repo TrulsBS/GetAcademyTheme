@@ -12,9 +12,6 @@ div.page {
   grid-template-columns: 6fr;
   grid-template-areas: 'header' 'mainContent' 'footer'; }
 
-div.mainContent {
-  grid-area: mainContent; }
-
 a#linkDark {
   position: relative;
   text-decoration: none;

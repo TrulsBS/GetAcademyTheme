@@ -11,7 +11,7 @@
     padding: 5rem 0 0 0;
 }
 
-.nyheter
+.tjenester
 {
     //background-color: #d3ae7d;
     display: flex;
@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     margin: 0 10rem 0 10rem;
 }
-.nyheter div
+.tjenester div
 {
     padding: 1rem;
     width: 15rem;
@@ -31,20 +31,44 @@
     align-items: center;
     margin: 3rem;
 }
-.nyheter h2
+.tjenester h2
 {
     margin: 0;
 }
 
-.nyheter p
+.tjenester p
 {
     text-align: center;
 }
 
 .empty
+{    
+    margin: auto;
+    margin-bottom: 10rem;
+    padding: 0 10rem 0 10rem;
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    // background-image: url("images/desk.jpeg");
+    // overflow: hidden;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-position: center;
+}
+.empty h4
 {
-    //background-color: #bd7e2d;
-    height: 5rem;
+    padding: 0 10rem 0 10rem;
+    margin: 5rem 0 0 0;
+}
+.empty p
+{
+    padding: 0 10rem 0 10rem;
+    margin: 1rem 0 0 0;
+}
+.empty img
+{
+    margin: 2rem 0 2rem 0;
+    width: fit-content;
 }
 
 .prosjekter
@@ -76,17 +100,17 @@
 }
 .textbox
 {
-    background-color: #a07e51;
+    background-color: #a3a3a3;
     display: flex;
     //padding: 6rem;
     font-size: 3rem;
-    color: white;
+    color: #101a31;
     margin: 5rem 0 0 0;
 }
 .textbox p
 {
     margin: auto;
-    padding: 10rem 0 10rem 0;
+    padding: 15rem 0 15rem 0;
 }
 
 .prosjektBox

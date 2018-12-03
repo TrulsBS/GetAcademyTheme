@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0; }
+
 div.header {
   user-select: none;
   grid-area: header;
@@ -7,6 +11,11 @@ div.header {
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between; }
+
+div.logo {
+  z-index: 2;
+  flex-grow: 1;
+  margin: 0 0 2rem 0; }
 
 .links {
   margin: 2rem;
@@ -51,8 +60,3 @@ a#linkDark {
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
   a#linkDark:hover:after, a#linkDark:focus:after {
     transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }
-
-div.logo {
-  z-index: 2;
-  flex-grow: 1;
-  margin: 0 0 2rem 0; }
