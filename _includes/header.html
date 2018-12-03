@@ -1,6 +1,7 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/header.css">    
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/header.css">
 </head>
+
 
 <div id="header" class="header">
     <div class="logo">
@@ -12,11 +13,11 @@
         {% assign sorted-links = site.html_pages | where:"categories","include" %}
         {% for p in sorted-links %}
         {% if page.url == p.url %}
-        <a class="active" id="linkDark" href="{{site.baseurl}}/{{ p.url }}">
+        <a class="active" id="linkDark" href="{{site.baseurl}}{{ p.url }}">
             {{p.page-name}}
         </a>
         {% else %}
-        <a id="linkDark" href="{{site.baseurl}}/{{ p.url }}">
+        <a id="linkDark" href="{{site.baseurl}}{{ p.url }}">
             {{p.page-name}}
         </a>
         {% endif %}

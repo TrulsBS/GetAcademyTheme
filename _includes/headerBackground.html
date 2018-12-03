@@ -14,17 +14,18 @@
             {% assign sorted-links = site.html_pages | where:"categories","include" %}
             {% for p in sorted-links %}
             {% if page.url == p.url %}
-            <a class="active" id="linkLight" href="{{site.baseurl}}/{{ p.url }}">
+            <a class="active" id="linkLight" href="{{site.baseurl}}{{ p.url }}">
                 {{p.page-name}}
             </a>
             {% else %}
-            <a id="linkLight" href="{{site.baseurl}}/{{ p.url }}">
+            <a id="linkLight" href="{{site.baseurl}}{{ p.url }}">
                 {{p.page-name}}
             </a>
             {% endif %}
             {% endfor %}
         </div>
         <div class="headerInfo">
+            <h1>{{page.title}}</h1>
             {% if page.sok == "include" %}
             <a class="linkLight" href="{{site.baseurl}}/sok.html" style="text-decoration: none; margin: auto;">
                 <div class="Søk" class="linkLight">
@@ -32,7 +33,6 @@
                 </div>
             </a>
             {% endif %}
-            <h1>{{page.title}}</h1>
         </div>
     </div>
 </div>
