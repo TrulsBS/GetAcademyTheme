@@ -8,35 +8,30 @@ layout: default
 
 <div class="grid">
 
-    <div class="nyheter">
+    <h1 style="margin: auto;">Vi leverer digitale tjenester</h1>
+    <div class="tjenester">
         <div>
-            <h2>Jeg</h2>
+            <h2>Utvikling</h2>
             <p>
-                Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret,
-                mei ut viris blandit sadipscing.
-                Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet.
+                Systemutvikling, integrasjon, systemarkitektur og prosjektledelse
             </p>
         </div>
         <div>
-            <h2>vet</h2>
+            <h2>UX-design</h2>
             <p>
-                Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret,
-                mei ut viris blandit sadipscing.
-                Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet.
+                Konseptutvikling, interaksjonsdesign og tjenestedesign
             </p>
         </div>
         <div>
-            <h2>ikke hva som skal være her</h2>
+            <h2>Rådgiving</h2>
             <p>
-                Lorem ipsum dolor sit amet, vix ne graeci postulant elaboraret,
-                mei ut viris blandit sadipscing.
-                Ne pro hinc evertitur deseruisse, ad usu incorrupte dissentiet.
+                Foredrag, workshops, rådgiving i valg av teknisk plattform og løsninger
             </p>
         </div>
     </div>
 
     <div class="empty">
-
+        {{content}}
     </div>
 
     <div class="prosjekter">
@@ -44,11 +39,11 @@ layout: default
         <div class="prosjekterContainer">
             {% assign sorted-posts = site.posts | where:"categories","prosjekter" %}
             {% for post in sorted-posts limit:currentSize %}
-            <a id="link" href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem;">
+            <a id="link" href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem;">
                 <div class="prosjektBox">
                     <div class="innerProsjektBox">
                         <div style="padding: 0; margin: 0;">
-                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
+                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}{{post.image}});">
                             </div>
                             <h2>
                                 {{post.title}}
@@ -65,7 +60,7 @@ layout: default
     </div>
 
     <div class="textbox">
-        <p>Lorem ipsum and some stuff about that</p>
+        <p>En quote eller noe tekst her</p>
     </div>
 
 </div>
