@@ -20,7 +20,10 @@
 {
     margin: 5rem 2rem 5rem 10rem;
     text-align: right;
-    grid-area: textLeft;
+    grid-area: textLeft;    
+}
+.textLeft div
+{
     display: flex;
     flex-direction: column;
 }
@@ -31,8 +34,10 @@
 }
 .textLeft h2
 {
+    text-align: right;
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;    
+    align-self: flex-end;
 }
 .imageRight
 {
@@ -47,6 +52,9 @@
     margin: 5rem 2rem 5rem 10rem;
     grid-area: textLeft1;
     text-align: right;
+}
+.textLeft1 div
+{
     display: flex;
     flex-direction: column;
 }
@@ -57,8 +65,11 @@
 }
 .textLeft1 h2
 {
+    text-align: center;
     margin: 0;
     margin-bottom: 2rem;
+    align-self: flex-end;
+    
 }
 .imageRight1
 {
@@ -72,6 +83,9 @@
 {
     margin: 5rem 10rem 5rem 2rem;
     grid-area: textRight;
+}
+.textRight div
+{
     display: flex;
     flex-direction: column;
 }
@@ -82,8 +96,10 @@
 }
 .textRight h2
 {
+    
     margin: 0;
     margin-bottom: 2rem;
+    align-self: flex-start;
 }
 .imageLeft
 {
@@ -97,6 +113,9 @@
 {
     margin: 5rem 10rem 5rem 2rem;
     grid-area: textRight1;
+}
+.textRight1 div
+{    
     display: flex;
     flex-direction: column;
 }
@@ -107,8 +126,10 @@
 }
 .textRight1 h2
 {
+    text-align: center;
     margin: 0;
     margin-bottom: 2rem;
+    align-self: flex-start;
 }
 .imageLeft1
 {
@@ -153,7 +174,7 @@
 }
 .samarbeidsPartnere h1
 {
-    font-size: 4rem;    
+    font-size: 4rem;
 }
 .partnere
 {   
@@ -167,11 +188,13 @@
 {
     width: 10rem;
     margin: 1rem;
-    animation: .2s ease-in-out;
+    filter: grayscale(100%);
+    transition: filter 200ms linear;
 }
 .partnere img:hover
 {
-    transform: scale(1.05, 1.05);
+    filter: grayscale(0%);
+    // transform: scale(1.05, 1.05);
 }
 .row5
 {

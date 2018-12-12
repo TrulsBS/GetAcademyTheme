@@ -3,24 +3,36 @@
 
 @charset "UTF-8";
 
+#leftFooter
+{
+    width: 25%;
+    margin: 5rem 0 0 10rem;    
+    text-align: left;    
+}
 #middleFooter
 {
-    width: 100%;   
-    margin: 5rem 0 0 10rem;
-    text-align: left;   
+    width: 25%;   
+    margin: 5rem 0 0 0;
+    text-align: left;
 }
 #rightFooter
 {
-    margin: 5rem 10rem 0 0;
+    margin: 5rem 10rem 0 10rem;
     text-align: right;
     display: flex;
+    width: 20%;
     flex-direction: column;    
 }
+#rightFooter a
+{
+    align-self: flex-start;
+}
+
 div.footer
 {
     grid-area: footer;
     height: 35rem;
-    // text-align: center;    
+    // text-align: center;
     font-size: 1.2rem;
     color: #a3a3a3;
     background-color: #101a31;
@@ -29,16 +41,6 @@ div.footer
     align-content: flex-start;
     justify-content: space-evenly;
     padding: 1rem;
-}
-#leftFooter
-{
-    width: 100%;   
-    margin: 5rem 0 0 10rem;
-    text-align: left;    
-}
-#leftFooter p
-{
-    margin: 0;
 }
 
 .fb

@@ -22,13 +22,19 @@ div.page
                          'mainContent'
                          'footer';
 }
+
+#linkDark
+{
+    text-decoration: none;
+}
+
 $duration: .2s;
 $distance: 20px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);
 
-a#linkDark{
-    position: relative;
-    text-decoration: none;
+a#linkDark h2
+{
+    position: relative;    
     color: #101a31;
   
      &:before,
@@ -50,18 +56,18 @@ a#linkDark{
           transform: translateY($distance/1);
           transition: transform $duration $easeOutBack, opacity $duration;
       }
-      &:hover,
-      &:focus {
-          &:before,
-          &:after {
-              opacity: 1;
-              transform: translateY(0);
-          }
-          &:before {
-              transition: transform $duration $easeOutBack, opacity $duration;
-          }
-          &:after {
-              transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-          }
+  }
+  #linkDark:hover h2,
+  #linkDark:focus h2{
+      &:before,
+      &:after {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
       }
   }
