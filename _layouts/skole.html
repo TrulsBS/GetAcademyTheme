@@ -11,32 +11,36 @@ layout: default
 
 <div class="skolePageGrid">
 
-    {% if sorted-news[0] %}
+    {% if sorted-news[2] %}
     <div class="textLeft">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[0].url}}">
+        <a id="linkDark" href="{{sorted-news[2].url}}">
             <div>
-                <h2>{{sorted-news[0].title}}</h2>
-                {{sorted-news[0].description}}
+                <h2>{{sorted-news[2].title}}</h2>
+                <p>{{sorted-news[2].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageRight">
-        <a href="{{site.baseurl}}/{{sorted-news[0].url}}"><img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[0].image}}" /></a>
+        <a href="{{sorted-news[2].url}}">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[2].image}}" />
+        </a>
     </div>
     {% endif %}
 
 
-    {% if sorted-news[1] %}
+    {% if sorted-news[3] %}
     <div class="textRight">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[1].url}}">
+        <a id="linkDark" href="{{sorted-news[3].url}}">
             <div>
-                <h2>{{sorted-news[1].title}}</h2>
-                {{sorted-news[1].description}}
+                <h2>{{sorted-news[3].title}}</h2>
+                <p>{{sorted-news[3].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageLeft">
-        <a href="{{site.baseurl}}/{{sorted-news[1].url}}"><img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[1].image}}" /></a>
+        <a href="{{sorted-news[3].url}}">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[3].image}}" />
+        </a>
     </div>
     {% endif %}
 
@@ -52,36 +56,42 @@ layout: default
         </h1>
         <div class="partnere">
             {% for partner in site.data.partnere %}
-            <a title="{{partner.name}}" href="{{partner.url}}"><img src="{{partner.imgUrl}}"></a>
+            <a title="{{partner.name}}" href="{{partner.url}}">
+                <img src="{{partner.imgUrl}}">
+            </a>
             {% endfor %}
         </div>
     </div>
 
-    {% if sorted-news[2] %}
+    {% if sorted-news[0] %}
     <div class="textLeft1">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[2].url}}">
+        <a id="linkDark" href="{{sorted-news[0].url}}">
             <div>
-                <h2>{{sorted-news[2].title}}</h2>
-                {{sorted-news[2].description}}
+                <h2>{{sorted-news[0].title}}</h2>
+                <p>{{sorted-news[0].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageRight1">
-        <a href="{{site.baseurl}}/{{sorted-news[2].url}}"><img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[2].image}}" /></a>
+        <a href="{{sorted-news[0].url}}">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[0].image}}" />
+        </a>
     </div>
     {% endif %}
 
-    {% if sorted-news[3] %}
+    {% if sorted-news[1] %}
     <div class="textRight1">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[3].url}}">
+        <a id="linkDark" href="{{sorted-news[1].url}}">
             <div>
-                <h2>{{sorted-news[3].title}}</h2>
-                {{sorted-news[3].description}}
+                <h2>{{sorted-news[1].title}}</h2>
+                <p>{{sorted-news[1].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageLeft1">
-        <a href="{{site.baseurl}}/{{sorted-news[3].url}}"><img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[3].image}}" /></a>
+        <a href="{{sorted-news[1].url}}">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-news[1].image}}" />
+        </a>
     </div>
     {% endif %}
 

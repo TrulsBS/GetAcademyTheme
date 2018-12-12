@@ -6,28 +6,31 @@ layout: default
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/nyheter.css">
 </head>
 
+<div style="display: flex;">
+    <h1 style="margin: auto; padding: 5rem 0 0 0;">Nytt fra GET Academy</h1>
+</div>
 <div class="nyheterGrid">
-
-    <!-- {% assign psize = site.posts | size%}
-    {% assign currentSize = 3 %} -->
-    {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
-    {% for post in sorted-posts %}
-    <a id="linkDark" href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem; text-transform: none;">
-        <div class="newsBox">
-            <div class="innerNewsBox">
-                <div style="padding: 0; margin: 0;">
-                    <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
+    <div style="margin: auto; flex-wrap: wrap; display: flex; padding: 5rem; max-width: 85rem;">
+        <!-- {% assign psize = site.posts | size%}
+        {% assign currentSize = 3 %} -->
+        {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
+        {% for post in sorted-posts %}
+        <a id="linkDark1" href="{{site.baseurl}}{{post.url}}" style="text-transform: none;">
+            <div class="newsBox">
+                <div class="innerNewsBox">
+                    <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
                     </div>
                     <h2>
                         {{post.title}}
                     </h2>
-                    <p style="color: #101a31; font-size: 1rem; font-style: italic;">{{post.date | date:"%d.%m.%Y"}}</p>
+                    <p style="color: #101a31; font-size: 1rem; font-style: italic;">
+                        {{post.date | date:"%d.%m.%Y"}}
+                    </p>
                 </div>
             </div>
-        </div>
-    </a>
-    {% endfor %}
-
+        </a>
+        {% endfor %}
+    </div>
     <!--{% if psize > currentSize %}
     <button>
         VIS MER {{currentSize}}        
