@@ -12,11 +12,13 @@ div.page {
   grid-template-columns: 6fr;
   grid-template-areas: 'header' 'mainContent' 'footer'; }
 
-a#linkDark {
+#linkDark {
+  text-decoration: none; }
+
+a#linkDark h2 {
   position: relative;
-  text-decoration: none;
   color: #101a31; }
-  a#linkDark:before, a#linkDark:after {
+  a#linkDark h2:before, a#linkDark h2:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -24,18 +26,23 @@ a#linkDark {
     right: 0;
     height: 2px;
     background-color: #101a31; }
-  a#linkDark:before {
+  a#linkDark h2:before {
     opacity: 0;
     transform: translateY(-20px);
     transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
-  a#linkDark:after {
+  a#linkDark h2:after {
     opacity: 0;
     transform: translateY(20px);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
-  a#linkDark:hover:before, a#linkDark:hover:after, a#linkDark:focus:before, a#linkDark:focus:after {
-    opacity: 1;
-    transform: translateY(0); }
-  a#linkDark:hover:before, a#linkDark:focus:before {
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
-  a#linkDark:hover:after, a#linkDark:focus:after {
-    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }
+
+#linkDark:hover h2:before, #linkDark:hover h2:after,
+#linkDark:focus h2:before,
+#linkDark:focus h2:after {
+  opacity: 1;
+  transform: translateY(0); }
+#linkDark:hover h2:before,
+#linkDark:focus h2:before {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+#linkDark:hover h2:after,
+#linkDark:focus h2:after {
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }

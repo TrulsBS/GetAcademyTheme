@@ -1,50 +1,38 @@
 .grid {
-  display: grid;
-  grid-template-rows: repeat(auto, 4);
-  grid-template-columns: 1fr;
-  padding: 5rem 0 0 0; }
+  padding: 5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; }
 
 .tjenester {
   display: flex;
   align-content: center;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 10rem 0 10rem; }
 
-.tjenester div {
-  padding: 1rem;
+.tjenesteBoks {
+  padding: 2rem;
+  height: 20rem;
   width: 15rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem; }
+  align-items: center; }
 
-.tjenester h2 {
+.tjenesteBoks h2 {
   margin: 0; }
 
-.tjenester p {
+.tjenesteBoks p {
   text-align: center; }
 
 .empty {
   margin: auto;
-  margin-bottom: 10rem;
-  padding: 0 10rem 0 10rem;
   display: flex;
+  width: 50rem;
   flex-direction: column; }
-
-.empty h4 {
-  padding: 0 10rem 0 10rem;
-  margin: 5rem 0 0 0; }
-
-.empty p {
-  padding: 0 10rem 0 10rem;
-  margin: 1rem 0 0 0; }
-
-.empty img {
-  margin: 2rem 0 2rem 0;
-  width: fit-content; }
 
 .prosjekter {
   display: flex;
@@ -52,6 +40,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column; }
+
+.prosjekter h1 {
+  margin: 10rem 0 0 0; }
 
 .prosjekter .prosjektBox {
   display: flex;
@@ -67,6 +58,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin: 0 0 2rem 0;
   padding: 0 5rem 0 5rem; }
 
 .textbox {
@@ -103,29 +95,45 @@
 .innerProsjektBox h2 {
   margin: 1rem 0 0 0; }
 
-a#link {
+.innerProsjektBox {
+  display: flex;
+  flex-direction: column; }
+
+#linkDark1 {
+  color: #101a31; }
+
+#linkDark1 h2 {
+  align-self: flex-start;
+  font-size: 2rem; }
+
+#linkDark1 h2 {
   position: relative;
   text-decoration: none; }
-  a#link:before, a#link:after {
+  #linkDark1 h2:before, #linkDark1 h2:after {
     content: '';
     position: absolute;
-    bottom: 2px;
+    bottom: -2;
     left: 0;
     right: 0;
     height: 2px;
     background-color: #101a31; }
-  a#link:before {
+  #linkDark1 h2:before {
     opacity: 0;
     transform: translateY(-20px);
     transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
-  a#link:after {
+  #linkDark1 h2:after {
     opacity: 0;
     transform: translateY(20px);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
-  a#link:hover:before, a#link:hover:after, a#link:focus:before, a#link:focus:after {
-    opacity: 1;
-    transform: translateY(0); }
-  a#link:hover:before, a#link:focus:before {
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
-  a#link:hover:after, a#link:focus:after {
-    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }
+
+#linkDark1:hover h2:before, #linkDark1:hover h2:after,
+#linkDark1:focus h2:before,
+#linkDark1:focus h2:after {
+  opacity: 1;
+  transform: translateY(0); }
+#linkDark1:hover h2:before,
+#linkDark1:focus h2:before {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
+#linkDark1:hover h2:after,
+#linkDark1:focus h2:after {
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }

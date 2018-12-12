@@ -25,7 +25,8 @@ body {
 .eD {
   grid-area: eD;
   margin: auto;
-  margin-right: 10rem; }
+  margin-right: 10rem;
+  text-align: right; }
 
 .ida {
   grid-area: i;

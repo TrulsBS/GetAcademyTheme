@@ -14,14 +14,14 @@ div.header {
   justify-content: space-between; }
 
 .søk {
-  background: #101a31;
+  background: #162342;
   width: 15rem;
   height: 5rem;
   margin: auto;
   display: flex; }
 
 .søk:hover {
-  background: linear-gradient(#1f3569, #101a31 40%); }
+  background: linear-gradient(#274281, #162342); }
 
 .søk p {
   margin: auto;
@@ -30,6 +30,7 @@ div.header {
 div.bgi {
   overflow: hidden;
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; }
 
@@ -49,7 +50,7 @@ div.tint {
 div.logo {
   z-index: 2;
   flex-grow: 1;
-  margin: 0 0 2rem 0; }
+  margin: 0 0 5rem 0; }
 
 @media only screen and (max-width: 800px) {
   div.header {
