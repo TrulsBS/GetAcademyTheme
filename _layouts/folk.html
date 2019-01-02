@@ -90,18 +90,19 @@ layout: default
                     <img style="height: 20rem;" src="{{site.baseurl}}/{{studenter[0].image}}" />
                 </a>
             </div>
-            {% assign samarbeid = site.posts | where:"title","Samarbeidspartnere" %}
+            <!-- {% assign samarbeid = site.posts | where:"title","Samarbeidspartnere" %} -->
             <div class="textLeft1">
-                <a id="linkDark" href="{{samarbeid[0].url}}">
+                <a id="linkDark" href="{{site.baseurl}}/3about.html#partnere">
                     <div>
-                        <h2>{{samarbeid[0].title}}</h2>
-                        <p>{{samarbeid[0].description}}</p>
+                        <h2>Samarbeidspartnere</h2>
+                        <p>Samarbeid er viktig for oss, samarbeid med næringsliv, offentlige, kunder og venner.
+                             Inviterer også ulike folk til gjesteforelesninger. Lyst til å samarbeide med oss?</p>
                     </div>
                 </a>
             </div>
             <div class="imageRight1">
-                <a href="{{samarbeid[0].url}}">
-                    <img style="height: 20rem;" src="{{site.baseurl}}/{{samarbeid[0].image}}" />
+                <a href="{{site.baseurl}}/3about.html#partnere">
+                    <img style="height: 20rem;" src="{{site.baseurl}}/assets/images/office.jpg" />
                 </a>
             </div>
         </div>
