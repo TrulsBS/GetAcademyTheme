@@ -6,56 +6,63 @@ layout: default
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/about.css">
 </head>
 
+<div style="display: flex;">
+        <h1 style="margin: auto; padding: 5rem 0 0 0;">Om oss</h1>
+    </div>
 <div class="aboutPage">
     <div class="main">
         {{content}}
     </div>
 
+    <div class="grid">
+        
+        {% assign organisert = site.posts | where:"title","Hvordan vi er organisert" %}
+            <div class="textLeft">
+                <a id="linkDark" href="{{organisert[0].url}}">
+                    <div>
+                        <h2>{{organisert[0].title}}</h2>
+                        <p>{{organisert[0].description}}</p>
+                    </div>
+                </a>
+            </div>
+            <div class="imageRight">
+                <a href="{{organisert[0].url}}">
+                    <img style="height: 20rem;" src="{{site.baseurl}}/{{organisert[0].image}}" />
+                </a>
+            </div>
+        {% assign verdier = site.posts | where:"title","Våre verdier" %}    
+            <div class="textRight">
+                <a id="linkDark" href="{{verdier[0].url}}">
+                    <div>
+                        <h2>{{verdier[0].title}}</h2>
+                        <p>{{verdier[0].description}}</p>
+                    </div>
+                </a>
+            </div>
+            <div class="imageLeft">
+                <a href="{{verdier[0].url}}">
+                    <img style="height: 20rem;" src="{{site.baseurl}}/{{verdier[0].image}}" />
+                </a>
+            </div>
+    </div>
 
-    <h1 style="text-align: center; margin: auto; padding: 5rem 0 0 0;">Ansatte</h1>
+    <div class="box">
+        <p style="font-style: italic; color: c2c2c2">
+        <i class="fas fa-quote-left" style="margin: 0 0 5rem 0;"></i></br>
+            If a child can't learn the way we teach, maybe we should teach the way they learn </br></br> - Ignicio Estrada
+        </p>
+    </div>
 
-    <div class="ansatte">
-        <div>
-            <img src="{{site.baseurl}}/assets/images/geir.jpeg" />
-            <p>
-                <h3>Geir Sollid</h3>
-                Lærer i nøkkelkompetanser<br /> ​<br />
-                geir@getacademy.no<br />
-                926 21 638<br />
-                <p style="color: rgb(80, 122, 214)"><i class="fab fa-discord"></i> Geir#4082</p>
-            </p>
-        </div>
-        <div>
-            <img src="{{site.baseurl}}/assets/images/eskil.jpg" />
-            <p>
-                <h3>Eskil Domben</h3>
-                Daglig leder og lærer i nøkkelkompetanser<br /> ​<br />
-                eskil@getacademy.no<br />
-                454 85 922<br />
-                <p style="color: rgb(80, 122, 214)"><i class="fab fa-discord"></i> Eskil#6979</p>
-            </p>
-        </div>
-        <div>
-            <img src="{{site.baseurl}}/assets/images/terje.jpg" />
-            <p>
-                <h3>Terje Kolderup</h3>
-                IT-lærer<br /> ​<br />
-                <br />
-                terje@getacademy.no<br />
-                952 28 064<br />
-                <p style="color: rgb(80, 122, 214)"><i class="fab fa-discord"></i> Terje#0422</p>
-            </p>
-        </div>
-        <div>
-            <img src="{{site.baseurl}}/assets/images/ida.jpg" />
-            <p>
-                <h3>Ida Husjord</h3>
-                UX-designer<br /> ​<br />
-                <br />
-                ida@getacademy.no<br />
-                911 56 654<br />
-                <p style="color: rgb(80, 122, 214)"><i class="fab fa-discord"></i> idahusjord#7242</p>
-            </p>
+    <div class="samarbeidsPartnere">
+        <h1>
+            Samarbeidspartnere
+        </h1>
+        <div class="partnere">
+            {% for partner in site.data.partnere %}
+            <a title="{{partner.name}}" href="{{partner.url}}">
+                <img src="{{partner.imgUrl}}">
+            </a>
+            {% endfor %}
         </div>
     </div>
 </div>

@@ -4,10 +4,128 @@ layout: default
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/studieprogram.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 
+<div style="display: flex; flex-direction: column; padding: 5rem 10rem 0 10rem">
+    <h1 style="margin: auto;">Studieprogram</h1>
+    <p>
+        Start IT og GET IT har opptak to ganger i året. En Start IT begynner tidlig i februar og løper ut ​mai. 
+        Neste GET IT starter da i august og løper ut juni året etter. En annen Start IT 
+        begynner i midten av september og går til midten av januar.
+        Så starter en ny GET IT i mars og går til februar året etter. 
+    </p>
+</div>
+
 <div class="studiePage">
-    <div style="margin: auto; text-align: center;">
-        {{content}}
+    {% assign startIT = site.posts | where:"title","Start IT - 4 måneder" %}
+    <div class="textLeft">
+        <a id="linkDark" href="{{startIT[0].url}}">
+            <div>
+                <h2>{{startIT[0].title}}</h2>
+                <p>{{startIT[0].description}}</p>
+            </div>
+        </a>
+    </div>
+    <div class="imageRight">
+        <a href="{{startIT[0].url}}">
+            <img style="height: 20rem;" src="{{site.baseurl}}/{{startIT[0].image}}" />
+        </a>
+    </div>
+
+
+    {% assign getIT = site.posts | where:"title","GET IT - 1 år" %}
+    <div class="textRight">
+        <a id="linkDark" href="{{getIT[0].url}}">
+            <div>
+                <h2>{{getIT[0].title}}</h2>
+                <p>{{getIT[0].description}}</p>
+            </div>
+        </a>
+    </div>
+    <div class="imageLeft">
+        <a href="{{getIT[0].url}}">
+            <img style="height: 20rem;" src="{{site.baseurl}}/{{getIT[0].image}}" />
+        </a>
     </div>
 </div>
+
+
+<!-- <script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, 
+{
+    type: 'doughnut',
+    data: 
+    {
+        datasets: 
+        [{
+            data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            backgroundColor: "#117",
+            labels: 
+            [
+                "Januar",
+                "Februar",
+                "Mars",
+                "April",
+                "Mai",
+                "Juni",
+                "Juli",
+                "August",
+                "September",
+                "Oktober",
+                "November",
+                "Desember"            
+            ]
+        },
+        {
+            data: [4, 8],
+            backgroundColor: 
+            [
+                "#849451",
+                "#fff"                    
+            ],
+            labels: 
+            [
+                "Start IT", ""
+            ],
+            borderWidth: [5,5]
+        },
+        {
+            data: [12, 0],
+            backgroundColor: 
+            [
+                "#ff8400",
+                "#fff"                    
+            ],
+            labels: 
+            [
+                "GET IT", ""
+            ],
+            borderWidth: [5,5]
+        }
+        ],            
+
+    },
+
+    options: 
+    {
+        cutoutPercentage: 80,
+        legend: {
+            display: true
+        },
+        tooltips: 
+        {
+            callbacks: 
+            {
+                label: function(tooltipItem, data) 
+                {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var index = tooltipItem.index;
+                return dataset.labels[index];
+                }
+            }
+        }
+    }
+});
+</script> -->

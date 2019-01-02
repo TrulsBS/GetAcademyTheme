@@ -5,44 +5,40 @@ layout: default
 <head>
     <link href="https://www.scribd.com/document/386413924/studiebeskrivelse-for-web-get-it#page=1">
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/skole.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">     -->
 </head>
 
-{% assign sorted-news = site.posts | where:"categories","skole" %}
 
 <div class="skolePageGrid">
-
-    {% if sorted-news[2] %}
+    {% assign aarsUtdanning = site.posts | where:"title","1,5 års utdanning" %}
     <div class="textLeft">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[2].url}}">
+        <a id="linkDark" href="{{aarsUtdanning[0].url}}">
             <div>
-                <h2>{{sorted-news[2].title}}</h2>
-                <p>{{sorted-news[2].description}}</p>
+                <h2>{{aarsUtdanning[0].title}}</h2>
+                <p>{{aarsUtdanning[0].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageRight">
-        <a href="{{sorted-news[2].url}}">
-            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[2].image}}" />
+        <a href="{{aarsUtdanning[0].url}}">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{aarsUtdanning[0].image}}" />
         </a>
     </div>
-    {% endif %}
 
-
-    {% if sorted-news[3] %}
+    {% assign studielop = site.posts | where:"title","Unikt studieløp" %}
     <div class="textRight">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[3].url}}">
+        <a id="linkDark" href="{{site.baseurl}}/studieprogram.html">
             <div>
-                <h2>{{sorted-news[3].title}}</h2>
-                <p>{{sorted-news[3].description}}</p>
+                <h2>{{studielop[0].title}}</h2>
+                <p>{{studielop[0].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageLeft">
-        <a href="{{sorted-news[3].url}}">
-            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[3].image}}" />
+        <a href="{{site.baseurl}}/studieprogram.html">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{studielop[0].image}}"/>
         </a>
     </div>
-    {% endif %}
 
     <div class="longBox">
         <span style="margin: auto;">
@@ -50,7 +46,7 @@ layout: default
         </span>
     </div>
 
-    <div class="samarbeidsPartnere">
+    <!-- <div class="samarbeidsPartnere">
         <h1>
             Samarbeidspartnere
         </h1>
@@ -61,46 +57,110 @@ layout: default
             </a>
             {% endfor %}
         </div>
-    </div>
+    </div> -->
 
-    {% if sorted-news[0] %}
+    {% assign karriere = site.posts | where:"title","Karrieremuligheter" %}
     <div class="textLeft1">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[0].url}}">
+        <a id="linkDark" href="{{sorted-news[0].url}}">
             <div>
-                <h2>{{sorted-news[0].title}}</h2>
-                <p>{{sorted-news[0].description}}</p>
+                <h2>{{karriere[0].title}}</h2>
+                <p>{{karriere[0].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageRight1">
-        <a href="{{sorted-news[0].url}}">
-            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[0].image}}" />
+        <a href="{{karriere[0].url}}">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{karriere[0].image}}" />
         </a>
     </div>
-    {% endif %}
 
-    {% if sorted-news[1] %}
+    <div class="sitat">
+        <div class="sitatContent">
+            <i class="fas fa-quote-left" style="margin: 0 0 5rem 0;"></i>
+            <div class="mySlides w3-animate-right" style="margin: auto; font-style: italic;">
+                Fantastisk læringsmiljø. føler meg trygg, gode verdier og inkluderende miljø.
+                fått troen på meg selv og lært utrolig mye. fått meg jobb!  </br></br>
+                - tidligere student, ansatt i ABAX
+            </div>
+            <div class="mySlides w3-animate-right" style="margin: auto; font-style: italic;">
+                Arbeidslaget har meget høy arbeidsmoral noe vi har vært positivt overrasket over. 
+                De holder et høyt tempo gjennom dagen og gjør en imponerende jobb. 
+                Det ser også ut som om de har det gøy på jobb og det er moro for meg å jobbe med dem.
+                </br>
+                - Comtech
+            </div>
+            <div class="mySlides w3-animate-right" style="margin: auto; font-style: italic;">
+                en slide
+            </div>
+        </div>
+        <div class="dots">
+            <a id="linkLight" style="font-size: 1rem; background-color: #101a3100; 
+            border: none; color: white; cursor: pointer;" onclick="plusDivs(-1)">Forrige</a>
+
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+
+            <a id="linkLight" style="font-size: 1rem; background-color: #101a3100; 
+            border: none; color: white; cursor: pointer;" onclick="plusDivs(1)">Neste</a>
+        </div>
+    </div>
+    {% assign praktisk = site.pages | where:"title","Praktisk info" %}
     <div class="textRight1">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[1].url}}">
+        <a id="linkDark" href="{{site.baseurl}}/praktiskInfo.html">
             <div>
-                <h2>{{sorted-news[1].title}}</h2>
-                <p>{{sorted-news[1].description}}</p>
+                <h2>{{praktisk[0].title}}</h2>
+                <p>{{praktisk[0].description}}</p>
             </div>
         </a>
     </div>
     <div class="imageLeft1">
-        <a href="{{sorted-news[1].url}}">
-            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-news[1].image}}" />
+        <a href="{{site.baseurl}}/praktiskInfo.html">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{praktisk[0].image}}" />
         </a>
     </div>
-    {% endif %}
-
-    <div class="longBox1">
-        <a id="linkLight" href="{{site.baseurl}}/studieprogram.html" style="margin: auto; font-size: 3rem; text-align: center;">
-            <span style="margin: auto;">
-                Lær om vårt unike studieprogram
-            </span>
+    {% assign forDeg = site.posts | where:"title","Koding noe for deg?" %}
+    <div class="textLeft2">
+        <a id="linkDark" href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">
+            <div>
+                <h2>{{forDeg[0].title}}</h2>
+                <p>{{forDeg[0].description}}</p>
+            </div>
         </a>
     </div>
-
+    <div class="imageRight2">
+        <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">
+            <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{forDeg[0].image}}" />
+        </a>
+    </div>
 </div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>

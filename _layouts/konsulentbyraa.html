@@ -11,29 +11,42 @@ layout: default
     <h1 style="margin: auto;">Vi leverer digitale tjenester</h1>
     <div class="tjenester">
         <div class="tjenesteBoks">
+                <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-code"></i></br>   -->
             <h2>Utvikling</h2>
             <p>
                 Systemutvikling, integrasjon, systemarkitektur og prosjektledelse
+            
             </p>
         </div>
         <div class="tjenesteBoks">
+                <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-object-group"></i></br> -->
             <h2>UX-design</h2>
             <p>
                 Konseptutvikling, interaksjonsdesign og tjenestedesign
+
             </p>
         </div>
         <div class="tjenesteBoks">
+                <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-chalkboard-teacher"></i></br> -->
             <h2>Rådgiving</h2>
             <p>
                 Foredrag, workshops, rådgiving i valg av teknisk plattform og løsninger
+
             </p>
         </div>
     </div>
 
     <div class="empty">
-        {{content}}
-        <img style="margin: auto; margin-top: 3rem; width: 50rem;" 
-        src="{{site.baseurl}}/assets/images/konsulent.jpg" />
+
+        <div style="margin: 0 5rem 0 0;">
+            <p>{{content}}</p>
+        </div>
+
+        <div>
+            <img style="margin-top: 3rem; width: 30rem;" 
+            src="{{site.baseurl}}/assets/images/konsulent.jpg" />
+        </div>
+        
     </div>
 
     <div class="prosjekter">
@@ -45,7 +58,7 @@ layout: default
                 <div class="prosjektBox">
                     <div class="innerProsjektBox">
                         <!-- <div style="padding: 0; margin: 0;"> -->
-                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
+                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}{{post.image}});">
                             </div>
                             <h2>
                                 {{post.title}}
@@ -61,8 +74,8 @@ layout: default
         </div>
     </div>
 
-    <div class="textbox">
-        <p>En quote eller noe tekst her</p>
+    <div class="textbox" style="color: white;">
+        <p>Det vitenskapelige navnet på Lama er Lama glama</p>
     </div>
 
 </div>

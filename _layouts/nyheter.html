@@ -7,25 +7,29 @@ layout: default
 </head>
 
 <div style="display: flex;">
-    <h1 style="margin: auto; padding: 5rem 0 0 0;">Nytt fra GET Academy</h1>
+    <h1 style="margin: auto; padding: 5rem 0 1rem 0;">Nytt fra GET Academy</h1>
 </div>
 <div class="nyheterGrid">
-    <div style="margin: auto; flex-wrap: wrap; display: flex; padding: 5rem; max-width: 85rem;">
+    <div style="margin: auto; flex-wrap: wrap; display: flex; padding: 5rem 7rem 5rem 7rem; max-width: 85rem;">
         <!-- {% assign psize = site.posts | size%}
         {% assign currentSize = 3 %} -->
         {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
         {% for post in sorted-posts %}
-        <a id="linkDark1" href="{{site.baseurl}}/{{post.url}}" style="text-transform: none;">
+        <a id="linkDark1" href="{{site.baseurl}}{{post.url}}" style="text-transform: none;">
             <div class="newsBox">
                 <div class="innerNewsBox">
-                    <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
+                    <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
                     </div>
+                    <p style="color: #101a31; font-size: 0.8rem; font-style: italic;">
+                        {{post.date | date:"%d.%m.%Y"}}
+                    </p>
                     <h2>
                         {{post.title}}
                     </h2>
-                    <p style="color: #101a31; font-size: 1rem; font-style: italic;">
-                        {{post.date | date:"%d.%m.%Y"}}
+                    <p>
+                        {{post.description}}
                     </p>
+
                 </div>
             </div>
         </a>
