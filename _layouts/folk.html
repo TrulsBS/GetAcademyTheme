@@ -92,7 +92,7 @@ layout: default
             </div>
             {% assign samarbeid = site.posts | where:"title","Samarbeidspartnere" %}
             <div class="textLeft1">
-                <a id="linkDark" href="{{site.baseurl}}/samarbeid[0].url">
+                <a id="linkDark" href="{{samarbeid[0].url}}">
                     <div>
                         <h2>{{samarbeid[0].title}}</h2>
                         <p>{{samarbeid[0].description}}</p>
