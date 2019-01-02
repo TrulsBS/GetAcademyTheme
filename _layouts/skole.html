@@ -12,7 +12,7 @@ layout: default
 <div class="skolePageGrid">
     {% assign aarsUtdanning = site.posts | where:"title","1,5 års utdanning" %}
     <div class="textLeft">
-        <a id="linkDark" href="{{aarsUtdanning[0].url}}">
+        <a id="linkDark" href="{{site.baseurl}}/{{aarsUtdanning[0].url}}">
             <div>
                 <h2>{{aarsUtdanning[0].title}}</h2>
                 <p>{{aarsUtdanning[0].description}}</p>
@@ -61,7 +61,7 @@ layout: default
 
     {% assign karriere = site.posts | where:"title","Karrieremuligheter" %}
     <div class="textLeft1">
-        <a id="linkDark" href="{{sorted-news[0].url}}">
+        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[0].url}}">
             <div>
                 <h2>{{karriere[0].title}}</h2>
                 <p>{{karriere[0].description}}</p>
