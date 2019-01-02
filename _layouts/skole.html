@@ -61,7 +61,7 @@ layout: default
 
     {% assign karriere = site.posts | where:"title","Karrieremuligheter" %}
     <div class="textLeft1">
-        <a id="linkDark" href="{{site.baseurl}}/{{sorted-news[0].url}}">
+        <a id="linkDark" href="{{site.baseurl}}/{{karriere[0].url}}">
             <div>
                 <h2>{{karriere[0].title}}</h2>
                 <p>{{karriere[0].description}}</p>
