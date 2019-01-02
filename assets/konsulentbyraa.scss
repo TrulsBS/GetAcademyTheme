@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 10rem 0 10rem;
+    margin: 5rem 10rem 0 10rem;
 }
 .tjenesteBoks
 {
@@ -51,16 +51,10 @@
 .empty
 {    
     margin: auto;
-    // margin: 0 10rem 10rem 10rem;
+    padding: 0;
     display: flex;
-    width: 50rem;
-    flex-direction: column;
-    // width: 100%;
-    // background-image: url("images/desk.jpeg");
-    // overflow: hidden;
-    // background-size: cover;
-    // background-attachment: fixed;
-    // background-position: center;
+    flex-direction: row;
+    margin: 5rem 10rem 5rem 10rem;
 }
 
 .prosjekter

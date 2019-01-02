@@ -57,12 +57,15 @@ $duration: .2s;
 $distance: 20px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);
 
-a#linkLight1{
+a#linkLight1
+{
     position: relative;
     text-decoration: none;
     color: #fff;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: normal;
   
      &:before,
       &:after {
