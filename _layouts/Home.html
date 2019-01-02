@@ -62,7 +62,7 @@ layout: default
         <div class="newsBoxes">
             {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
             {% for post in sorted-posts limit:3 %}
-            <a id="linkDark1" href="{{site.baseurl}}{{post.url}}" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
+            <a id="linkDark1" href="{{site.baseurl}}/{{post.url}}" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
                 <div class="newsBox">
                     <div class="innerNewsBox">
                         <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
