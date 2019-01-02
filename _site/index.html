@@ -2,10 +2,10 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-130099998-1', 'auto');
         ga('send', 'pageview');
@@ -31,17 +31,48 @@
 
         <div class="logo">
             <a href="/index.html">
-                <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 20rem; margin-left: 6rem; margin-top: 1rem;" />
+                <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin-left: 6rem; margin-top: 1rem;" />
             </a>
         </div>
         <div class="links">
-            
-            
-            
-            <a id="linkLight" href="/1skole.html">
-                Skole
+
+            <a id="linkLight" href="/sok.html">Søk nå!</a>
+
+            <div class="dropdown" style="width: 6rem;">
+                <a  id="linkLight" 
+                href="/1skole.html">
+                    Skole <i class="icon"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="/sok.html">Søknadsskjema</a>
+                    <a href="/studieprogram.html">Studieprogram</a>
+                    <a href="/praktiskInfo.html">Praktisk info</a>
+                    <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+                </div>
+            </div>
+            <a  id="linkLight" href="/2konsulentbyraa">
+                Konsulentbyrå
             </a>
-            
+            <div class="dropdown" style="width: 7rem;">
+                <a id="linkLight" href="/3about.html" style="color: white; text-decoration: none; text-transform: uppercase; font-size: 1.2rem;">
+                    Om oss <i class="icon"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="/folk.html">Folk</a>
+                    <a href="/historie.html">Historie</a>
+
+                </div>
+            </div>
+            <a id="linkLight" href="/4nyheter.html">
+                Nyheter
+            </a>
+            <a id="linkLight" href="/kontakt.html">
+                Kontakt
+            </a>
+
+            <!-- Generere linker automatisk -->
+
+            <!-- 
             
             
             <a id="linkLight" href="/2konsulentbyraa.html">
@@ -50,31 +81,29 @@
             
             
             
-            <a id="linkLight" href="/3nyheter.html">
+            <a id="linkLight" href="/3about.html">
+                Om oss
+            </a>
+            
+            
+            
+            <a id="linkLight" href="/4nyheter.html">
                 Nyheter
             </a>
             
             
             
-            <a id="linkLight" href="/4about.html">
-                Om oss
+            <a id="linkLight" href="/kontakt.html">
+                Kontakt
             </a>
             
+             -->
+
             
+
         </div>
-        <div class="headerInfo">
-
-            
+        <div class="headerInfo">            
             <h1></h1>
-            
-
-            
-            <a class="linkLight" href="/sok.html" style="text-decoration: none; margin: auto;">
-                <div class="Søk linkLight">
-                    <p>Søk Nå!</p>
-                </div>
-            </a>
-            
         </div>
     </div>
 </div>
@@ -103,15 +132,14 @@
         </div>
         <div class="imageRight">
             <a href="/other/2018/11/15/other-1.html">
-                <img style="width: 100%; margin: auto;" src="/assets/images/office.jpg" />
+                <img style="width: 100%; margin: auto;" src="assets/images/stock.jpg"/>
             </a>
         </div>
     </div>
 
     <a href="/1skole.html">
         <div class="sKButton skole">
-            <a id="linkLight" style="margin: auto; color:white; font-size: 50px;" 
-            href="/1skole.html">
+            <a id="linkLight" style="margin: auto; color:white; font-size: 50px;" href="/1skole.html">
                 <span>
                     Skole
                 </span>
@@ -120,8 +148,7 @@
     </a>
     <a href="/2konsulentbyraa.html">
         <div class="sKButton konsulent">
-            <a id="linkLight" style="margin: auto; color: white; font-size: 50px;" 
-            href="/2konsulentbyraa.html">
+            <a id="linkLight" style="margin: auto; color: white; font-size: 50px;" href="/2konsulentbyraa.html">
                 <span>
                     Konsulentbyrå
                 </span>
@@ -136,59 +163,76 @@
     </div>
 
     <div class="news">
+        <!-- <i style="margin: auto; padding: 0; color: #ff8400; font-size: 5rem;" class="far fa-newspaper"></i> <br> -->
         <h1 id="title">
             Nytt fra GET Academy
         </h1>
         <div class="newsBoxes">
             
             
-            <a id="linkDark1" href="/nyheter/2018/12/03/Nyhet-1.html" style="text-decoration: none; margin: 1rem; text-transform: none;">
+            <a id="linkDark1" href="/nyheter/2018/12/03/Nyhet-1.html" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
                 <div class="newsBox">
                     <div class="innerNewsBox">
                         <div class="newsImage" style="background-image: url(assets/images/desk.jpeg);">
                         </div>
+                        <p style="color: #101a31; font-size: 0.8rem; font-style: italic;">
+                            03.12.2018
+                        </p>
                         <h2>
                             en nyhet
                         </h2>
-                        <p style="color: #101a31; font-size: 1rem; font-style: italic;">
-                            03.12.2018
+                        <p>
+                        blablabla
                         </p>
+
                     </div>
                 </div>
             </a>
             
-            <a id="linkDark1" href="/nyheter/2018/11/27/Nyhet-5.html" style="text-decoration: none; margin: 1rem; text-transform: none;">
+            <a id="linkDark1" href="/nyheter/2018/11/27/Nyhet-5.html" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
                 <div class="newsBox">
                     <div class="innerNewsBox">
                         <div class="newsImage" style="background-image: url(assets/images/stock.jpg);">
                         </div>
+                        <p style="color: #101a31; font-size: 0.8rem; font-style: italic;">
+                            27.11.2018
+                        </p>
                         <h2>
                             Enda en ny nyhet
                         </h2>
-                        <p style="color: #101a31; font-size: 1rem; font-style: italic;">
-                            27.11.2018
+                        <p>
+                        askdjnaksd fhksdhf afhakd fkahf kah fjah kjah ka fahfauieq h  aajfoia jfalf jalkf ak fashfahfuia zb ugh
                         </p>
+
                     </div>
                 </div>
             </a>
             
-            <a id="linkDark1" href="/nyheter/2018/11/27/Nyhet-3-Kopi.html" style="text-decoration: none; margin: 1rem; text-transform: none;">
+            <a id="linkDark1" href="/nyheter/2018/11/27/Nyhet-3-Kopi.html" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
                 <div class="newsBox">
                     <div class="innerNewsBox">
                         <div class="newsImage" style="background-image: url(assets/images/programmer.jpg);">
                         </div>
+                        <p style="color: #101a31; font-size: 0.8rem; font-style: italic;">
+                            27.11.2018
+                        </p>
                         <h2>
                             En ny nyhet
                         </h2>
-                        <p style="color: #101a31; font-size: 1rem; font-style: italic;">
-                            27.11.2018
+                        <p>
+                        Noe beskrivende om nyheten som sier noe som folk som er interressert i denne nyheten burde vite.
                         </p>
+
                     </div>
                 </div>
             </a>
             
         </div>
-        <h3 style="margin: auto;"><a href="/3nyheter.html" id="linkDark2">Se fler nyheter</a></h3>
+        <h3 style="margin: auto; padding: 5rem 0 0 0;">
+            <a href="/4nyheter.html" id="linkDark2">
+                Se fler nyheter
+            </a>
+        </h3>
     </div>
     <div class="besøk">
         <p>
@@ -199,6 +243,10 @@
 </div>
         </div>
 
+        <a href="#header" style="position: fixed; right: 1rem; bottom: 1rem; font-size: 1.2rem; color: #ff8400; text-decoration: none;">
+            Til topp <i class="fas fa-arrow-circle-up"></i>
+        </a>
+
         <head>
     <link rel="stylesheet" type="text/css" href="/assets/footer.css">
 </head>
@@ -207,7 +255,7 @@
     <div id="leftFooter">
         <h3>Skole</h3>
         <p>
-            Torget 8 </br>
+            Torget 10A </br>
             3256 </br>
             Larvik </br></br>
             +47 454 85 922</br>
@@ -218,6 +266,10 @@
     <div id="middleFooter">
         <h3>Konsulentbyrå</h3>
         <p>
+            Torget 10B </br>
+            (2. Etasje)</br>
+            3256 </br>
+            Larvik </br></br>
             +47 911 56 654</br>
             Org. nr: 921 633 963
         </p>

@@ -2,10 +2,10 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-130099998-1', 'auto');
         ga('send', 'pageview');
@@ -31,17 +31,49 @@
 <div id="header" class="header">
     <div class="logo">
         <a href="/index.html">
-            <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 20rem; margin-left: 6rem; margin-top: 1rem;" />
+            <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin-left: 6rem; margin-top: 1rem;" />
         </a>
     </div>
     <div class="links">
+
         
+            <a id="linkDark" href="/sok.html">
+                Søk nå!
+            </a>
         
-        
-        <a id="linkDark" href="/1skole.html">
-            Skole
+
+        <div class="dropdown" style="width: 6rem;">
+        <a id="linkDark" 
+        href="/1skole.html">
+            Skole <i class="icon"></i>
         </a>
-        
+        <div class="dropdown-content">
+            <a href="/sok.html">Søknadsskjema</a>
+            <a href="/studieprogram.html">Studieprogram</a>
+            <a href="/praktiskInfo.html">Praktisk info</a>
+            <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+        </div>
+        </div>
+        <a id="linkDark" href="/2konsulentbyraa">
+            Konsulentbyrå
+        </a>
+        <div class="dropdown"  style="width: 7rem;">
+            <a  id="linkDark" href="/3about.html">
+                Om oss <i class="icon"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="/folk.html">Folk</a>
+                <a href="/historie.html">Historie</a>
+            </div>
+        </div>
+        <a  id="linkDark" href="/4nyheter.html">
+            Nyheter
+        </a>
+        <a  id="linkDark" href="/kontakt.html">
+            Kontakt
+        </a>
+
+        <!-- 
         
         
         <a id="linkDark" href="/2konsulentbyraa.html">
@@ -50,17 +82,23 @@
         
         
         
-        <a id="linkDark" href="/3nyheter.html">
+        <a id="linkDark" href="/3about.html">
+            Om oss
+        </a>
+        
+        
+        
+        <a id="linkDark" href="/4nyheter.html">
             Nyheter
         </a>
         
         
         
-        <a id="linkDark" href="/4about.html">
-            Om oss
+        <a id="linkDark" href="/kontakt.html">
+            Kontakt
         </a>
         
-        
+         -->
     </div>
 </div>
         
@@ -85,7 +123,7 @@
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
         novalidate>
         <div id="mc_embed_signup_scroll">
-            <p><b style="font-size: 1.5rem">Gratisleksjoner</b></p>
+            <p><b style="font-size: 1.5rem">Taste IT</b></p>
             <p style="font-size: 1.2rem">
                 Vi gir deg de første leksjonene om HTML, CSS og Javascript på e-post ved å fylle ut skjemaet under:
             </p>
@@ -129,6 +167,10 @@
 <!--End mc_embed_signup-->
         </div>
 
+        <a href="#header" style="position: fixed; right: 1rem; bottom: 1rem; font-size: 1.2rem; color: #ff8400; text-decoration: none;">
+            Til topp <i class="fas fa-arrow-circle-up"></i>
+        </a>
+
         <head>
     <link rel="stylesheet" type="text/css" href="/assets/footer.css">
 </head>
@@ -137,7 +179,7 @@
     <div id="leftFooter">
         <h3>Skole</h3>
         <p>
-            Torget 8 </br>
+            Torget 10A </br>
             3256 </br>
             Larvik </br></br>
             +47 454 85 922</br>
@@ -148,6 +190,10 @@
     <div id="middleFooter">
         <h3>Konsulentbyrå</h3>
         <p>
+            Torget 10B </br>
+            (2. Etasje)</br>
+            3256 </br>
+            Larvik </br></br>
             +47 911 56 654</br>
             Org. nr: 921 633 963
         </p>

@@ -12,38 +12,38 @@ body {
   justify-content: center; }
 
 .newsBox {
-  width: 26rem;
-  height: 23rem;
+  width: 24.5rem;
+  height: 30rem;
+  margin: auto;
   display: flex;
   align-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  align-items: stretch;
   overflow: hidden;
-  color: #101a31;
-  padding: 0;
-  margin: 0; }
+  color: #101a31; }
 
 .innerNewsBox {
-  padding: 0;
-  margin: 0;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  overflow: hidden; }
+  flex-direction: column; }
 
 .innerNewsBox h2 {
-  margin: 0;
-  margin-top: 1rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
   align-self: flex-start; }
 
 .newsImage {
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   width: 100%;
-  height: 14rem;
+  height: 12rem;
   filter: contrast(80%);
   transition: filter 1000ms linear; }
 
@@ -79,11 +79,11 @@ a#linkDark1 {
     background-color: #101a31; }
   #linkDark1 h2:before {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-10px);
     transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s; }
   #linkDark1 h2:after {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10px);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
 
 #linkDark1:hover h2:before, #linkDark1:hover h2:after,

@@ -1,12 +1,15 @@
 .skolePageGrid {
+  margin: 5rem 0 5rem 0;
   display: grid;
   grid-template-rows: repeat(auto, 7);
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'textLeft imageRight' 'imageLeft textRight' 'longBox longBox' 'partnere partnere' 'textLeft1 imageRight1' 'imageLeft1 textRight1' 'longBox1 longBox1'; }
+  grid-template-areas: 'textLeft imageRight' 'imageLeft textRight' 'longBox longBox' 'textLeft1 imageRight1' 'sitat sitat' 'imageLeft1 textRight1' 'textLeft2 imageRight2'; }
+
+h2 {
+  font-size: 1.8rem; }
 
 .textLeft {
   margin: 5rem 2rem 5rem 10rem;
-  text-align: right;
   grid-area: textLeft; }
 
 .textLeft div {
@@ -18,10 +21,9 @@
   margin: 0; }
 
 .textLeft h2 {
-  text-align: right;
   margin: 0;
   margin-bottom: 2rem;
-  align-self: flex-end; }
+  align-self: flex-start; }
 
 .imageRight {
   grid-area: imageRight;
@@ -31,9 +33,8 @@
   margin: 5rem 10rem 5rem 2rem; }
 
 .textLeft1 {
-  margin: 5rem 2rem 5rem 10rem;
-  grid-area: textLeft1;
-  text-align: right; }
+  margin: 10rem 2rem 10rem 10rem;
+  grid-area: textLeft1; }
 
 .textLeft1 div {
   display: flex;
@@ -44,17 +45,16 @@
   margin: 0; }
 
 .textLeft1 h2 {
-  text-align: center;
   margin: 0;
   margin-bottom: 2rem;
-  align-self: flex-end; }
+  align-self: flex-start; }
 
 .imageRight1 {
   grid-area: imageRight1;
   display: flex;
   align-content: center;
   align-items: center;
-  margin: 5rem 10rem 5rem 2rem; }
+  margin: 10rem 10rem 10rem 2rem; }
 
 .textRight {
   margin: 5rem 10rem 5rem 2rem;
@@ -107,6 +107,7 @@
 
 .longBox {
   padding: 15rem 10rem 15rem 10rem;
+  margin: 5rem 0 5rem 0;
   grid-area: longBox;
   font-size: 3rem;
   color: #c2c2c2;
@@ -153,17 +154,89 @@
 .partnere img:hover {
   filter: grayscale(0%); }
 
-.row5 {
-  grid-area: row5;
-  background-color: #f1b56a;
-  height: 15rem; }
+.textLeft2 {
+  margin: 5rem 2rem 5rem 10rem;
+  grid-area: textLeft2; }
 
-.row6 {
-  grid-area: row6;
-  background-color: #493114;
-  height: 15rem; }
+.textLeft2 div {
+  display: flex;
+  flex-direction: column; }
 
-.row7 {
-  grid-area: row7;
-  background-color: #ffcc8f;
-  height: 15rem; }
+.textLeft2 p {
+  color: #101a31;
+  margin: 0; }
+
+.textLeft2 h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+  align-self: flex-start; }
+
+.imageRight2 {
+  grid-area: imageRight2;
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+  margin: 5rem 10rem 5rem 2rem; }
+
+.sitat {
+  user-select: none;
+  grid-area: sitat;
+  height: 30rem;
+  padding: 10rem 10rem 5rem 10rem;
+  margin: 5rem 0 5rem 0;
+  font-size: 2rem;
+  color: #c2c2c2;
+  display: flex;
+  flex-direction: column;
+  background-color: #101a31;
+  text-align: center; }
+
+.sitatContent {
+  height: 20rem;
+  overflow: hidden; }
+
+.dots {
+  margin: auto;
+  height: 5rem; }
+
+.mySlides {
+  display: none; }
+
+.w3-left, .w3-right, .w3-badge {
+  cursor: pointer; }
+
+.w3-badge {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  border-radius: 50%; }
+
+.w3-border {
+  border: 1px solid #ccc !important; }
+
+.w3-transparent {
+  background-color: transparent !important; }
+
+.w3-white {
+  color: #000 !important;
+  background-color: #fff !important; }
+
+.w3-hover-white:hover {
+  color: #000 !important;
+  background-color: #fff !important; }
+
+.w3-animate-right {
+  position: relative;
+  animation: animateright 0.4s; }
+
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0; }
+  to {
+    right: 0;
+    opacity: 1; } }

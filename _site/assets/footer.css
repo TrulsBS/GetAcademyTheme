@@ -42,7 +42,9 @@ a#linkLight1 {
   text-decoration: none;
   color: #fff;
   margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: normal; }
   a#linkLight1:before, a#linkLight1:after {
     content: '';
     position: absolute;

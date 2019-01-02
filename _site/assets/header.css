@@ -28,7 +28,7 @@ div.logo {
 a#linkDark {
   color: #101a31;
   font-size: 1.2rem;
-  margin: 2rem;
+  margin: 2rem 1rem 2rem 1rem;
   text-transform: uppercase; }
 
 .active#linkDark {
@@ -60,3 +60,45 @@ a#linkDark {
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0.2s; }
   a#linkDark:hover:after, a#linkDark:focus:after {
     transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }
+
+.dropdown {
+  margin: 2rem 1rem 2rem 1rem;
+  padding: 0; }
+
+.dropdown .icon:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  font-weight: 900;
+  font-style: normal; }
+
+.dropdown-content {
+  padding: 1rem 0 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  background: #101a31bf; }
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; }
+
+.dropdown-content a:hover {
+  text-decoration: underline; }
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; }
+
+.dropdown:hover .icon:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f107";
+  font-weight: 900;
+  font-style: normal; }

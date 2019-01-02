@@ -1,0 +1,24 @@
+.mainDiv {
+  padding: 5rem 10rem 5rem 10rem; }
+
+a {
+  color: #ff8400;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+hr {
+  clear: both; }
+
+iframe {
+  float: left;
+  margin: 3rem 3rem 3rem 0; }
+
+h3 {
+  margin: 4rem 0 0 0; }
+
+.fa-play-circle {
+  position: absolute;
+  font-size: 5rem;
+  color: #ff8400; }

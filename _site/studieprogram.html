@@ -2,10 +2,10 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-130099998-1', 'auto');
         ga('send', 'pageview');
@@ -31,17 +31,49 @@
 <div id="header" class="header">
     <div class="logo">
         <a href="/index.html">
-            <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 20rem; margin-left: 6rem; margin-top: 1rem;" />
+            <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin-left: 6rem; margin-top: 1rem;" />
         </a>
     </div>
     <div class="links">
+
         
+            <a id="linkDark" href="/sok.html">
+                Søk nå!
+            </a>
         
-        
-        <a id="linkDark" href="/1skole.html">
-            Skole
+
+        <div class="dropdown" style="width: 6rem;">
+        <a id="linkDark" 
+        href="/1skole.html">
+            Skole <i class="icon"></i>
         </a>
-        
+        <div class="dropdown-content">
+            <a href="/sok.html">Søknadsskjema</a>
+            <a href="/studieprogram.html">Studieprogram</a>
+            <a href="/praktiskInfo.html">Praktisk info</a>
+            <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+        </div>
+        </div>
+        <a id="linkDark" href="/2konsulentbyraa">
+            Konsulentbyrå
+        </a>
+        <div class="dropdown"  style="width: 7rem;">
+            <a  id="linkDark" href="/3about.html">
+                Om oss <i class="icon"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="/folk.html">Folk</a>
+                <a href="/historie.html">Historie</a>
+            </div>
+        </div>
+        <a  id="linkDark" href="/4nyheter.html">
+            Nyheter
+        </a>
+        <a  id="linkDark" href="/kontakt.html">
+            Kontakt
+        </a>
+
+        <!-- 
         
         
         <a id="linkDark" href="/2konsulentbyraa.html">
@@ -50,17 +82,23 @@
         
         
         
-        <a id="linkDark" href="/3nyheter.html">
+        <a id="linkDark" href="/3about.html">
+            Om oss
+        </a>
+        
+        
+        
+        <a id="linkDark" href="/4nyheter.html">
             Nyheter
         </a>
         
         
         
-        <a id="linkDark" href="/4about.html">
-            Om oss
+        <a id="linkDark" href="/kontakt.html">
+            Kontakt
         </a>
         
-        
+         -->
     </div>
 </div>
         
@@ -68,19 +106,136 @@
         <div class="mainContent">
             <head>
     <link rel="stylesheet" type="text/css" href="/assets/studieprogram.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 
+<div style="display: flex; flex-direction: column; padding: 5rem 10rem 0 10rem">
+    <h1 style="margin: auto;">Studieprogram</h1>
+    <p>
+        Start IT og GET IT har opptak to ganger i året. En Start IT begynner tidlig i februar og løper ut ​mai. 
+        Neste GET IT starter da i august og løper ut juni året etter. En annen Start IT 
+        begynner i midten av september og går til midten av januar.
+        Så starter en ny GET IT i mars og går til februar året etter. 
+    </p>
+</div>
+
 <div class="studiePage">
-    <div style="margin: auto; text-align: center;">
-        <h1 id="studieprogram">Studieprogram</h1>
+    
+    <div class="textLeft">
+        <a id="linkDark" href="/skole/2018/12/03/Start-IT.html">
+            <div>
+                <h2>Start IT - 4 måneder</h2>
+                <p>Start IT er første trinn i vår utdanning. Du får en introduksjon til IT-utvikling og en avklaring av om det er greia for deg - på fire måneder Neste oppstart i februar 2019.</p>
+            </div>
+        </a>
+    </div>
+    <div class="imageRight">
+        <a href="/skole/2018/12/03/Start-IT.html">
+            <img style="height: 20rem;" src="/assets/images/stock.jpg" />
+        </a>
+    </div>
 
-<p>Start IT og GET IT har opptak to ganger i året. En Start IT begynner tidlig i februar og løper ut ​mai. Neste GET IT starter da i august og løper ut juni året etter. En annen Start IT begynner i midten av september og går til midten av januar. Så starter en ny GET IT i mars og går til februar året etter.</p>
 
-<p><img src="/assets/images/studieplan.png" alt="program" /></p>
-
+    
+    <div class="textRight">
+        <a id="linkDark" href="/skole/2018/12/03/GET-IT.html">
+            <div>
+                <h2>GET IT - 1 år</h2>
+                <p>GET IT er trinn to og går over ett skoleår og gjør deg til utvikler med kompetanse på et nivå som etterspørres i arbeidsmarkedet. Neste oppstart er mars 2019. ​For å komme inn på GET IT må du ha gått på Start IT.​​</p>
+            </div>
+        </a>
+    </div>
+    <div class="imageLeft">
+        <a href="/skole/2018/12/03/GET-IT.html">
+            <img style="height: 20rem;" src="/assets/images/office.jpg" />
+        </a>
     </div>
 </div>
+
+
+<!-- <script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, 
+{
+    type: 'doughnut',
+    data: 
+    {
+        datasets: 
+        [{
+            data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            backgroundColor: "#117",
+            labels: 
+            [
+                "Januar",
+                "Februar",
+                "Mars",
+                "April",
+                "Mai",
+                "Juni",
+                "Juli",
+                "August",
+                "September",
+                "Oktober",
+                "November",
+                "Desember"            
+            ]
+        },
+        {
+            data: [4, 8],
+            backgroundColor: 
+            [
+                "#849451",
+                "#fff"                    
+            ],
+            labels: 
+            [
+                "Start IT", ""
+            ],
+            borderWidth: [5,5]
+        },
+        {
+            data: [12, 0],
+            backgroundColor: 
+            [
+                "#ff8400",
+                "#fff"                    
+            ],
+            labels: 
+            [
+                "GET IT", ""
+            ],
+            borderWidth: [5,5]
+        }
+        ],            
+
+    },
+
+    options: 
+    {
+        cutoutPercentage: 80,
+        legend: {
+            display: true
+        },
+        tooltips: 
+        {
+            callbacks: 
+            {
+                label: function(tooltipItem, data) 
+                {
+                var dataset = data.datasets[tooltipItem.datasetIndex];
+                var index = tooltipItem.index;
+                return dataset.labels[index];
+                }
+            }
+        }
+    }
+});
+</script> -->
         </div>
+
+        <a href="#header" style="position: fixed; right: 1rem; bottom: 1rem; font-size: 1.2rem; color: #ff8400; text-decoration: none;">
+            Til topp <i class="fas fa-arrow-circle-up"></i>
+        </a>
 
         <head>
     <link rel="stylesheet" type="text/css" href="/assets/footer.css">
@@ -90,7 +245,7 @@
     <div id="leftFooter">
         <h3>Skole</h3>
         <p>
-            Torget 8 </br>
+            Torget 10A </br>
             3256 </br>
             Larvik </br></br>
             +47 454 85 922</br>
@@ -101,6 +256,10 @@
     <div id="middleFooter">
         <h3>Konsulentbyrå</h3>
         <p>
+            Torget 10B </br>
+            (2. Etasje)</br>
+            3256 </br>
+            Larvik </br></br>
             +47 911 56 654</br>
             Org. nr: 921 633 963
         </p>
