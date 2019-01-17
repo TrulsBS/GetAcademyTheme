@@ -7,49 +7,50 @@ layout: default
 </head>
 
 <div style="display: flex;">
-        <h1 style="margin: auto; padding: 5rem 0 0 0;">Om oss</h1>
-    </div>
+    <h1 id="omOss" style="margin: auto; padding: 5rem 0 0 0;">Om oss</h1>
+</div>
 <div class="aboutPage">
     <div class="main">
         {{content}}
     </div>
 
     <div class="grid">
-        
+
         {% assign organisert = site.posts | where:"title","Hvordan vi er organisert" %}
-            <div class="textLeft">
-                <a id="linkDark" href="{{organisert[0].url}}">
-                    <div>
-                        <h2>{{organisert[0].title}}</h2>
-                        <p>{{organisert[0].description}}</p>
-                    </div>
-                </a>
-            </div>
-            <div class="imageRight">
-                <a href="{{organisert[0].url}}">
-                    <img style="height: 20rem;" src="{{site.baseurl}}/{{organisert[0].image}}" />
-                </a>
-            </div>
-        {% assign verdier = site.posts | where:"title","Våre verdier" %}    
-            <div class="textRight">
-                <a id="linkDark" href="{{verdier[0].url}}">
-                    <div>
-                        <h2>{{verdier[0].title}}</h2>
-                        <p>{{verdier[0].description}}</p>
-                    </div>
-                </a>
-            </div>
-            <div class="imageLeft">
-                <a href="{{verdier[0].url}}">
-                    <img style="height: 20rem;" src="{{site.baseurl}}/{{verdier[0].image}}" />
-                </a>
-            </div>
+        <div class="textLeft">
+            <a id="linkDark" href="{{organisert[0].url}}">
+                <div>
+                    <h2>{{organisert[0].title}}</h2>
+                    <p>{{organisert[0].description}}</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageRight">
+            <a href="{{organisert[0].url}}">
+                <img src="{{site.baseurl}}/{{organisert[0].image}}" />
+            </a>
+        </div>
+        {% assign verdier = site.posts | where:"title","Våre verdier" %}
+        <div class="textRight">
+            <a id="linkDark" href="{{verdier[0].url}}">
+                <div>
+                    <h2>{{verdier[0].title}}</h2>
+                    <p>{{verdier[0].description}}</p>
+                </div>
+            </a>
+        </div>
+        <div class="imageLeft">
+            <a href="{{verdier[0].url}}">
+                <img src="{{site.baseurl}}/{{verdier[0].image}}" />
+            </a>
+        </div>
     </div>
 
     <div class="box">
         <p style="font-style: italic; color: c2c2c2">
-        <i class="fas fa-quote-left" style="margin: 0 0 5rem 0;"></i></br>
-            If a child can't learn the way we teach, maybe we should teach the way they learn </br></br> - Ignicio Estrada
+            <i class="fas fa-quote-left" style="margin: 0 0 5rem 0;"></i></br>
+            If a child can't learn the way we teach, maybe we should teach the way they learn </br></br> - Ignicio
+            Estrada
         </p>
     </div>
 

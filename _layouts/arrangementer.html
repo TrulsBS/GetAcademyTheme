@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/arrangementer.css">
+</head>
+
+<div id="title" style="display: flex; width: 100%; flex-direction: column;">
+    <div style="margin: auto; display: flex; flex-direction: row;">
+            <a {% if page.url == "/kommendeArrangement.html" %} class="activ type" {% endif %} class="type" href="{{site.baseurl}}kommendeArrangement.html" id="linkDark">Kommende</a>
+            <a {% if page.url == "/arrangementer.html" %} class="activ type" {% endif %} class="type" href="{{site.baseurl}}arrangementer.html" id="linkDark">Faste</a>
+    </div>
+    <h1 style="margin: auto; padding: 1rem 0 5rem 0;">
+        Arrangementer
+    </h1>
+</div>
+
+<div class="arrangementerContainer">
+    {% assign arrangementer = site.posts | where:"categories","arrangement" %}
+    {% assign faste = arrangementer | where:"type","fast" %}
+    {% for post in faste%}
+    <a class="arrangementBox" id="linkDark3" href="{{site.baseurl}}{{post.url}}">
+        <div class="image">
+            <div style="background-image: url({{site.baseurl}}{{post.image}});">
+            </div>
+        </div>
+        <div>
+            <p style="color: #646464; margin: 0; font-size: 1.2rem;">{{post.scheduled}}</p>
+            <h2>{{post.title}}</h2>
+            <p>{{post.description}}</p>
+            <p style="color: #ff8400;"><i class="fas fa-map-marker-alt"></i> {{post.location}}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>

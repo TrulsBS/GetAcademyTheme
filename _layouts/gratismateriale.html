@@ -4,12 +4,50 @@ layout: default
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
-    #mc_embed_signup {
+
+    #mc_embed_signup 
+    {
         padding: 5rem 15rem 5rem 15rem;
         background: #ffffff;
         clear: left;
         font: 14px Helvetica, Arial, sans-serif;
+    }
+
+    @media screen and (max-width: 400px) 
+    {
+        #mc_embed_signup 
+        {
+            padding: 5rem 0 5rem 0;
+            background: #ffffff;
+            width: 100%;
+        }
+        #mc_embed_signup_scroll p 
+        {
+            width: 80% !important;
+            margin: 2rem !important;
+            padding: 0 !important;
+        }
+        div.mc-field-group
+        {
+            margin: 0 !important;
+        }
+        div.mc-field-group label
+        {
+            margin: 1rem 2rem 1rem 2rem;
+        }
+        input 
+        {
+            width: 70% !important;
+            margin: 1rem 2rem 2rem 2rem !important;
+            padding: 0.5rem 0 0.5rem 0 !important;
+        }
+        #mc-embedded-subscribe 
+        {
+            padding: 0 2rem 0 2rem;
+            line-height: 0 !important;
+        }
     }
 
     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
@@ -21,13 +59,14 @@ layout: default
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
         novalidate>
         <div id="mc_embed_signup_scroll">
-            <p><b style="font-size: 1.5rem">Taste IT</b></p>
+            <p><b style="font-size: 1.5rem">Gratisleksjoner</b></p>
             <p style="font-size: 1.2rem">
                 Vi gir deg de første leksjonene om HTML, CSS og Javascript på e-post ved å fylle ut skjemaet under:
             </p>
             <div style="margin: 2rem" class="mc-field-group">
                 <label style="font-weight: 700; font-size: 1.2rem" for="mce-EMAIL">Email Address </label>
-                <input style="border: #949494 solid 1px; width: 20rem;" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                <input style="border: #949494 solid 1px; width: 20rem;" type="email" value="" name="EMAIL" class="required email"
+                    id="mce-EMAIL">
             </div>
             <div style="margin: 2rem" class="mc-field-group">
                 <label style="font-weight: 700; font-size: 1.2rem" for="mce-FNAME">First Name </label>
@@ -45,7 +84,8 @@ layout: default
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6eb581d677fe91f575e72ede9_40c57abe7f"
                     tabindex="-1" value=""></div>
             <div class="clear">
-                <input style="background: #ff8400;" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <input style="background: #ff8400;" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                    class="button">
             </div>
         </div>
     </form>

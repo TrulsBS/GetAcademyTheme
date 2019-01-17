@@ -2,7 +2,26 @@
 layout: default
 ---
 
-<div style="display: flex; margin: 3rem 10rem 0 10rem;">
+<style>
+    #mainContainer
+    {
+        display: flex; 
+        margin: 5rem 15rem 5rem 15rem;
+    }
+    h1
+    {
+        text-align: center;
+    }
+    @media screen and (max-width: 400px) 
+    {
+        #mainContainer
+        {
+            margin: 0 !important;
+        }
+    }
+</style>
+
+<div id="mainContainer">
     <div style="margin: auto;">
         {{content}}
     </div>

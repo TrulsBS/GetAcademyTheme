@@ -7,14 +7,15 @@ layout: default
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 
-<div style="display: flex; flex-direction: column; padding: 5rem 10rem 0 10rem">
-    <h1 style="margin: auto;">Studieprogram</h1>
+<div class="firstText">
+    <h1>Studieprogram</h1>
     <p>
-        Start IT og GET IT har opptak to ganger i året. En Start IT begynner tidlig i februar og løper ut ​mai. 
-        Neste GET IT starter da i august og løper ut juni året etter. En annen Start IT 
+        Start IT og GET IT har opptak to ganger i året. En Start IT begynner tidlig i februar og løper ut ​mai.
+        Neste GET IT starter da i august og løper ut juni året etter. En annen Start IT
         begynner i midten av september og går til midten av januar.
-        Så starter en ny GET IT i mars og går til februar året etter. 
+        Så starter en ny GET IT i mars og går til februar året etter.
     </p>
+    <img style="margin: 5rem 0 5rem 0; padding: 0;" src="{{site.baseurl}}/assets/images/studieplan.png"/>
 </div>
 
 <div class="studiePage">
@@ -29,7 +30,7 @@ layout: default
     </div>
     <div class="imageRight">
         <a href="{{startIT[0].url}}">
-            <img style="height: 20rem;" src="{{site.baseurl}}/{{startIT[0].image}}" />
+            <img src="{{site.baseurl}}/{{startIT[0].image}}" />
         </a>
     </div>
 
@@ -45,7 +46,7 @@ layout: default
     </div>
     <div class="imageLeft">
         <a href="{{getIT[0].url}}">
-            <img style="height: 20rem;" src="{{site.baseurl}}/{{getIT[0].image}}" />
+            <img src="{{site.baseurl}}/{{getIT[0].image}}" />
         </a>
     </div>
 </div>
