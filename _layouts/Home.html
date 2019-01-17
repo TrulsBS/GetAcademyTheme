@@ -11,7 +11,7 @@ layout: default
     {% assign sorted-posts-other = site.posts | where:"categories","other" %}
     <div class="textImage">
         <div class="textLeft">
-            <a href="{{sorted-posts-other[0].url}}" style="color: #101a31; margin: 0;" id="linkDark1">
+            <a href="{{site.baseurl}}/{{sorted-posts-other[0].url}}" style="color: #101a31; margin: 0;" id="linkDark1">
                 <div>
                     <h2>
                         {{sorted-posts-other[0].title}}
@@ -24,7 +24,7 @@ layout: default
         </div>
         <div class="imageRight">
             <a href="{{sorted-posts-other[0].url}}">
-                <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-posts-other[0].image}}"/>
+                <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-posts-other[0].image}}"/>
             </a>
         </div>
     </div>
@@ -62,10 +62,10 @@ layout: default
         <div class="newsBoxes">
             {% assign sorted-posts = site.posts | where:"categories","nyheter" %}
             {% for post in sorted-posts limit:3 %}
-            <a id="linkDark1" href="{{site.baseurl}}{{post.url}}" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
+            <a id="linkDark1" href="{{site.baseurl}}/{{post.url}}" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
                 <div class="newsBox">
                     <div class="innerNewsBox">
-                        <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
+                        <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
                         </div>
                         <p style="color: #101a31; font-size: 0.8rem; font-style: italic;">
                             {{post.date | date:"%d.%m.%Y"}}
