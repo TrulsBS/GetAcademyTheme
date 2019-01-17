@@ -60,8 +60,8 @@ layout: default
         </h1>
         <div class="partnere">
             {% for partner in site.data.partnere %}
-            <a title="{{partner.name}}" href="{{site.baseurl}}/{{partner.url}}">
-                <img src="{{site.baseurl}}/{{partner.imgUrl}}">
+            <a title="{{partner.name}}" href="{{partner.url}}">
+                <img src="{{partner.imgUrl}}">
             </a>
             {% endfor %}
         </div>
