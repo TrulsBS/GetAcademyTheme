@@ -23,7 +23,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     margin: 5rem 10rem 0 10rem;
 }
 .tjenesteBoks
@@ -32,7 +32,6 @@
     height: 20rem;
     width: 15rem;
     margin: 2rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,5 +195,126 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.475);
     &:after 
     {
         transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
+}
+#linkDark2
+{
+    text-decoration: none;
+    color: #101a31;
+}
+#linkDark2 h2
+{
+  position: relative;
+
+   &:before,
+    &:after 
+    {
+        content: '';
+        position: absolute;
+        bottom: -2;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: #101a31;
+    }
+    &:before 
+    {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after 
+    {
+        opacity: 0;
+        transform: translateY($distance/1);
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+}
+#linkDark2:hover h2,
+#linkDark2:focus h2
+{
+    &:before,
+    &:after 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &:before
+    {
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:after 
+    {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    .grid
+    {
+        width: 100vw;
+    }
+    #viLeverer
+    {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .tjenesteBoks
+    {
+        margin: 2rem 0 2rem 0;
+        padding: 1rem;
+        font-size: 1rem;
+        height: fit-content;
+    }
+    .tjenesteBoks h2
+    {
+        font-size: 1.5rem;
+    }
+    .empty
+    {
+        margin: 0;        
+        padding: 0;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    .empty p, .empty h3
+    {
+        margin: 2rem 2rem 2rem 2rem;
+    }
+    .empty img 
+    {
+        width: 100vw !important;        
+    }
+    .prosjekterContainer
+    {
+        width: 50%;
+    }
+    .prosjekter h1
+    {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .prosjektBox
+    {
+        width: 15rem;
+    }
+    .prosjektBox
+    {
+        text-align: center;
+    }
+    .prosjektImage
+    {
+        width: 15rem;
+    }
+    .textbox
+    {
+        font-size: 1.5rem;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+    }
+    .textbox p 
+    {
+        margin: 2rem;
+        padding: 0;
     }
 }

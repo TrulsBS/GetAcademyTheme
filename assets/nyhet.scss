@@ -47,22 +47,37 @@ body
 }
 img
 {
-    width: 25rem;
     width: 100%; 
 }
 a:hover
 {
     text-decoration: underline;
 }
-@media  only screen and (max-width: 1300px)
+
+@media screen and (max-width: 1024px)
 {
     .postPage
     {
-        display: flex;
-        align-content: center;
-        align-items: center;  
-        justify-content: center; 
-        background-color: #ffffff; 
-        padding: 0 5rem 5rem 5rem;
+        padding: 0 !important;
+    }
+
+    .postContent
+    {
+        margin: auto !important;
+        padding: 2rem 2rem 2rem 2rem !important;
+    }
+    .postContent p
+    {
+        font-size: 1rem !important;
+        margin: auto !important;
+        text-align: center !important;
+    }
+    .postcontent img 
+    {
+        margin: 2rem 0 2rem 0 !important;
+    }
+    .postcontent h1 
+    {
+        font-size: 1.5rem !important;
     }
 }

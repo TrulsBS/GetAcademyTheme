@@ -93,7 +93,10 @@ h1
     margin: 3rem 0 3rem 3rem;
     overflow: hidden;
 }
-
+.imageRight img 
+{
+    width: 100%;
+}
 .textRight
 {
     margin: 3rem 0 3rem 3rem;
@@ -126,7 +129,10 @@ h1
     margin: 3rem 3rem 3rem 0;
     overflow: hidden;
 }
-
+.imageLeft img 
+{
+    width: 100%;
+}
 .textLeft1
 {
     margin: 3rem 3rem 3rem 0;
@@ -158,4 +164,73 @@ h1
     align-items: center;
     margin: 3rem 0 3rem 3rem;
     overflow: hidden;
+}
+.imageRight1 img 
+{
+    width: 100%;
+}
+
+#hvem
+{
+    padding: 2rem 20rem 2rem 20rem;
+}
+
+@media screen and (max-width: 1024px) 
+{
+    .grid
+    {
+        margin: 5rem 0 5rem 0 !important;
+        width: 100% !important;
+        display: grid;
+        grid-template-rows: repeat(auto, 6) !important;
+        grid-template-columns: 1fr !important;
+        grid-template-areas: 'textLeft'
+                            'imageRight'                            
+                            'textRight'
+                            'imageLeft'
+                            'textLeft1'
+                            'imageRight1' !important;
+    }
+    .ansatte div
+    {
+        margin: 0 !important;
+        width: fit-content;
+    }
+    #hvem
+    {
+        padding: 0 !important;
+        width: 80%;
+        word-wrap: normal !important;
+        margin: 2rem;
+    }
+    .textLeft
+    {
+        margin: 2rem 2rem 1rem 2rem;
+        width: 80%;
+    }
+    .imageRight
+    {
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+    }
+    .textRight
+    {
+        margin: 2rem 2rem 1rem 2rem;
+        width: 80%;
+    }
+    .imageLeft
+    {
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+    }
+    .textLeft1
+    {
+        margin: 2rem 2rem 1rem 2rem;
+        width: 80%;
+    }
+    .imageRight1
+    {
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+    }
 }

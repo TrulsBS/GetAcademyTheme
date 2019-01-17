@@ -71,3 +71,16 @@ a#linkDark h2
           transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
       }
   }
+
+
+  @media screen and (max-width: 1024px)
+{
+    div.page
+    {
+        grid-template-rows: 30vh 1fr 30vh !important;
+    }
+    #toTop
+    {
+        display: none;
+    }
+}
