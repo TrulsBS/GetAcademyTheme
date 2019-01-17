@@ -22,14 +22,14 @@
         {% endif %}
 
         <div class="dropdown">
-            <a id="linkDark" href="{{site.baseurl}}/1skole.html">
+            <a {% if page.url=='/sok.html' or page.url=='/studieprogram.html' or page.url=='/praktiskInfo.html' or page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/1skole.html">
                 Skole
             </a>
             <div class="dropdown-content">
-                <a href="{{site.baseurl}}/sok.html">Søknadsskjema</a>
-                <a href="{{site.baseurl}}/studieprogram.html">Studieprogram</a>
-                <a href="{{site.baseurl}}/praktiskInfo.html">Praktisk info</a>
-                <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+                <a {% if page.url=='/sok.html' %} class="active" {% endif %} href="{{site.baseurl}}/sok.html">Søknadsskjema</a>
+                <a {% if page.url=='/studieprogram.html' %} class="active" {% endif %} href="{{site.baseurl}}/studieprogram.html">Studieprogram</a>
+                <a {% if page.url=='/praktiskInfo.html' %} class="active" {% endif %} href="{{site.baseurl}}/praktiskInfo.html">Praktisk info</a>
+                <a {% if page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %} href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
             </div>
         </div>
         <a id="linkDark" href="{{site.baseurl}}/2konsulentbyraa">
