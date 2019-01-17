@@ -52,6 +52,12 @@
   margin: 3rem 0 3rem 3rem;
   overflow: hidden; }
 
+.imageRight img {
+  width: 100%; }
+
+.imageLeft img {
+  width: 100%; }
+
 .textRight {
   margin: 3rem 0 3rem 3rem;
   grid-area: textRight; }
@@ -154,3 +160,75 @@ a#linkOrange {
 
 .partnere img:hover {
   filter: grayscale(0%); }
+
+@media screen and (max-width: 1024px) {
+  .aboutPage {
+    width: 100vw; }
+
+  .main {
+    padding: 0 2rem 0 2rem;
+    font-size: 1rem; }
+
+  #omOss {
+    font-size: 2rem; }
+
+  .grid {
+    margin: 5rem 0 5rem 0;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(auto, 4);
+    grid-template-columns: 1fr;
+    grid-template-areas: 'textLeft' 'imageRight' 'textRight' 'imageLeft'; }
+
+  .textLeft {
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    width: 15rem; }
+
+  .imageRight {
+    margin: auto;
+    margin-bottom: 5rem;
+    padding: 0;
+    overflow: hidden; }
+
+  .imageLeft {
+    margin: auto;
+    padding: 0;
+    overflow: hidden; }
+
+  .imageRight img {
+    width: 100%; }
+
+  .imageLeft img {
+    width: 100%; }
+
+  .textRight {
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    width: 15rem; }
+
+  .textRight h2 {
+    margin: auto;
+    text-align: center;
+    padding: 0 0 1.5rem 0; }
+
+  .box {
+    font-size: 1rem;
+    padding: 0; }
+
+  .box p {
+    padding: 0 2rem 0 2rem; }
+
+  .samarbeidsPartnere {
+    width: 100vw;
+    margin: 2rem 0 2rem 0;
+    padding: 0; }
+
+  .samarbeidsPartnere #partnere {
+    font-size: 1.5rem;
+    word-wrap: break-word; }
+
+  .samarbeidsPartnere .partnere img {
+    width: 5rem; } }

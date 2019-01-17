@@ -14,3 +14,8 @@ body {
 
 .form {
   margin-top: 5rem; }
+
+@media screen and (max-width: 1024px) {
+  .form {
+    width: 20rem;
+    margin: 1rem; } }

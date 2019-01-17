@@ -240,3 +240,95 @@ h2 {
   to {
     right: 0;
     opacity: 1; } }
+@media screen and (max-width: 1024px) {
+  .skolePageGrid {
+    margin: 5rem 0 5rem 0;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(auto, 12);
+    grid-template-columns: 1fr;
+    grid-template-areas: 'textLeft' 'imageRight' 'textRight' 'imageLeft' 'longBox' 'textLeft1' 'imageRight1' 'sitat' 'textRight1' 'imageLeft1' 'textLeft2' 'imageRight2'; }
+
+  .textLeft {
+    margin: 5rem 2rem 5rem 2rem;
+    width: 20rem;
+    grid-area: textLeft; }
+
+  .imageRight {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+
+  .textLeft1 {
+    margin: 5rem 2rem 5rem 2rem;
+    width: 20rem;
+    grid-area: textLeft1; }
+
+  .imageRight1 {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+
+  .textLeft2 {
+    margin: 5rem 2rem 5rem 2rem;
+    width: 20rem;
+    grid-area: textLeft2; }
+
+  .imageRight2 {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+
+  .textRight {
+    margin: 5rem 2rem 5rem 2rem;
+    width: 20rem;
+    grid-area: textRight; }
+
+  .imageLeft {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+
+  .textRight1 {
+    margin: 5rem 2rem 5rem 2rem;
+    width: 20rem;
+    grid-area: textRight1; }
+
+  .imageLeft1 {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+
+  .sitat {
+    width: 100vw !important;
+    padding: 5rem 0 5rem 0;
+    margin: 5rem 0 5rem 0;
+    font-size: 1rem;
+    height: 20rem; }
+
+  .sitatContent {
+    width: 100vw !important;
+    margin: 0 5rem 0 5rem 0;
+    padding: 0; }
+
+  .sitatContent p {
+    margin: 0;
+    word-wrap: normal; }
+
+  .mySlides {
+    width: 100vw !important;
+    padding: 0 2rem 0 2rem !important; }
+
+  .longBox {
+    width: 100vw !important;
+    padding: 0; }
+
+  .longBox span {
+    width: 100vw !important;
+    padding: 5rem 2rem 5rem 2rem;
+    font-size: 2rem; } }

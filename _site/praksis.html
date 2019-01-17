@@ -16,6 +16,9 @@
     <link rel="shortcut icon" type="image/png" href="/assets/images/icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -25,53 +28,71 @@
         
         <head>
     <link rel="stylesheet" type="text/css" href="/assets/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <div id="header" class="header">
     <div class="logo">
         <a href="/index.html">
-            <img src="/assets/images/GetAcademyLogo_DarkBlue.png" style="width: 15rem; margin-left: 6rem; margin-top: 1rem;" />
+            <img src="/assets/images/GetAcademy2_4_2.png" style="width: 12rem; margin: 1rem 0 1rem 6rem;" />
         </a>
     </div>
     <div class="links">
 
         
-            <a id="linkDark" href="/sok.html">
-                Søk nå!
-            </a>
+        <a id="linkDark" href="/sok.html">
+            Søk nå!
+        </a>
         
 
-        <div class="dropdown" style="width: 6rem;">
-        <a id="linkDark" 
-        href="/1skole.html">
-            Skole <i class="icon"></i>
-        </a>
-        <div class="dropdown-content">
-            <a href="/sok.html">Søknadsskjema</a>
-            <a href="/studieprogram.html">Studieprogram</a>
-            <a href="/praktiskInfo.html">Praktisk info</a>
-            <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
-        </div>
+        <div class="dropdown">
+            <a id="linkDark" href="/1skole.html">
+                Skole
+            </a>
+            <div class="dropdown-content">
+                <a href="/sok.html">Søknadsskjema</a>
+                <a href="/studieprogram.html">Studieprogram</a>
+                <a href="/praktiskInfo.html">Praktisk info</a>
+                <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+            </div>
         </div>
         <a id="linkDark" href="/2konsulentbyraa">
             Konsulentbyrå
         </a>
-        <div class="dropdown"  style="width: 7rem;">
+
+
+        <div class="dropdown">
             <a  id="linkDark" href="/3about.html">
-                Om oss <i class="icon"></i>
+                Om oss
             </a>
             <div class="dropdown-content">
-                <a href="/folk.html">Folk</a>
-                <a href="/historie.html">Historie</a>
+                <a  href="/Folk.html">
+                    Folk
+                </a>
+                <a  href="/historie.html">
+                    Historie
+                </a>
             </div>
         </div>
-        <a  id="linkDark" href="/4nyheter.html">
-            Nyheter
-        </a>
+
+
+        <div class="dropdown">
+            <a  id="linkDark"
+                href="/4nyheter.html">
+                Nyheter
+            </a>
+            <div class="dropdown-content">
+                <a 
+                 href="/arrangementer.html">Arrangementer</a>
+            </div>
+        </div>
         <a  id="linkDark" href="/kontakt.html">
             Kontakt
         </a>
+
+        <!-- DYNAMIC MENU LIST -->
 
         <!-- 
         
@@ -100,7 +121,118 @@
         
          -->
     </div>
+
+    <!-- DROPDOWN MENU -->
+
+    <!-- <div class="dropdown" id="select">
+        <div>
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="dropdown-content">
+            <a href="/sok.html">Søk nå!</a>
+            <div class="dropdown1" style="color: white;">
+                - Skole
+                <div class="dropdown-content1" style="left: -1rem !important; background: #ff8400;">
+                    <a href="/1skole.html" style="color: #fff">Skole</a>
+                    <a href="/sok.html" style="color: #fff">Søknadsskjema</a>
+                    <a href="/studieprogram.html" style="color: #fff">Studieprogram</a>
+                    <a href="/praktiskInfo.html" style="color: #fff">Praktisk info</a>
+                    <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html" style="color: #fff">Gratisleksjoner</a>
+                </div>
+            </div>
+            
+            <a href="/2konsulentbyraa">Konsulentbyrå</a>
+            <div class="dropdown1" style="color: white;">
+                - Om oss
+                <div class="dropdown-content1" style="left: -1rem !important; background: #ff8400;">
+                    <a href="/3about.html" style="color: #fff">Om oss</a>
+                    <a href="/folk.html" style="color: #fff">Folk</a>
+                    <a href="/historie.html" style="color: #fff">Historie</a>
+                </div>
+            </div>
+            <a href="/4nyheter.html">Nyheter</a>
+            <a href="/kontakt.html">Kontakt</a>
+        </div>
+    </div> -->
+
+
+
+    <!-- PHONE MENU -->
+    <span id="icon" onclick="openNav()">
+        <i class="fas fa-bars"></i>
+    </span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a  href="/sok.html">Søk nå!</a>
+
+        <a  href="/1skole.html">Skole</a>
+        <button class="dropdown-btn">
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a  href="/sok.html">Søknadsskjema</a>
+            <a  href="/studieprogram.html">Studieprogram</a>
+            <a  href="/praktiskInfo.html">Praktisk
+                info</a>
+            <a  href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+        </div>
+        <a href="/2konsulentbyraa">Konsulentbyrå</a>
+
+        <a  href="/3about.html">Om oss</a>
+        <button class="dropdown-btn">
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a  href="/folk.html">Folk</a>
+            <a  href="/historie.html">Historie</a>
+        </div>
+
+        <a  href="/4nyheter.html">
+            Nyheter
+        </a>
+        <button class="dropdown-btn">
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a 
+             href="/arrangementer.html">Arrangementer</a>
+        </div>
+
+        <a  href="/kontakt.html">Kontakt</a>
+    </div>
+
+    <!-- <div class="empty">
+    </div> -->
+
 </div>
+
+<script>
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
         
 
         <div class="mainContent">
@@ -129,12 +261,13 @@
 </div>
         </div>
 
-        <a href="#header" style="position: fixed; right: 1rem; bottom: 1rem; font-size: 1.2rem; color: #ff8400; text-decoration: none;">
+        <a id="toTop" href="#header" style="position: fixed; right: 1rem; bottom: 1rem; font-size: 1.2rem; color: #ff8400; text-decoration: none;">
             Til topp <i class="fas fa-arrow-circle-up"></i>
         </a>
 
         <head>
     <link rel="stylesheet" type="text/css" href="/assets/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <div class="footer">

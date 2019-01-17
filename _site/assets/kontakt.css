@@ -34,3 +34,32 @@ body {
 .aD {
   grid-area: aD;
   margin-left: 5rem; }
+
+@media screen and (max-width: 1024px) {
+  .kontaktGrid {
+    padding: 10rem 2rem 10rem 2rem;
+    display: grid;
+    grid-template-rows: repeat(auto, 6);
+    grid-template-columns: 1fr;
+    grid-template-areas: 'skole' 'eD' 'konsulent' 'iD' 'adresse' 'aD'; }
+
+  .eD {
+    margin: auto !important;
+    padding: 0 0 5rem 0 !important; }
+
+  .iD {
+    margin: auto !important;
+    padding: 0 0 5rem 0 !important; }
+
+  .skole {
+    margin: auto !important; }
+
+  .konsulent {
+    margin: auto !important; }
+
+  .adresse {
+    margin: auto !important; }
+
+  .aD {
+    margin: auto !important;
+    padding: 0 0 5rem 0 !important; } }
