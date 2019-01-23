@@ -5,117 +5,90 @@
 </head>
 
 
-<div id="header" class="header">
+<div id="header" {% if page.tags contains 'underlinks' %} class="underlinks" {% else %} class="header" {% endif %}>
+
     <div class="logo">
         <a href="{{site.baseurl}}/index.html">
             <img src="{{site.baseurl}}/assets/images/GetAcademy2_4_2.png" style="width: 12rem; margin: 1rem 0 1rem 6rem;" />
         </a>
     </div>
+
     <div class="links">
 
-        {% if page.url == '/sok.html' %}
-        <a class="active" id="linkDark" href="{{site.baseurl}}/sok.html">Søk nå!</a>
-        {% else %}
-        <a id="linkDark" href="{{site.baseurl}}/sok.html">
+        <a {% if page.url=='/sok.html' %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/sok.html">
             Søk nå!
         </a>
-        {% endif %}
 
+        <a id="linkDark" href="{{site.baseurl}}/Skole.html">
+            Skole
+        </a>
+        <!-- 
         <div class="dropdown">
-            <a {% if page.url=='/sok.html' or page.url=='/studieprogram.html' or page.url=='/praktiskInfo.html' or page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/1skole.html">
+            <a id="linkDark" href="{{site.baseurl}}/Skole.html">
                 Skole
             </a>
             <div class="dropdown-content">
-                <a {% if page.url=='/sok.html' %} class="active" {% endif %} href="{{site.baseurl}}/sok.html">Søknadsskjema</a>
-                <a {% if page.url=='/studieprogram.html' %} class="active" {% endif %} href="{{site.baseurl}}/studieprogram.html">Studieprogram</a>
-                <a {% if page.url=='/praktiskInfo.html' %} class="active" {% endif %} href="{{site.baseurl}}/praktiskInfo.html">Praktisk info</a>
-                <a {% if page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %} href="{{site.baseurl}}/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+                <a href="{{site.baseurl}}/sok.html">Søknadsskjema</a>
+                <a href="{{site.baseurl}}/Studieprogram.html">Studieprogram</a>
+                <a href="{{site.baseurl}}/Praktisk Info.html">Praktisk info</a>
+                <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
             </div>
-        </div>
-        <a id="linkDark" href="{{site.baseurl}}/2konsulentbyraa">
+        </div> -->
+
+        <a id="linkDark" href="{{site.baseurl}}/Konsulentselskap">
             Konsulentbyrå
         </a>
 
+        <a {% if page.url=='/Om oss.html' or page.url=='/Historie.html' or page.url=='/Folk.html' %} class="active" {%
+            endif %} id="linkDark" href="{{site.baseurl}}/Om oss.html">
+            Om oss
+        </a>
 
-        <div class="dropdown">
-            <a {% if page.url=='/3about.html' or page.url=='/historie.html' or page.url=='/Folk.html' %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/3about.html">
+        <!-- <div class="dropdown">
+            <a {% if page.url=='/Om oss.html' or page.url=='/Historie.html' or page.url=='/Folk.html' %} class="active"
+                {% endif %} id="linkDark" href="{{site.baseurl}}/Om oss.html">
                 Om oss
             </a>
             <div class="dropdown-content">
-                <a {% if page.url=='/Folk.html' %} class="active"  {% endif %} href="{{site.baseurl}}/Folk.html">
+                <a {% if page.url=='/Folk.html' %} class="active" {% endif %} href="{{site.baseurl}}/Folk.html">
                     Folk
                 </a>
-                <a {% if page.url=='/historie.html' %} class="active" {% endif %} href="{{site.baseurl}}/historie.html">
+                <a {% if page.url=='/Historie.html' %} class="active" {% endif %} href="{{site.baseurl}}/Historie.html">
                     Historie
                 </a>
             </div>
-        </div>
+        </div> -->
 
-
+        <a {% if page.url=='/4nyheter.html' or page.url=='/Arrangementer.html' or page.url=='/Kommende Arrangementer.html'
+            %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/Nyheter.html">
+            Hva skjer?
+        </a>
+<!-- 
         <div class="dropdown">
-            <a {% if page.url=='/4nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %} class="active" {% endif %} id="linkDark"
-                href="{{site.baseurl}}/4nyheter.html">
-                Nyheter
+            <a {% if page.url=='/4nyheter.html' or page.url=='/Arrangementer.html' or page.url=='/Kommende Arrangementer.html'
+                %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/Nyheter.html">
+                Hva skjer?
             </a>
             <div class="dropdown-content">
-                <a {% if page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %} class="active" {% endif %}
-                 href="{{site.baseurl}}/arrangementer.html">Arrangementer</a>
+                <a href="{{site.baseurl}}/Nyheter.html">Nyheter</a>
+                <a {% if page.url=='/Arrangementer.html' or page.url=='/Kommende Arrangementer.html' %} class="active"
+                    {% endif %} href="{{site.baseurl}}/Arrangementer.html">Arrangementer</a>
             </div>
-        </div>
-        <a {% if page.url=='/kontakt.html' %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/kontakt.html">
+        </div> -->
+
+        <a {% if page.url=='/Kontakt.html' %} class="active" {% endif %} id="linkDark" href="{{site.baseurl}}/Kontakt.html">
             Kontakt
         </a>
-
-        <!-- DYNAMIC MENU LIST -->
-
-        <!-- {% assign sorted-links = site.html_pages | where:"categories","include" %}
-        {% for p in sorted-links %}
-        {% if page.url == p.url %}
-        <a class="active" id="linkDark" href="{{site.baseurl}}{{ p.url }}">
-            {{p.page-name}}
-        </a>
-        {% else %}
-        <a id="linkDark" href="{{site.baseurl}}{{ p.url }}">
-            {{p.page-name}}
-        </a>
-        {% endif %}
-        {% endfor %} -->
     </div>
-
-    <!-- DROPDOWN MENU -->
-
-    <!-- <div class="dropdown" id="select">
-        <div>
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="dropdown-content">
-            <a href="{{site.baseurl}}/sok.html">Søk nå!</a>
-            <div class="dropdown1" style="color: white;">
-                - Skole
-                <div class="dropdown-content1" style="left: -1rem !important; background: #ff8400;">
-                    <a href="{{site.baseurl}}/1skole.html" style="color: #fff">Skole</a>
-                    <a href="{{site.baseurl}}/sok.html" style="color: #fff">Søknadsskjema</a>
-                    <a href="{{site.baseurl}}/studieprogram.html" style="color: #fff">Studieprogram</a>
-                    <a href="{{site.baseurl}}/praktiskInfo.html" style="color: #fff">Praktisk info</a>
-                    <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html" style="color: #fff">Gratisleksjoner</a>
-                </div>
-            </div>
-            
-            <a href="{{site.baseurl}}/2konsulentbyraa">Konsulentbyrå</a>
-            <div class="dropdown1" style="color: white;">
-                - Om oss
-                <div class="dropdown-content1" style="left: -1rem !important; background: #ff8400;">
-                    <a href="{{site.baseurl}}/3about.html" style="color: #fff">Om oss</a>
-                    <a href="{{site.baseurl}}/folk.html" style="color: #fff">Folk</a>
-                    <a href="{{site.baseurl}}/historie.html" style="color: #fff">Historie</a>
-                </div>
-            </div>
-            <a href="{{site.baseurl}}/4nyheter.html">Nyheter</a>
-            <a href="{{site.baseurl}}/kontakt.html">Kontakt</a>
-        </div>
-    </div> -->
-
-
+    {% if page.tags contains 'underlinks' %}
+    <div class="underlink">
+        {% for item in page.links %}
+        <a href="{{site.baseurl}}/{{item.url}}.html" id="linkDark">
+            {{item.name}}
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
 
     <!-- PHONE MENU -->
     <span id="icon" onclick="openNav()">
@@ -135,6 +108,7 @@
             <a {% if page.url=='/praktiskInfo.html' %} class="active" {% endif %} href="{{site.baseurl}}/praktiskInfo.html">Praktisk
                 info</a>
             <a {% if page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %} href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">Gratisleksjoner</a>
+            <a href="{{site.baseurl}}/studieprogram.html">Om utdanningen</a>
         </div>
         <a href="{{site.baseurl}}/2konsulentbyraa">Konsulentbyrå</a>
 
@@ -147,27 +121,29 @@
             <a {% if page.url=='/historie.html' %} class="active" {% endif %} href="{{site.baseurl}}/historie.html">Historie</a>
         </div>
 
-        <a {% if page.url=='/4nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %} class="active" {% endif %} href="{{site.baseurl}}/4nyheter.html">
-            Nyheter
+        <a {% if page.url=='/4nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html'
+            %} class="active" {% endif %} href="{{site.baseurl}}/4nyheter.html">
+            Hva skjer?
         </a>
         <button class="dropdown-btn">
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a {% if page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %} class="active" {% endif %}
-             href="{{site.baseurl}}/arrangementer.html">Arrangementer</a>
+            <a {% if page.url=='/4nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html'
+                %} class="active" {% endif %} href="{{site.baseurl}}/4nyheter.html">
+                Nyheter
+            </a>
+            <a {% if page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %} class="active" {%
+                endif %} href="{{site.baseurl}}/arrangementer.html">Arrangementer</a>
         </div>
 
         <a {% if page.url=='/kontakt.html' %} class="active" {% endif %} href="{{site.baseurl}}/kontakt.html">Kontakt</a>
     </div>
-
-    <!-- <div class="empty">
-    </div> -->
-
 </div>
 
-<script>
 
+
+<script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "100%";
     }
