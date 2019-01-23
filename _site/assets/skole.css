@@ -9,7 +9,7 @@ h2 {
   font-size: 1.8rem; }
 
 .textLeft {
-  margin: 5rem 2rem 5rem 10rem;
+  margin: 5rem 2rem 5rem 20rem;
   grid-area: textLeft; }
 
 .textLeft div {
@@ -30,10 +30,10 @@ h2 {
   display: flex;
   align-content: center;
   align-items: center;
-  margin: 5rem 10rem 5rem 2rem; }
+  margin: 5rem 20rem 5rem 2rem; }
 
 .textLeft1 {
-  margin: 10rem 2rem 10rem 10rem;
+  margin: 10rem 2rem 10rem 20rem;
   grid-area: textLeft1; }
 
 .textLeft1 div {
@@ -54,10 +54,10 @@ h2 {
   display: flex;
   align-content: center;
   align-items: center;
-  margin: 10rem 10rem 10rem 2rem; }
+  margin: 10rem 20rem 10rem 2rem; }
 
 .textRight {
-  margin: 5rem 10rem 5rem 2rem;
+  margin: 5rem 20rem 5rem 2rem;
   grid-area: textRight; }
 
 .textRight div {
@@ -78,10 +78,10 @@ h2 {
   display: flex;
   align-content: center;
   align-items: stretch;
-  margin: 5rem 2rem 5rem 10rem; }
+  margin: 5rem 2rem 5rem 20rem; }
 
 .textRight1 {
-  margin: 5rem 10rem 5rem 2rem;
+  margin: 5rem 20rem 5rem 2rem;
   grid-area: textRight1; }
 
 .textRight1 div {
@@ -103,14 +103,14 @@ h2 {
   display: flex;
   align-content: center;
   align-items: stretch;
-  margin: 5rem 2rem 5rem 10rem; }
+  margin: 5rem 2rem 5rem 20rem; }
 
 .longBox {
   padding: 15rem 10rem 15rem 10rem;
   margin: 5rem 0 5rem 0;
   grid-area: longBox;
   font-size: 3rem;
-  color: #c2c2c2;
+  color: #fff;
   display: flex;
   background-color: #101a31;
   text-align: center; }
@@ -155,7 +155,7 @@ h2 {
   filter: grayscale(0%); }
 
 .textLeft2 {
-  margin: 5rem 2rem 5rem 10rem;
+  margin: 5rem 2rem 5rem 20rem;
   grid-area: textLeft2; }
 
 .textLeft2 div {
@@ -177,16 +177,16 @@ h2 {
   display: flex;
   align-content: center;
   align-items: stretch;
-  margin: 5rem 10rem 5rem 2rem; }
+  margin: 5rem 20rem 5rem 2rem; }
 
 .sitat {
   user-select: none;
   grid-area: sitat;
   height: 30rem;
-  padding: 10rem 10rem 5rem 10rem;
+  padding: 10rem 20rem 5rem 20rem;
   margin: 5rem 0 5rem 0;
   font-size: 2rem;
-  color: #c2c2c2;
+  color: #fff;
   display: flex;
   flex-direction: column;
   background-color: #101a31;

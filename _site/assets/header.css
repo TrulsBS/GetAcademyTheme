@@ -2,30 +2,38 @@ body {
   margin: 0;
   padding: 0; }
 
-div.header {
-  user-select: none;
-  grid-area: header;
-  overflow: hidden;
-  display: flex;
-  align-content: stretch;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto, 1);
+  grid-template-areas: 'logo links';
   height: fit-content; }
 
-div.logo {
-  z-index: 2;
-  flex-grow: 1; }
+.logo {
+  grid-area: logo; }
 
 .links {
-  margin: auto;
-  overflow: hidden;
+  grid-area: links;
   display: flex;
+  flex-direction: row;
+  padding: 0 0 0 10rem;
+  margin: auto;
   justify-content: center;
   align-items: flex-end;
-  align-content: stretch;
-  flex-direction: row;
-  padding: 0 6rem 0 3rem; }
+  align-content: stretch; }
+
+.underlinks {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(auto, 2);
+  grid-template-areas: 'logo links' 'empty underlink';
+  height: fit-content; }
+
+.underlink {
+  grid-area: underlink;
+  margin: auto;
+  margin-right: 10.7rem;
+  padding: 0 0 0 10rem; }
 
 a#linkDark {
   color: #101a31;
