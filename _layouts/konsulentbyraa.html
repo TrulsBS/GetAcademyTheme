@@ -8,24 +8,27 @@ layout: default
 
 <div class="grid">
 
-    <h1 id="viLeverer" style="margin: auto;">Vi leverer digitale tjenester</h1>
+    <h1 id="viLeverer" style="margin: auto; padding-top: 5rem;">Vi leverer digitale tjenester</h1>
+    <p id="ingress" style="margin: auto; padding-top: 5rem; font-size: 2rem;">
+        En ingress med noe tekst
+    </p>
     <div class="tjenester">
         <a href="{{site.baseurl}}/utvikling.html" id="linkDark2" class="tjenesteBoks">
-                <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-code"></i></br>   -->
+            <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-code"></i></br>   -->
             <h2>Utvikling</h2>
             <p>
-                Systemutvikling, integrasjon, systemarkitektur og prosjektledelse            
+                Systemutvikling, integrasjon, systemarkitektur og prosjektledelse
             </p>
         </a>
         <a href="{{site.baseurl}}/ux-design.html" id="linkDark2" class="tjenesteBoks">
-                <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-object-group"></i></br> -->
+            <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-object-group"></i></br> -->
             <h2>UX-design</h2>
             <p>
                 Konseptutvikling, interaksjonsdesign og tjenestedesign
             </p>
         </a>
         <a href="{{site.baseurl}}/raadgivning.html" id="linkDark2" class="tjenesteBoks">
-                <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-chalkboard-teacher"></i></br> -->
+            <!-- <i style="font-size: 5rem; color: #ff8400;" class="fas fa-chalkboard-teacher"></i></br> -->
             <h2>Rådgiving</h2>
             <p>
                 Foredrag, workshops, rådgiving i valg av teknisk plattform og løsninger
@@ -33,17 +36,44 @@ layout: default
         </a>
     </div>
 
-    <div class="empty">
-
-        <div style="margin: 0 5rem 0 0;">
-            <p>{{content}}</p>
+    <div class="grid2">
+        <div class="textLeft">
+            <a style="color: #101a31; margin: 0;">
+                <div>
+                    <h2>
+                        Team
+                    </h2>
+                    <p>
+                        Vårt konsulentselskap består i dag av 8 konsulenter med genuin lidenskap
+                        for teknologi og brukervennlighet
+                    </p>
+                </div>
+            </a>
         </div>
-
-        <div>
-            <img style="margin-top: 3rem; width: 30rem;" 
-            src="{{site.baseurl}}/assets/images/konsulent.jpg" />
+        <div class="imageRight">
+            <a>
+                <img src="{{site.baseurl}}/assets/images/konsulent.jpg" />
+            </a>
         </div>
-        
+        <div class="textRight">
+            <a style="color: #101a31; margin: 0;">
+                <div>
+                    <h2>
+                        Prosess
+                    </h2>
+                    <p>
+                        Mer enn 50% av ungdommer i Norge fullfører ikke videregående opplæring.
+                        Næringslivet i Norge mangler 6000 utviklere. Gjennom vår 
+                        utdanning har vi allerede fått 30 ungdommmer ut i jobb, og vi har akkurat startet.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="imageLeft">
+            <a>
+                <img src="{{site.baseurl}}/assets/images/computer.jpg" />
+            </a>
+        </div>
     </div>
 
     <div class="prosjekter">
@@ -51,18 +81,18 @@ layout: default
         <div class="prosjekterContainer">
             {% assign sorted-posts = site.posts | where:"categories","prosjekter" %}
             {% for post in sorted-posts limit:3 %}
-            <a id="linkDark1" href="{{site.baseurl}}/{{post.url}}" style="text-decoration: none; margin: 1rem;">
+            <a id="linkDark1" href="{{site.baseurl}}{{post.url}}" style="text-decoration: none; margin: 1rem;">
                 <div class="prosjektBox">
                     <div class="innerProsjektBox">
                         <!-- <div style="padding: 0; margin: 0;"> -->
-                            <div class="prosjektImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
-                            </div>
-                            <h2>
-                                {{post.title}}
-                            </h2>
-                            <p style="font-size: 1.5rem;">
-                                {{post.description}}
-                            </p>
+                        <div class="prosjektImage" style="background-image: url({{site.baseurl}}{{post.image}});">
+                        </div>
+                        <h2>
+                            {{post.title}}
+                        </h2>
+                        <p style="font-size: 1.5rem;">
+                            {{post.description}}
+                        </p>
                         <!-- </div> -->
                     </div>
                 </div>
@@ -72,7 +102,7 @@ layout: default
     </div>
 
     <div class="textbox" style="color: white;">
-        <p>Du skal få en dag i mårå</p>
+        <p>Det vitenskapelige navnet på Lama er Lama glama</p>
     </div>
 
 </div>
