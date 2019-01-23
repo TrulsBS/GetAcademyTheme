@@ -9,16 +9,12 @@ body
     margin: 0;
     padding: 0;
 }
-div.header
+.header
 {
-    user-select: none;
-    grid-area: header;
-    overflow: hidden;
-    display: flex;
-    align-content: stretch;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(auto, 1);
+    grid-template-areas: 'logo links';
     height: fit-content;
     background: white;
 }
@@ -52,11 +48,11 @@ div.bgi
     background-attachment: fixed;
     background-position: center;
 }
-div.tint
-{
-    background-color: #ff8b0e;
-    background-blend-mode: multiply;
-}
+// div.tint
+// {
+//     background-color: #ff8b0e;
+//     background-blend-mode: multiply;
+// }
 .headerInfo
 {
     // align-self: flex-end; 
@@ -73,25 +69,37 @@ div.tint
 div.logo
 {
     z-index: 2;
-    flex-grow: 1;
-    
 }
 
-#select 
-{
-    display: none;
-}
 
 .links
 {
+    grid-area: links;
+    display: flex;    
+    flex-direction: row;
+    padding: 0 0 0 10rem;
     margin: auto;
-    overflow: hidden;
-    display: flex;
     justify-content: center;
     align-items: flex-end;
     align-content: stretch;
-    flex-direction: row;
-    padding: 0 6rem 0 3rem;
+}
+.underlinks
+{
+    display: grid;    
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(auto, 2);
+    grid-template-areas: 'logo links'
+                         'empty underlink';
+    height: fit-content;
+    background: white;
+    padding-bottom: 1rem;
+}
+.underlink
+{
+    grid-area: underlink;
+    margin: auto;
+    margin-right: 10.7rem;
+    padding: 0 0 0 10rem;    
 }
 a#linkDark
 {
@@ -217,7 +225,7 @@ a#linkLight{
   
   .dropdown-content 
   {
-    padding: 3rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
     // display: none;
     opacity: 0;
     visibility: hidden;
@@ -228,13 +236,13 @@ a#linkLight{
     position: absolute;
     min-width: 160px;
     z-index: 1;
-    background: #ffffffbf;
+    background: #101a31ee;
     // border-bottom-left-radius: 10px;
     // border-bottom-right-radius: 10px;
   }  
   .dropdown-content a 
   {
-    color: #101a31;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;

@@ -48,10 +48,11 @@
 {
     padding: 5rem 0 0 0;
     display: grid;
-    grid-template-rows: repeat(auto, 5);
+    grid-template-rows: repeat(auto, 6);
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'textImage textImage'
-                         'skole konsulent'
+                         'hvaViGjør hvaViGjør'
+                         'skoleBox konsulentBox'
                          'longBox longBox'
                          'news news'
                          'besøk besøk';
@@ -70,7 +71,7 @@ h2
 }
 .textLeft
 {
-    margin: 5rem 2rem 5rem 10rem;
+    margin: 5rem 2rem 5rem 20rem;
     width: 50%;
     grid-area: textLeft;
     //background-color: #101a31; 
@@ -97,12 +98,12 @@ h2
     display: flex;
     align-content: center;
     align-items: center;
-    margin: 5rem 10rem 5rem 2rem;
+    margin: 5rem 20rem 5rem 2rem;
 }
 
 .skole
 {
-    margin: 5rem 2rem 5rem 10rem;
+    margin: 5rem 2rem 0 20rem;
     height: 30rem;
     // padding-top: 12rem;
     // padding-bottom: 12rem;
@@ -112,7 +113,7 @@ h2
 }
 .konsulent
 {
-    margin: 5rem 10rem 5rem 2rem;
+    margin: 5rem 20rem 0 2rem;
     height: 30rem;
     // padding-top: 12rem;
     // padding-bottom: 12rem;
@@ -130,6 +131,18 @@ h2
     background: #0c1324;
     transition: background-color .2s linear;
 }
+.xtraSkole
+{
+    grid-area: skoleXtra;
+    margin: 1rem 2rem 0 20rem;
+    padding: 0;
+}
+.xtraKonsulent
+{
+    grid-area: konsulentXtra;
+    margin: 1rem 20rem 0 2rem;
+    padding: 0;
+}
 .longBox
 {
     padding: 15rem 10rem 15rem 10rem;
@@ -137,7 +150,7 @@ h2
     grid-area: longBox;
     font-size: 3rem;
     text-align: center;
-    color: #bec3cf;
+    color: #fff;
     display: flex;
     background-color: #101a31;
     font-style: italic;
@@ -147,15 +160,15 @@ h2
 .besøk
 {
     grid-area: besøk;
-    background-color: #a3a3a3;
+    background-color: #1d2d53;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10rem 10rem 10rem 10rem;
+    padding: 10rem 20rem 10rem 20rem;
 }
 .besøk p
 {
-    color: #e9e9e9;
+    color: #fff;
     font-style: italic;
     font-size: 3rem;
     text-align: center;
@@ -163,7 +176,7 @@ h2
 
 .news
 {
-    margin: 7rem 0 7rem 0;
+    margin: 5rem 20rem 5rem 20rem;
     grid-area: news;
     display: flex;
     flex-direction: column;
@@ -189,9 +202,9 @@ h2
 }
 .newsBox
 {    
-    width: 24.5rem;
+    width: 20rem;
     //background: #d6d6d6;
-    height: 30rem;      
+    height: 25rem;   
     display: flex;
     align-content: center;
     align-items: stretch;
@@ -222,6 +235,7 @@ h2
     padding: 0;
     background-repeat: no-repeat; 
     background-size: cover; 
+    background-position: center;
     overflow: hidden;
     width: 100%;
     height: 12rem;
