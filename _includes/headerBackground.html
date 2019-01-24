@@ -18,8 +18,15 @@
                     Søk nå!
                 </a>
         
-                <a id="linkDark" href="{{site.baseurl}}/Skole.html">
-                    Skole
+                <a id="linkDark" href="{{site.baseurl}}/Skole.html" 
+                {% if page.url=='/Skole.html' 
+                or page.url=='/Sok.html'
+                or page.url=='/Studieprogram.html' 
+                or page.url=='/Praktisk Info.html' 
+                or page.url=='/skole/2018/12/03/gratismateriale.html' %} 
+                class="active" 
+                {% endif %}>
+                    Skole                    
                 </a>
                 <!-- 
                 <div class="dropdown">
@@ -34,7 +41,7 @@
                     </div>
                 </div> -->
         
-                <a id="linkDark" href="{{site.baseurl}}/Konsulentselskap">
+                <a id="linkDark" href="{{site.baseurl}}/Konsulentselskap" {% if page.url=='/Konsulentselskap.html' %} class="active" {% endif %}>
                     Konsulentbyrå
                 </a>
         
@@ -95,12 +102,29 @@
         </div>
         {% if page.tags contains 'underlinks' %}
         <div class="underlink">
-            {% for item in page.links %}
-            <a href="{{site.baseurl}}/{{item.url}}.html" id="linkDark">
-                {{item.name}}
-            </a>
-            {% endfor %}
+            
+            {% if page.url=='/Skole.html' or 
+            
+            page.url=='/studieprogram.html' or 
+            page.url=='/praktiskInfo.html' or 
+            page.url=='/skole/2018/12/03/gratismateriale.html' %}
+            <!-- <a href="{{site.baseurl}}/sok.html" id="linkDark" {% if page.url=='/sok.html' %} class="active" {% endif %}>Søk</a> -->
+            <a href="{{site.baseurl}}/studieprogram.html" id="linkDark" {% if page.url=='/studieprogram.html' %} class="active" {% endif %}>Studieprogram</a>
+            <a href="{{site.baseurl}}/praktiskInfo.html" id="linkDark" {% if page.url=='/praktiskInfo.html' %} class="active" {% endif %}>Praktisk Info</a>
+            <a href="{{site.baseurl}}/skole/2018/12/03/gratismateriale.html" id="linkDark" {% if page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %}>Gratismateriale</a>
+            {% endif %}
+    
+            {% if page.url=='/Om%20oss.html' or page.url=='/Folk.html' or page.url=='/historie.html' %}
+            <a href="{{site.baseurl}}/Folk.html" id="linkDark" {% if page.url=='/Folk.html' %} class="active" {% endif %}>Folk</a>
+            <a href="{{site.baseurl}}/historie.html" id="linkDark" {% if page.url=='/historie.html' %} class="active" {% endif %}>Historie</a>
+            {% endif %}
+            
+            {% if page.url=='/Nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %}
+            <a href="{{site.baseurl}}/Nyheter.html" id="linkDark" {% if page.url=='/Nyheter.html' %} class="active" {% endif %}>Nyheter</a>
+            <a href="{{site.baseurl}}/arrangementer.html" id="linkDark" {% if page.url=='/arrangementer.html' %} class="active" {% endif %}>Arrangementer</a>
+            {% endif %}
         </div>
+    
         {% endif %}
 
         <span id="icon" onclick="openNav()">
