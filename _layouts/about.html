@@ -18,7 +18,7 @@ layout: default
 
         {% assign organisert = site.posts | where:"title","Hvordan vi er organisert" %}
         <div class="textLeft">
-            <a id="linkDark" href="{{organisert[0].url}}">
+            <a id="linkDark" href="{{site.baseurl}}/{{organisert[0].url}}">
                 <div>
                     <h2>{{organisert[0].title}}</h2>
                     <p>{{organisert[0].description}}</p>
@@ -32,7 +32,7 @@ layout: default
         </div>
         {% assign verdier = site.posts | where:"title","Våre verdier" %}
         <div class="textRight">
-            <a id="linkDark" href="{{verdier[0].url}}">
+            <a id="linkDark" href="{{site.baseurl}}/{{verdier[0].url}}">
                 <div>
                     <h2>{{verdier[0].title}}</h2>
                     <p>{{verdier[0].description}}</p>
