@@ -24,7 +24,7 @@ layout: default
         </div>
         <div class="imageRight">
             <a href="{{sorted-posts-other[0].url}}">
-                <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-posts-other[0].image}}" />
+                <img style="width: 100%; margin: auto;" src="{{site.baseurl}}{{sorted-posts-other[0].image}}" />
             </a>
         </div>
     </div>
@@ -34,9 +34,9 @@ layout: default
     <div style="grid-area: skoleBox;">
         <a href="{{site.baseurl}}/1skole.html">
             <div class="sKButton skole">
-                <a id="linkLight" style="margin: auto; color:white; font-size: 50px;" href="{{site.baseurl}}/1skole.html">
+                <a id="linkLight" style="margin: auto; color:white; font-size: 40px;" href="{{site.baseurl}}/1skole.html">
                     <span>
-                        Skole
+                        IT-Skole
                     </span>
                 </a>
             </div>
@@ -49,15 +49,15 @@ layout: default
     <div style="grid-area: konsulentBox;">
         <a href="{{site.baseurl}}/2konsulentbyraa.html">
             <div class="sKButton konsulent">
-                <a id="linkLight" style="margin: auto; color: white; font-size: 50px;" href="{{site.baseurl}}/2konsulentbyraa.html">
+                <a id="linkLight" style="margin: auto; color: white; font-size: 40px;" href="{{site.baseurl}}/2konsulentbyraa.html">
                     <span>
-                        Konsulentbyrå
+                        Konsulentselskap
                     </span>
                 </a>
             </div>
         </a>
         <div class="xtraKonsulent">
-            <h4>KonsulentSelskap</h4>
+            <h4>Konsulentselskap</h4>
             <p>Leverer design, utvikling og rådgiving for digitale flater</p>
         </div>
     </div>
@@ -79,7 +79,7 @@ layout: default
             <a id="linkDark1" href="{{site.baseurl}}{{post.url}}" style="padding: 0; text-decoration: none; margin: 1rem; text-transform: none;">
                 <div class="newsBox">
                     <div class="innerNewsBox">
-                        <div class="newsImage" style="background-image: url({{site.baseurl}}/{{post.image}});">
+                        <div class="newsImage" style="background-image: url({{site.baseurl}}{{post.image}});">
                         </div>
                         <p style="color: #101a31; font-size: 0.8rem; font-style: italic;">
                             {{post.date | date:"%d.%m.%Y"}}
@@ -97,7 +97,7 @@ layout: default
             {% endfor %}
         </div>
         <h3 style="margin: auto; padding: 5rem 0 0 0;">
-            <a href="{{site.baseurl}}/4nyheter.html" id="linkDark2">
+            <a href="{{site.baseurl}}/nyheter.html" id="linkDark2">
                 Se fler nyheter
             </a>
         </h3>
