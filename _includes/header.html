@@ -102,7 +102,7 @@
         
         {% if page.url=='/Nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %}
         <a href="{{site.baseurl}}/Nyheter.html" id="linkDark" {% if page.url=='/Nyheter.html' %} class="active" {% endif %}>Nyheter</a>
-        <a href="{{site.baseurl}}/arrangementer.html" id="linkDark" {% if page.url=='/arrangementer.html' %} class="active" {% endif %}>Arrangementer</a>
+        <a href="{{site.baseurl}}/arrangementer.html" id="linkDark" {% if page.url=='/arrangementer.html' or page.url=='kommendeArrangement.html' %} class="active" {% endif %}>Arrangementer</a>
         {% endif %}
     </div>
 
