@@ -12,7 +12,7 @@ layout: default
 <div class="skolePageGrid">
     {% assign aarsUtdanning = site.posts | where:"title","1,5 års utdanning" %}
     <div class="textLeft">
-        <a id="linkDark" href="{{aarsUtdanning[0].url}}">
+        <a id="linkDark" href="{{site.baseurl}}/{{aarsUtdanning[0].url}}">
             <div>
                 <h2>{{aarsUtdanning[0].title}}</h2>
                 <p>{{aarsUtdanning[0].description}}</p>
@@ -69,7 +69,7 @@ layout: default
         </a>
     </div>
     <div class="imageRight1">
-        <a href="{{karriere[0].url}}">
+        <a href="{{site.baseurl}}/{{karriere[0].url}}">
             <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{karriere[0].image}}" />
         </a>
     </div>
@@ -115,7 +115,7 @@ layout: default
     </div>
     {% assign forDeg = site.posts | where:"title","Koding noe for deg?" %}
     <div class="textLeft2">
-        <a id="linkDark" href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">
+        <a id="linkDark" href="{{site.baseurl}}/skole/2018/12/03/gratismateriale.html">
             <div>
                 <h2>{{forDeg[0].title}}</h2>
                 <p>{{forDeg[0].description}}</p>
@@ -123,7 +123,7 @@ layout: default
         </a>
     </div>
     <div class="imageRight2">
-        <a href="http://localhost:4000/skole/2018/12/03/gratismateriale.html">
+        <a href="{{site.baseurl}}/skole/2018/12/03/gratismateriale.html">
             <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{forDeg[0].image}}" />
         </a>
     </div>
