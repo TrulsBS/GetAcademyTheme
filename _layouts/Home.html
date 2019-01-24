@@ -11,7 +11,7 @@ layout: default
     {% assign sorted-posts-other = site.posts | where:"categories","other" %}
     <div class="textImage">
         <div class="textLeft">
-            <a href="{{sorted-posts-other[0].url}}" style="color: #101a31; margin: 0;" id="linkDark1">
+            <a href="{{site.baseurl}}/{{sorted-posts-other[0].url}}" style="color: #101a31; margin: 0;" id="linkDark1">
                 <div>
                     <h2>
                         {{sorted-posts-other[0].title}}
@@ -23,7 +23,7 @@ layout: default
             </a>
         </div>
         <div class="imageRight">
-            <a href="{{sorted-posts-other[0].url}}">
+            <a href="{{site.baseurl}}/{{sorted-posts-other[0].url}}">
                 <img style="width: 100%; margin: auto;" src="{{site.baseurl}}/{{sorted-posts-other[0].image}}" />
             </a>
         </div>
