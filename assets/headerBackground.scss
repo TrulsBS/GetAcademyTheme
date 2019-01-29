@@ -276,6 +276,10 @@ a#linkLight{
 
 @media screen and (max-width: 1024px)
 {
+    .underlink
+    {
+        display: none;
+    }
     #icon
     {
         display: inline;
@@ -288,7 +292,8 @@ a#linkLight{
     .bgi
     {
         background-position: top !important;
-        background-size: 120vw !important;   
+        background-size: 120vw !important; 
+        height: 15rem;  
     }
     div.header
     {
@@ -312,7 +317,7 @@ a#linkLight{
     .logo img
     {
         flex-grow: 0 !important;
-        margin: 1rem !important;
+        margin: 1rem 5rem 1rem 1rem !important;
         width: 10rem !important;
     }
     .links

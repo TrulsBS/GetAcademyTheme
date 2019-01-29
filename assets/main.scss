@@ -85,9 +85,10 @@ a#linkDark h2
     div.page
     {
         grid-template-rows: 30vh 1fr 30vh !important;
+        width: 100vw !important;
     }
     #toTop
     {
-        display: none;
+        display: none !important;
     }
 }
