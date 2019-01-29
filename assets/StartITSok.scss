@@ -30,9 +30,26 @@ h3
     margin: 4rem 0 0 0;
 }
 
-.fa-play-circle
+
+
+@media screen and (max-width: 1024px)
 {
-    position: absolute;
-    font-size: 5rem;
-    color: #ff8400;
+    .mainDiv
+    {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+    p 
+    {
+        padding: 0 2rem 0 2rem;
+    }
+    h3, h1
+    {
+        padding: 0 2rem 0 2rem;
+    }
+    iframe
+    {
+        width: 100vw;        
+    }
 }
