@@ -20,7 +20,10 @@ body
     grid-template-areas: 'skole konsulent adresse'
                          'eD iD aD';
 }
-
+iframe
+{
+    width: 100%;
+}
 .eD
 {
     grid-area: eD;
