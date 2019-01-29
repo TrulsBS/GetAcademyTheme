@@ -9,10 +9,10 @@ layout: default
 <div id="title" style="display: flex; width: 100%; flex-direction: column;">
     <div style="margin: auto; display: flex; flex-direction: row;">
 
-        <a {% if page.url=="/kommendeArrangement.html" %} class="activ type" {% endif %} class="type" href="{{site.baseurl}}kommendeArrangement.html"
+        <a {% if page.url=="/kommendeArrangement.html" %} class="activ type" {% endif %} class="type" href="{{site.baseurl}}/kommendeArrangement.html"
             id="linkDark">Kommende</a>
 
-        <a {% if page.url=="/arrangementer.html" %} class="activ type" {% endif %} class="type" href="{{site.baseurl}}arrangementer.html"
+        <a {% if page.url=="/arrangementer.html" %} class="activ type" {% endif %} class="type" href="{{site.baseurl}}/arrangementer.html"
             id="linkDark">Faste</a>
 
     </div>
@@ -25,9 +25,9 @@ layout: default
     {% assign arrangementer = site.posts | where:"categories","arrangement" %}
     {% assign kommende = arrangementer | where:"type","kommende" %}
     {% for post in kommende%}
-    <a class="arrangementBox" id="linkDark3" href="{{site.baseurl}}{{post.url}}">
+    <a class="arrangementBox" id="linkDark3" href="{{site.baseurl}}/{{post.url}}">
         <div class="image" style="margin: 0 2rem 0 0;">
-            <div style="background-image: url({{site.baseurl}}{{post.image}});">
+            <div style="background-image: url({{site.baseurl}}/{{post.image}});">
             </div>
         </div>
         <div style="margin: 0 0 0 2rem;">
