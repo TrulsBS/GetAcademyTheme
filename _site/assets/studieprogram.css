@@ -81,8 +81,9 @@
     margin: 2rem; }
 
   .firstText p {
+    font-size: 1rem !important;
     word-wrap: normal;
-    margin: 2rem 2rem 2rem 2rem; }
+    margin: 2rem 2rem 2rem 2rem !important; }
 
   .studiePage {
     width: 100%;

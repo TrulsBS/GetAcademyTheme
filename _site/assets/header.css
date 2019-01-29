@@ -124,6 +124,9 @@ a#linkDark {
   margin: 2rem; }
 
 @media screen and (max-width: 1024px) {
+  .underlink {
+    display: none; }
+
   #icon {
     display: inline; }
 
@@ -145,7 +148,7 @@ a#linkDark {
 
   .logo img {
     flex-grow: 0 !important;
-    margin: 1rem !important;
+    margin: 1rem 5rem 1rem 1rem !important;
     width: 10rem !important; }
 
   .links {

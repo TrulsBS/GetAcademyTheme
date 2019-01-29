@@ -5,6 +5,16 @@
   align-content: center;
   justify-content: center; }
 
+#viLeverer {
+  margin: auto;
+  padding-top: 5rem; }
+
+#ingress {
+  margin: auto;
+  padding: 5rem 25rem 0 25rem;
+  font-size: 2rem;
+  text-align: center; }
+
 .tjenester {
   display: flex;
   align-content: center;
@@ -121,7 +131,7 @@
   padding: 0 5rem 0 5rem; }
 
 .textbox {
-  background-color: #a3a3a3;
+  background-color: #1d2d53;
   display: flex;
   font-size: 3rem;
   color: #101a31;
@@ -233,12 +243,52 @@
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.475), opacity 0s 0.2s; }
 
 @media screen and (max-width: 1024px) {
+  .grid2 {
+    display: grid;
+    grid-template-rows: repeat(auto, 4) !important;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'textLeft' 'imageRight' 'textRight' 'imageLeft';
+    width: 100vw !important;
+    margin: 0; }
+
+  .textLeft {
+    padding: 2rem; }
+
+  .textRight {
+    padding: 2rem; }
+
+  .imageLeft img {
+    width: 100vw !important;
+    margin: 0; }
+
+  .imageRight {
+    margin: 0 !important; }
+
+  .imageLeft {
+    margin: 0 !important; }
+
+  .imageRight img {
+    width: 100vw !important;
+    margin: 0; }
+
+  .textLeft {
+    margin: 5rem 0 0 0; }
+
+  .textRight {
+    margin: 5rem 0 0 0; }
+
   .grid {
-    width: 100vw; }
+    width: 100vw !important; }
 
   #viLeverer {
     text-align: center;
     font-size: 2rem; }
+
+  #ingress {
+    margin: auto;
+    padding: 5rem 2rem 0 2rem;
+    font-size: 1rem;
+    text-align: center; }
 
   .tjenesteBoks {
     margin: 2rem 0 2rem 0;
@@ -261,8 +311,13 @@
   .empty img {
     width: 100vw !important; }
 
+  .prosjekter {
+    width: 100vw !important; }
+
   .prosjekterContainer {
-    width: 50%; }
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important; }
 
   .prosjekter h1 {
     font-size: 2.5rem;
@@ -275,7 +330,8 @@
     text-align: center; }
 
   .prosjektImage {
-    width: 15rem; }
+    width: 15rem;
+    background-position: center; }
 
   .textbox {
     font-size: 1.5rem;

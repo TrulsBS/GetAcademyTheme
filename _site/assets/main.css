@@ -55,7 +55,8 @@ a#linkDark h2 {
 
 @media screen and (max-width: 1024px) {
   div.page {
-    grid-template-rows: 30vh 1fr 30vh !important; }
+    grid-template-rows: 30vh 1fr 30vh !important;
+    width: 100vw !important; }
 
   #toTop {
-    display: none; } }
+    display: none !important; } }

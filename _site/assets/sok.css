@@ -16,6 +16,9 @@ body {
   margin-top: 5rem; }
 
 @media screen and (max-width: 1024px) {
+  .søkePage {
+    width: 100vw !important; }
+
   .form {
-    width: 20rem;
+    width: 80%;
     margin: 1rem; } }
