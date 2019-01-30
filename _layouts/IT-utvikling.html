@@ -2,13 +2,76 @@
 layout: default
 ---
 
-<div style="display: flex; flex-direction: column; padding: 5rem 10rem 5rem 10rem; line-height: 2.2rem;">
-    <div>
+<head>
+    <style>
+        main
+        {
+            display: flex; 
+            flex-direction: column; 
+            align-content: center;
+            align-items: center;
+            padding: 5rem 10rem 5rem 10rem; 
+            line-height: 2.2rem;
+        }
+        .contentContainer
+        {
+            display: flex; 
+            flex-direction: column; 
+            flex-wrap: wrap;
+        }
+        .ingress
+        {
+            margin: auto;
+            text-align: center;
+            padding-bottom: 5rem;
+        }
+        .content
+        {
+            display: flex; 
+            flex-direction: row; 
+            margin: auto;
+        }
+        @media screen and (max-width: 1024px)
+        {
+            main
+            {
+                padding: 5rem 2rem 5rem 2rem !important;
+                width: 100vw;
+            }
+            .contentContainer
+            {
+                width: 100vw;
+            }
+            .content
+            {
+                width: 100vw;
+                font-size: 1rem;
+            }
+            h1
+            {
+                font-size: 1.5rem;
+            }
+            .ingress
+            {
+                margin: auto;
+                width: 100vw;
+                font-size: 1rem;
+            }
+            img
+            {
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+
+<div class="main">
+    <div class="ingress">
         <h1>IT-Utvikling</h1>
         Fokus er på grunnleggende objektorientert programmering i C# og Javascript. ​
     </div>
-    <div style="display: flex; flex-direction: column; flex-wrap: wrap;">
-        <div style="display: flex; flex-direction: row; margin: auto;">
+    <div class="contentContainer">
+        <div class="content">
             {{content}}
         </div>
         <div>
