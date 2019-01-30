@@ -102,12 +102,18 @@
         <a href="{{site.baseurl}}/skole/2018/12/03/gratismateriale.html" id="linkDark" {% if page.url=='/skole/2018/12/03/gratismateriale.html' %} class="active" {% endif %}>Gratismateriale</a>
         {% endif %}
 
-        {% if page.url=='/Om%20oss.html' or page.url=='/Folk.html' or page.url=='/historie.html' %}
+        {% if page.url=='/Om%20oss.html' or
+        page.url=='/Folk.html' or
+        page.url=='/skole/2018/12/21/organisert.html' or
+        page.url=='/skole/2018/12/21/verdier.html' or
+        page.url=='/historie.html' %}
         <a href="{{site.baseurl}}/Folk.html" id="linkDark" {% if page.url=='/Folk.html' %} class="active" {% endif %}>Folk</a>
         <a href="{{site.baseurl}}/historie.html" id="linkDark" {% if page.url=='/historie.html' %} class="active" {% endif %}>Historie</a>
         {% endif %}
         
-        {% if page.url=='/Nyheter.html' or page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %}
+        {% if page.url=='/Nyheter.html' or
+        page.url=='/arrangementer.html' or
+        page.url=='/kommendeArrangement.html' %}
         <a href="{{site.baseurl}}/Nyheter.html" id="linkDark" {% if page.url=='/Nyheter.html' %} class="active" {% endif %}>Nyheter</a>
         <a href="{{site.baseurl}}/arrangementer.html" id="linkDark" {% if page.url=='/arrangementer.html' or page.url=='/kommendeArrangement.html' %} class="active" {% endif %}>Arrangementer</a>
         {% endif %}
