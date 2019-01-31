@@ -9,11 +9,43 @@ layout: default
         {
             margin: 1rem 10rem 1rem 0;
         }
+        .main
+        {
+            padding: 0 10rem 0 10rem; 
+            display: flex; 
+            flex-direction: column;
+        }
+        .content
+        {
+            padding: 5rem 10rem 5rem 10rem; 
+            margin: auto;
+        }
+        @media screen and (max-width: 1024px)
+        {
+            .main
+            {                
+                width: 70vw !important;
+                margin: 0 !important;
+                padding: 0 2rem 0 2rem !important;
+            }
+            img 
+            {
+                margin: 0 !important;
+                width: 70vw !important;
+            }
+            .content
+            {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 70vw !important;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
-<div style="padding: 0 10rem 0 10rem; display: flex; flex-direction: column;">
-    <div style="padding: 5rem 30rem 5rem 30rem; margin: auto;">
+<div class="main">
+    <div class="content">
         {{content}}
     </div>
 </div>
